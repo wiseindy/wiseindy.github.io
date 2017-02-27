@@ -76,6 +76,7 @@ cd megatools-1.9.97/
 make
 sudo make install
 ```
+Finally, run the above commands to compile megatools and install it in your system.
 
 <div class="row">
   <div class="col-12">
@@ -83,7 +84,6 @@ sudo make install
   </div>
 </div>
 
-Finally, run the above commands to compile megatools and install it in your system.
 <h3>Step 3:</h3>
 If all went well, you should now have megatools installed on your system.
 
