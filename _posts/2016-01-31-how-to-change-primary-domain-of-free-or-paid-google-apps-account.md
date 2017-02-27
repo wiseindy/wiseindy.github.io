@@ -97,6 +97,12 @@ For <strong>Request body</strong>, you don't need to type the brackets and all 
 
 Click <strong>Authorize and Execute</strong>.
 
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 A couple of popups might show up asking you to authorize this with your Google account, Authorize everything.
 
 <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-08.png" rel="attachment wp-att-1151"><img class="alignnone size-full wp-image-1151" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-08.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-08" /></a>
