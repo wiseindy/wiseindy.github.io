@@ -119,6 +119,13 @@ Click <strong>Yes.</strong>
 Wait for it to deploy the agent.
 
 <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/vmware_physical_to_virtual_p2v_04-.png"><img class="alignnone size-full wp-image-770" src="http://wiseindy.com/wp-content/uploads/2015/06/vmware_physical_to_virtual_p2v_04-.png" alt="vmware_physical_to_virtual_p2v_04" /></a>
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h3>Step 5:</h3>
 <blockquote>If you do not get an error, you can skip to <strong>Step 6</strong>.</blockquote>
 At this point, you may or may get an error. It can be something like:
