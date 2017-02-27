@@ -98,6 +98,13 @@ The firmware upgrade process will take about 2-3 minutes. Hang tight.
 Once the upgrade is done, you should see another progress bar like this informing you that the router is restarting.
 
 <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-10.png"><img class="alignnone size-full wp-image-906" src="http://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-10.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" /></a>
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h3>Step 4:</h3>
 If all goes well, which it should and will, you should see the new DD-WRT router page.
 <blockquote>One thing to note here. If your router was configured to use a different IP range, for example <code>10.15.15.x</code>, then you'll need to manually go to <code>192.168.1.1</code> to see this page.
