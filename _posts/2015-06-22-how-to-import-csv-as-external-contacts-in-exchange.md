@@ -52,6 +52,13 @@ Create a <strong>.CSV</strong> file with this format:
 Save it as <strong>contacts.csv</strong>. For the purpose of this guide, I have saved it to <strong>D:\contacts.csv</strong>
 
 Also, make sure you have the Organizational Units (OUs) created in your Active Directory before proceeding. If not, you will get an error in <strong>Step 3</strong>.
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h3>Step 2:</h3>
 Launch <strong>Exchange Management Shell</strong>.
 
