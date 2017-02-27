@@ -9,13 +9,21 @@ layout: default
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
   </header>
   
-  {% include adsense-post-before.html %}
+  <div class="row">
+    <div class="col-12">
+      {% include adsense-post-before.html %}
+    </div>
+  </div>
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
 
-  {% include adsense-post-after.html %}
+  <div class="row">
+    <div class="col-12">
+      {% include adsense-post-after.html %}
+    </div>
+  </div>
   
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
