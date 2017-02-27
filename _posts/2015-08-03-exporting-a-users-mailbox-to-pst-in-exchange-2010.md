@@ -29,7 +29,7 @@ A mailbox export request is a process of exporting mailbox or archive data to a 
 
 <!--more-->
 
-The first thing you need to know is that <a href="https://msdn.microsoft.com/en-us/library/cc505910.aspx" target="_blank">Exchange Management <strong>Shell</strong></a> is not the same as <a href="https://msdn.microsoft.com/en-us/library/cc505909.aspx" target="_blank">Exchange Management <strong>Console</strong></a>. As the name suggests, the <strong>Shell</strong> is a Powershell based command-line interface to manage Exchange.
+The first thing you need to know is that <a target="_blank" href="https://msdn.microsoft.com/en-us/library/cc505910.aspx" target="_blank">Exchange Management <strong>Shell</strong></a> is not the same as <a target="_blank" href="https://msdn.microsoft.com/en-us/library/cc505909.aspx" target="_blank">Exchange Management <strong>Console</strong></a>. As the name suggests, the <strong>Shell</strong> is a Powershell based command-line interface to manage Exchange.
 <h3>Before you begin</h3>
 <ol>
 	<li>The first thing to keep in mind that you can <strong>only export to a UNC path.</strong></li>
@@ -61,6 +61,6 @@ This will remove the export request <strong>only</strong> for the user "John Doe
 <pre>Remove-MailboxExportRequest -Identity "John Doe\MailboxExport"</pre>
 This will remove <strong>all</strong> completed export requests.
 <pre>Get-MailboxExportRequest -Status Completed | Remove-MailboxExportRequest</pre>
-To read more about exporting mailboxes, you can check out <a href="https://technet.microsoft.com/en-us/library/ff459227(v=exchg.141).aspx" target="_blank">this TechNet article</a> by Microsoft.
+To read more about exporting mailboxes, you can check out <a target="_blank" href="https://technet.microsoft.com/en-us/library/ff459227(v=exchg.141).aspx" target="_blank">this TechNet article</a> by Microsoft.
 
-(header image source: <a href="http://www.wallpaperscastle.com/free-mood-desktop-wallpaper-11761.html" target="_blank">wallpaperscastle.com</a>)
+(header image source: <a target="_blank" href="http://www.wallpaperscastle.com/free-mood-desktop-wallpaper-11761.html" target="_blank">wallpaperscastle.com</a>)
