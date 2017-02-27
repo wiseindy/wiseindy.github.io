@@ -1,17 +1,29 @@
 @import "minima";
 
-$tablet: "(min-width: 768px) and (max-width: 1023px)";
-$desktop: "(min-width: 1024px)";
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
 
 .post-list-single {
   width: 100%;
 
-  @media #{$tablet} {
-    font-size: 50%;
+  @include tablet {
+    width: 50%;
   }
 
-  @media #{$desktop} {
-    font-size: 33%;
+  @include desktop {
+    width: 33%;
   }
 }
 
