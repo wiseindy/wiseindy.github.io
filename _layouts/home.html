@@ -22,7 +22,9 @@ layout: default
         <p>
           {{ post.excerpt }}
         </p>
-        <a class="post-link" href="{{ post.url | relative_url }}">Continue reading...</a>
+        <div class="post-link-wrapper">
+          <a class="post-link" href="{{ post.url | relative_url }}">Continue reading...</a>
+        </div>
       </li>
     {% endfor %}
   </ul>
