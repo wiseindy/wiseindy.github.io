@@ -26,8 +26,7 @@ $desktop-width: 1024px;
   }		
 		
   @include desktop {		
-    min-height: 550px;		
-    float: left;		
+    height: 550px;	
   }		
 }
 
