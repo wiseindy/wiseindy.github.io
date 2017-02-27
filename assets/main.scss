@@ -1,1 +1,19 @@
 @import "minima";
+
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+
+.post-list-single {
+  width: 100%;
+
+  @media #{$tablet} {
+    font-size: 50%;
+  }
+
+  @media #{$desktop} {
+    font-size: 33%;
+  }
+}
+
+.post-featured-image {
+}
