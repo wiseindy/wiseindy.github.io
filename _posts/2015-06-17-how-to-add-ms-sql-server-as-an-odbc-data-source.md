@@ -21,7 +21,7 @@ tags:
   - sql
   - sql server
 ---
-<a href="https://en.wikipedia.org/wiki/Open_Database_Connectivity" target="_blank">ODBC</a> stands for <a href="https://en.wikipedia.org/wiki/Open_Database_Connectivity" target="_blank">Open Database Connectivity</a>. It is an API that allows you to access database systems. This connection was developed with an aim to make it independent of database systems and operating systems.
+<a target="_blank" href="https://en.wikipedia.org/wiki/Open_Database_Connectivity" target="_blank">ODBC</a> stands for <a target="_blank" href="https://en.wikipedia.org/wiki/Open_Database_Connectivity" target="_blank">Open Database Connectivity</a>. It is an API that allows you to access database systems. This connection was developed with an aim to make it independent of database systems and operating systems.
 
 <!--more-->
 
@@ -42,44 +42,44 @@ In this quick guide, we will see how a connection can be established to a Micro
 <h3>Step 1:</h3>
 Click the <strong>Start</strong> button. Either navigate to <strong>Administrative Tools &gt; Data Sources (ODBC)</strong> or simply search for <strong>ODBC</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_02.png"><img class="alignnone wp-image-829 size-medium" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_02-163x300.png" alt="how-to-add-odbc-data-source_02" width="163" height="300" /></a>  <a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_01.png"><img class="alignnone wp-image-828 size-medium" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_01-250x300.png" alt="How to add ODBC data source - Microsoft SQL Server" width="250" height="300" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_02.png"><img class="alignnone wp-image-829 size-medium" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_02-163x300.png" alt="how-to-add-odbc-data-source_02" /></a>  <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_01.png"><img class="alignnone wp-image-828 size-medium" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_01-250x300.png" alt="How to add ODBC data source - Microsoft SQL Server" /></a>
 <h3>Step 2:</h3>
 In the <strong>ODBC Data Source Administrator</strong> window, click <strong>Add</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_03.png"><img class="alignnone size-full wp-image-830" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_03.png" alt="how-to-add-odbc-data-source_03" width="471" height="390" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_03.png"><img class="alignnone size-full wp-image-830" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_03.png" alt="how-to-add-odbc-data-source_03" /></a>
 <h3>Step 3:</h3>
 Since we are going to be connecting to MS SQL Server 2005, select <strong>SQL server</strong> in the <strong>Create New Data Source</strong> window. Click <strong>Next</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_04.png"><img class="alignnone size-full wp-image-831" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_04.png" alt="how-to-add-odbc-data-source_04" width="478" height="358" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_04.png"><img class="alignnone size-full wp-image-831" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_04.png" alt="how-to-add-odbc-data-source_04" /></a>
 <h3>Step 4:</h3>
 Type a <strong>Name</strong> for your data source. Next, enter the <strong>Server</strong> hostname or IP address. Click <strong>Next</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_05.png"><img class="alignnone size-full wp-image-832" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_05.png" alt="how-to-add-odbc-data-source_05" width="520" height="368" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_05.png"><img class="alignnone size-full wp-image-832" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_05.png" alt="how-to-add-odbc-data-source_05" /></a>
 <h3>Step 5:</h3>
 Select <strong>With SQL Server authentication using a login ID and password entered by the user.</strong>
 
 Enter the <strong>Login ID</strong> and <strong>Password</strong> for your SQL server. Click <strong>Next</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_06.png"><img class="alignnone size-full wp-image-833" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_06.png" alt="how-to-add-odbc-data-source_06" width="520" height="368" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_06.png"><img class="alignnone size-full wp-image-833" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_06.png" alt="how-to-add-odbc-data-source_06" /></a>
 <h3>Step 6:</h3>
 Leave all settings as default and click <strong>Next</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_07.png"><img class="alignnone size-full wp-image-834" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_07.png" alt="how-to-add-odbc-data-source_07" width="520" height="368" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_07.png"><img class="alignnone size-full wp-image-834" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_07.png" alt="how-to-add-odbc-data-source_07" /></a>
 <h3>Step 7:</h3>
 Leave all settings as default and click <strong>Finish</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_08.png"><img class="alignnone size-full wp-image-835" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_08.png" alt="how-to-add-odbc-data-source_08" width="520" height="368" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_08.png"><img class="alignnone size-full wp-image-835" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_08.png" alt="how-to-add-odbc-data-source_08" /></a>
 <h3>Step 8:</h3>
 A window will pop up asking you whether you want to test the connection or not. Click <strong>Test Data Source... </strong>If all goes well, you should see a <strong>TESTS COMPLETED SUCCESSFULLY!</strong> message. Click <strong>OK</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_09.png"><img class="alignnone size-full wp-image-836" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_09.png" alt="how-to-add-odbc-data-source_09" width="378" height="392" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_09.png"><img class="alignnone size-full wp-image-836" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_09.png" alt="how-to-add-odbc-data-source_09" /></a>
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_10.png"><img class="alignnone size-full wp-image-837" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_10.png" alt="how-to-add-odbc-data-source_10" width="378" height="392" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_10.png"><img class="alignnone size-full wp-image-837" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_10.png" alt="how-to-add-odbc-data-source_10" /></a>
 <h3>Step 10:</h3>
 Your new ODBC data source has been successfully added. Now you can use this data source in different applications to connect and access data from your SQL server.
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_11.png"><img class="alignnone size-full wp-image-838" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_11.png" alt="how-to-add-odbc-data-source_11" width="471" height="390" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_11.png"><img class="alignnone size-full wp-image-838" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_11.png" alt="how-to-add-odbc-data-source_11" /></a>
 <h3>Further reading</h3>
-<a href="https://msdn.microsoft.com/en-us/library/ms811006.aspx" target="_blank">https://msdn.microsoft.com/en-us/library/ms811006.aspx</a>
+<a target="_blank" href="https://msdn.microsoft.com/en-us/library/ms811006.aspx" target="_blank">https://msdn.microsoft.com/en-us/library/ms811006.aspx</a>
 
-(header image source: <a href="http://www.thebigdatainsightgroup.com/site/topics/relational%20database" target="_blank">thebigdatainsightgroup.com</a>)
+(header image source: <a target="_blank" href="http://www.thebigdatainsightgroup.com/site/topics/relational%20database" target="_blank">thebigdatainsightgroup.com</a>)
