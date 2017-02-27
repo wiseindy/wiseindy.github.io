@@ -26,6 +26,7 @@ github_username:  wiseindy
 markdown: kramdown
 highlighter: rouge
 theme: minima
+excerpt_separator: <!--more-->
 gems:
   - jekyll-feed
 exclude:
