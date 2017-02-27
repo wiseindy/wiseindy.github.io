@@ -39,8 +39,13 @@ $desktop-width: 1024px;
 }
 
 .post-title {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
+  padding: 15px 0;
+}
+
+.post-meta {
+  padding: 0 0 15px 0;
 }
 
 .post-link-wrapper {
