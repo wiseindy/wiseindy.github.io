@@ -7,64 +7,28 @@ layout: default
   <!--<h1 class="page-heading">Posts</h1>-->
   
   {{ content }}
-  
-  {% for post in site.posts %}
-    {% assign loopindex = forloop.index | modulo: 3 %}
-    {% if loopindex == 1 %}
-      <div>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-    {% else %}
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </div>
-    {% endif %}
-  {% endfor %}
 
   <ul class="post-list">
     {% for post in site.posts %}
-      {% assign loopindex = forloop.index | modulo: 3 %}
-      {% if loopindex == 1 %}
-        <ul>
-          <li class="post-list-single-wrapper">
-            <div class="post-list-single">
-              <div class="post-featured-image-wrapper">
-                <div class="post-featured-image" style="background: url({{ site.baseurl }}{{ post.image }}) no-repeat; background-size: cover; background-position: center;">
-                </div>
-              </div>
-              <div class="post-title">
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              </div>
-              <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
-              <p>
-                <!--{{ post.excerpt }}-->
-                {{ post.content | strip_html | truncatewords: 25 }}
-              </p>
-              <div class="post-link-wrapper">
-                <a href="{{ post.url | relative_url }}">Continue reading...</a>
-              </div>
+      <li class="post-list-single-wrapper">
+        <div class="post-list-single">
+          <div class="post-featured-image-wrapper">
+            <div class="post-featured-image" style="background: url({{ site.baseurl }}{{ post.image }}) no-repeat; background-size: cover; background-position: center;">
             </div>
-          </li>
-      {% else %}
-          <li class="post-list-single-wrapper">
-            <div class="post-list-single">
-              <div class="post-featured-image-wrapper">
-                <div class="post-featured-image" style="background: url({{ site.baseurl }}{{ post.image }}) no-repeat; background-size: cover; background-position: center;">
-                </div>
-              </div>
-              <div class="post-title">
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              </div>
-              <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
-              <p>
-                <!--{{ post.excerpt }}-->
-                {{ post.content | strip_html | truncatewords: 25 }}
-              </p>
-              <div class="post-link-wrapper">
-                <a href="{{ post.url | relative_url }}">Continue reading...</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      {% endif %}
+          </div>
+          <div class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </div>
+          <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+          <p>
+            <!--{{ post.excerpt }}-->
+            {{ post.content | strip_html | truncatewords: 25 }}
+          </p>
+          <div class="post-link-wrapper">
+            <a href="{{ post.url | relative_url }}">Continue reading...</a>
+          </div>
+        </div>
+      </li>
     {% endfor %}
   </ul>
 
