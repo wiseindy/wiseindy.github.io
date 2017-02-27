@@ -34,3 +34,4 @@ exclude:
   - Gemfile.lock
 disqus:
     shortname: wiseindy
+google_analytics: UA-41402704-6
