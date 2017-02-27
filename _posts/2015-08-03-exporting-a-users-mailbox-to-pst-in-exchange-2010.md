@@ -54,6 +54,13 @@ You can use various formatting options:
 <pre>Get-MailboxExportRequest | Format-Table</pre>
 <pre>Get-MailboxExportRequest | Format-Table -Wrap</pre>
 <pre>Get-MailboxExportRequest | Format-Table -Property Mailbox, Status</pre>
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h3>Clear completed export requests</h3>
 Completed mailbox export requests aren't cleared automatically. You can remove fully or partially completed mailbox export requests by using the following cmdlets.
 
