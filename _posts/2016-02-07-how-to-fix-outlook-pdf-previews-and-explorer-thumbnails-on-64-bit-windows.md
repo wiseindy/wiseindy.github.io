@@ -60,6 +60,13 @@ Double-click <strong>AppID</strong> in the right column and copy paste this in 
 <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_04.png" rel="attachment wp-att-1161"><img class="alignnone size-full wp-image-1161" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_04.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_04" /></a>
 
 Click <strong>OK</strong> and close regedit. That's it!
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h2>The automatic way to fix this error</h2>
 <h3>Step 1:</h3>
 Download the Adobe Reader preview handler x64 fixer by <a target="_blank" href="http://www.pretentiousname.com/" target="_blank">Leo Davidson</a>, from this link: <a target="_blank" href="http://www.pretentiousname.com/adobe_pdf_x64_fix/#downl" target="_blank">http://www.pretentiousname.com/adobe_pdf_x64_fix/#downl</a>
