@@ -43,21 +43,21 @@ Well, it's a pretty easy fix.
 
 <!--more-->
 
-<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_02.png" rel="attachment wp-att-1159"><img class="alignnone size-full wp-image-1159" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_02.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_02" width="518" height="227" /></a>
+<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_02.png" rel="attachment wp-att-1159"><img class="alignnone size-full wp-image-1159" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_02.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_02" /></a>
 <h2>The manual way to fix this error</h2>
 <h3>Step 1:</h3>
 Click the <strong>Start</strong> button, type <strong>regedit.exe</strong> and open it.
 
-<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_01.png" rel="attachment wp-att-1158"><img class="alignnone size-full wp-image-1158" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_01.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_01" width="392" height="520" /></a>
+<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_01.png" rel="attachment wp-att-1158"><img class="alignnone size-full wp-image-1158" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_01.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_01" /></a>
 <h3>Step 2:</h3>
 Once open, navigate to <span style="color: #339966;"><code>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Classes\
 CLSID\{DC6EFB56-9CFA-464D-8880-44885D7DC193}</code></span>
 
-<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_03.png" rel="attachment wp-att-1160"><img class="alignnone size-full wp-image-1160" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_03.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_03" width="1029" height="529" /></a>
+<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_03.png" rel="attachment wp-att-1160"><img class="alignnone size-full wp-image-1160" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_03.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_03" /></a>
 <h3>Step 3:</h3>
 Double-click <strong>AppID</strong> in the right column and copy paste this in the Value Data field:<span style="color: #339966;"> <code>{534A1E02-D58F-44f0-B58B-36CBED287C7C}</code></span>
 
-<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_04.png" rel="attachment wp-att-1161"><img class="alignnone size-full wp-image-1161" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_04.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_04" width="380" height="169" /></a>
+<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_04.png" rel="attachment wp-att-1161"><img class="alignnone size-full wp-image-1161" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_04.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_04" /></a>
 
 Click <strong>OK</strong> and close regedit. That's it!
 <h2>The automatic way to fix this error</h2>
@@ -66,15 +66,15 @@ Download the Adobe Reader preview handler x64 fixer by <a href="http://www.prete
 
 You could download either with installer or without. I choose to do the one without the installer.
 
-<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_05.png" rel="attachment wp-att-1162"><img class="alignnone size-full wp-image-1162" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_05.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_05" width="800" height="261" /></a>
+<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_05.png" rel="attachment wp-att-1162"><img class="alignnone size-full wp-image-1162" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_05.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_05" /></a>
 <h3>Step 2:</h3>
 Extract the downloaded files. You'll see two folders. Open the one that says <strong>"Fix for x64 Adobe Reader preview handler"</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_06.png" rel="attachment wp-att-1163"><img class="alignnone size-full wp-image-1163" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_06.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_06" width="953" height="500" /></a>
+<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_06.png" rel="attachment wp-att-1163"><img class="alignnone size-full wp-image-1163" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_06.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_06" /></a>
 
 Run the preview handler fix utility and click <strong>Apply Fix</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_07.png" rel="attachment wp-att-1164"><img class="alignnone size-full wp-image-1164" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_07.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_07" width="482" height="464" /></a>
+<a href="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_07.png" rel="attachment wp-att-1164"><img class="alignnone size-full wp-image-1164" src="http://wiseindy.com/wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_07.png" alt="how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows_07" /></a>
 
 That's it!
 
