@@ -18,13 +18,13 @@ tags:
 ---
 <p style="text-align: left;">This script allows you to run any command remotely using Powershell on your network. I usually use this to update group policy configurations on all PCs on my network remotely.</p>
 <!--more-->
-<blockquote>Note: In <strong>Windows Server 2012</strong> &amp; <strong>Windows Server 2012 R2</strong>, you can run the <code>Invoke-GPUpdate</code> PowerShell cmdlet ro refresh group policy on any <strong>Windows 8</strong> computers on your network. <a href="https://technet.microsoft.com/en-us/library/jj134201.aspx" target="_blank">More information here</a>.</blockquote>
+<blockquote>Note: In <strong>Windows Server 2012</strong> &amp; <strong>Windows Server 2012 R2</strong>, you can run the <code>Invoke-GPUpdate</code> PowerShell cmdlet ro refresh group policy on any <strong>Windows 8</strong> computers on your network. <a target="_blank" href="https://technet.microsoft.com/en-us/library/jj134201.aspx" target="_blank">More information here</a>.</blockquote>
 <h3>What you will need:</h3>
 <ul>
 	<li>PsTools
 <ul>
 	<li>Download PsTools from here:
-<a href="https://technet.microsoft.com/en-us/sysinternals/bb896649.aspx">https://technet.microsoft.com/en-us/sysinternals/bb896649.aspx</a></li>
+<a target="_blank" href="https://technet.microsoft.com/en-us/sysinternals/bb896649.aspx">https://technet.microsoft.com/en-us/sysinternals/bb896649.aspx</a></li>
 </ul>
 </li>
 	<li>Domain admin permissions</li>
@@ -56,4 +56,4 @@ replace "<code>\\*</code>" with "<code>\\PC1-USRNAME</code>" as shown below:
 	<li>For example, to create a directory in all workstations, simply run:
 <code>PsExec.exe \\* -s cmd /C mkdir C:\test</code></li>
 </ul>
-(header image source: <a href="http://interfaceit.com">interfaceit.com</a>)
+(header image source: <a target="_blank" href="http://interfaceit.com">interfaceit.com</a>)
