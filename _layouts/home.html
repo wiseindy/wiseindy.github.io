@@ -19,8 +19,34 @@ layout: default
   (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
   
+  <!--
+  {% for post in site.posts %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 1 %}
+      <div>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    {% else %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </div>
+    {% endif %}
+  {% endfor %}
+  -->
+  
   <ul class="row post-list">
     {% for post in site.posts %}
+      {% assign loopindex = forloop.index}
+      {% if loopindex == 2 %}
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Front page - 1 (wiseindy.com) -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4196010817129150"
+             data-ad-slot="7854991800"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      {% endif %}
       <li class="col-4 post-list-single-wrapper">
         <div class="post-list-single">
           <div class="post-featured-image-wrapper">
