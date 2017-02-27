@@ -51,6 +51,13 @@ In the <strong>ODBC Data Source Administrator</strong> window, click <strong>A
 Since we are going to be connecting to MS SQL Server 2005, select <strong>SQL server</strong> in the <strong>Create New Data Source</strong> window. Click <strong>Next</strong>.
 
 <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_04.png"><img class="alignnone size-full wp-image-831" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_04.png" alt="how-to-add-odbc-data-source_04" /></a>
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h3>Step 4:</h3>
 Type a <strong>Name</strong> for your data source. Next, enter the <strong>Server</strong> hostname or IP address. Click <strong>Next</strong>.
 
