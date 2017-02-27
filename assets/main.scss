@@ -21,13 +21,16 @@ $desktop-width: 1024px;
 
 .post-list-single {
   width: 100%;
+  float: none;
 
   @include tablet {
     width: 50%;
+    float: left;
   }
 
   @include desktop {
     width: 33%;
+    float: left;
   }
 }
 
