@@ -10,21 +10,23 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li class="post-list-single">
-        <div class="post-featured-image-wrapper">
-          <div class="post-featured-image" style="background: url({{ site.baseurl }}{{ post.image }}) no-repeat; background-size: cover; background-position: center;">
+      <li class="post-list-single-wrapper">
+        <div class="post-list-single">
+          <div class="post-featured-image-wrapper">
+            <div class="post-featured-image" style="background: url({{ site.baseurl }}{{ post.image }}) no-repeat; background-size: cover; background-position: center;">
+            </div>
           </div>
-        </div>
-        <div class="post-title">
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </div>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <p>
-          <!--{{ post.excerpt }}-->
-          {{ post.content | strip_html | truncatewords: 50 }}
-        </p>
-        <div class="post-link-wrapper">
-          <a href="{{ post.url | relative_url }}">Continue reading...</a>
+          <div class="post-title">
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </div>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <p>
+            <!--{{ post.excerpt }}-->
+            {{ post.content | strip_html | truncatewords: 50 }}
+          </p>
+          <div class="post-link-wrapper">
+            <a href="{{ post.url | relative_url }}">Continue reading...</a>
+          </div>
         </div>
       </li>
     {% endfor %}
