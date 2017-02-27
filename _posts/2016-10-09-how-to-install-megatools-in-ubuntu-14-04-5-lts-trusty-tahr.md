@@ -34,7 +34,7 @@ tags:
   - ubuntu
   - ubuntu 14.04
 ---
-Megatools is a great collection of command line utilities that allow you to interact with your <a href="https://mega.nz">mega.nz</a> account directly from the command line. You can directly download using the cli on your Ubuntu machine. They are a great set of tools, however, installing them does get confusing for a new Linux user. This guide will show you how to install it and set it up in no time.
+Megatools is a great collection of command line utilities that allow you to interact with your <a target="_blank" href="https://mega.nz">mega.nz</a> account directly from the command line. You can directly download using the cli on your Ubuntu machine. They are a great set of tools, however, installing them does get confusing for a new Linux user. This guide will show you how to install it and set it up in no time.
 
 <!--more-->
 <h3>What you need:</h3>
@@ -47,8 +47,8 @@ First you need to find out what's the latest version of megatools available.
 
 To find out the latest version, simply visit any one of the links below and see what's the latest version number:
 <ul>
- 	<li><a href="https://megatools.megous.com/">https://megatools.megous.com/</a></li>
- 	<li><a href="https://github.com/megous/megatools">https://github.com/megous/megatools</a></li>
+ 	<li><a target="_blank" href="https://megatools.megous.com/">https://megatools.megous.com/</a></li>
+ 	<li><a target="_blank" href="https://github.com/megous/megatools">https://github.com/megous/megatools</a></li>
 </ul>
 At the time of writing this article (9 October 2016), the latest version was <code>1.9.97</code>. If it is different in your case, simply replace <code>1.9.97</code> with your version in all the commands below.
 <h3>Step 2:</h3>
@@ -80,7 +80,7 @@ Finally, run the above commands to compile megatools and install it in your syst
 <h3>Step 3:</h3>
 If all went well, you should now have megatools installed on your system.
 
-To download from a <a href="https://mega.nz">mega.nz</a> link, simply type <code>megadl '&lt;link&gt;'</code> and the download will start.
+To download from a <a target="_blank" href="https://mega.nz">mega.nz</a> link, simply type <code>megadl '&lt;link&gt;'</code> and the download will start.
 
 Here's an example:
 ``` shell
