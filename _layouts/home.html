@@ -12,7 +12,8 @@ layout: default
     {% for post in site.posts %}
       <li class="post-list-single">
         <div class="post-featured-image-wrapper">
-          <img class="post-featured-image" src="{{ site.baseurl }}{{ post.image }}" title="{{ post-title }}" alt="{{ post-title }}" />
+          <div class="post-featured-image" style="background: url({{ site.baseurl }}{{ post.image }}) no-repeat; background-size: cover; background-position: top center;">
+          </div>
         </div>
         <div class="post-title">
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
