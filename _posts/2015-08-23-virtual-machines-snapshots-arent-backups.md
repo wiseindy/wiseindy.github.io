@@ -24,6 +24,12 @@ However, archives can be very useful for quick restores and solving minor issues
 <h3>Snapshots</h3>
 Snapshots are point-in-time copies of the data. As the name indicates, they're "snapshots" of the entire data set taken at a specific time. Snapshots are not backups. A snapshot file is only a change log of the original virtual disk. Snapshots are sometimes marketed as valid “backup solutions”. This is an incorrect and dangerous assumption.
 
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 Snapshots <strong>are not complete copies of the original virtual machine disk files</strong>. Taking a snapshot does not create a complete copy of the original vm disk file, rather it only copies the changes that were made since the previous snapshot. Every snapshot needs the base disk and the previous snapshot file to be fucntional. At any point of time, to access a snapshot, you should have full access to the snapshot chain before it. If the base disks are deleted, the snapshot files are useless.
 
 While there are benefits of using snapshots for development or testing purposes on non-production systems, they should not be considered as valid data protection or backups of your virtual machines.
