@@ -79,7 +79,7 @@ sudo make install
 
 <div class="row">
   <div class="col-12">
-    {% include adsense-post-before.html %}
+    {% include adsense-post-content.html %}
   </div>
 </div>
 
