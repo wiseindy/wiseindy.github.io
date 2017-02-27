@@ -34,6 +34,13 @@ tags:
 </ul>
 </li>
 </ul>
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h3>What this script does:</h3>
 <ul>
 	<li>Remotely runs <code>gpupdate /force</code> on all workstations</li>
