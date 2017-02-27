@@ -80,6 +80,13 @@ You will notice that <strong>IIS</strong> has been automatically selected. Lea
 On the <strong>Features</strong> screen, leave the default selections and click <strong>Next</strong>
 
 <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/wsus_server_2012_wiseindy_9.png"><img class="alignnone wp-image-548 size-full" src="http://wiseindy.com/wp-content/uploads/2015/06/wsus_server_2012_wiseindy_9.png" alt="wsus_server_2012_wiseindy_9" /></a>
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h3>Step 10:</h3>
 On the <strong>Web Server Role (IIS)</strong> page, click <strong>Next</strong>
 
