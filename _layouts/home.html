@@ -11,7 +11,7 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li class="post-list-single">
-        <img class="post-featured-image" style="background:url({{ site.baseurl }}{{ post.image }})" title="{{ post-title }}" alt="{{ post-title }}" />
+        <img class="post-featured-image" src="{{ site.baseurl }}{{ post.image }}" title="{{ post-title }}" alt="{{ post-title }}" />
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <div class="post-title">
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
