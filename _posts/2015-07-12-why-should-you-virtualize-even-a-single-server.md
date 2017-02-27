@@ -49,6 +49,12 @@ Virtual machines are extremely easy to backup and restore compared to their phys
 
 These features allow you to take a system snapshot before carrying out any activities that may risk the stability of the system. For e.g., installing new software, changing configurations, installing updates &amp; patching, etc. Snapshots can assist you in extremely rapid rollbacks should anything go wrong. This seemingly minor feature can lead to big peace of mind and overall system reliability.  It also makes testing of features and rolling back or repeated testing very easy in non-production environments.
 
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 Compare this with a physical machine. You're unable to do any of this with such ease and speed. Some may say there's Windows System Restore, but we all know it rarely works when you need it to. Windows System Restore is not an operating system agnostic backup unlike snapshots. In addition, it's not guaranteed to bring your OS back to the state it was in when you took the snapshot. Also, restoring a VM snapshot will get rid of any viruses or malware you picked up. This is definitely not the case with System Restore.
 
 However, an important point to keep in mind is that that snapshots <a target="_blank" href="http://wiseindy.com/it/virtual-machines-snapshots-arent-backups/" target="_blank">are not backups</a>. You should always have a solid disaster recovery plan in place.
