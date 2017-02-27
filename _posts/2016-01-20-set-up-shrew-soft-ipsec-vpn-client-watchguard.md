@@ -65,6 +65,13 @@ Select the <strong>Resources</strong> tab. Here under <strong>Allowed Resources
 Next, you'll have to specify the <strong>Virtual IP Address Pool</strong>. Whenever a device connects to your tunnel, it will be assigned an IP address from this pool.
 
 <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-04.png" rel="attachment wp-att-1064"><img class="alignnone size-full wp-image-1064" src="http://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-04.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-04" /></a>
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h3>Step 5:</h3>
 Finally, go the <strong>Advanced</strong> tab and set the <strong>Connect mode</strong> to <strong>Manual</strong> and <strong>Inactivity timeout</strong> to <strong>0 seconds</strong>.
 
