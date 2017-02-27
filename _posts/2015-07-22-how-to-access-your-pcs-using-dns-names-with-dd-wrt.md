@@ -60,6 +60,13 @@ Ok, so that explains why it doesn't work. But, in some rare cases (probably when
 Well, as it turns out, if a DNS zone is not defined for the network, your device tries ANOTHER way to figure out the IP address before abandoning the resolving process altogether. It tries to find out the hostname -&gt; IP address mapping on its own using a technique called "DNS broadcast". The problem with this is that not all machines/devices are configured to answer to this DNS broadcasr, or are actually configured to deliberately not answer such a request.
 
 To fix this you need to configure a "DNS Suffix" for your network.
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h3>So how do I get this "DNS Suffix" thing?</h3>
 If you open up command prompt and type <code>ipconfig</code>, you'll notice that the <strong>Connection-specific DNS Suffix</strong> is blank.
 
