@@ -10,7 +10,7 @@ layout: default
   
   <ul class="row post-list">
     {% for post in site.posts %}
-      {% assign loopindex = forloop.index}
+      {% assign loopindex = forloop.index %}
       {% if loopindex == 2 %}
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Front page - 1 (wiseindy.com) -->
@@ -22,7 +22,6 @@ layout: default
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
-      {% else %}
       {% endif %}
       <li class="col-4 post-list-single-wrapper">
         <div class="post-list-single">
