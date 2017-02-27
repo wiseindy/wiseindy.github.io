@@ -14,10 +14,9 @@ sharing_disabled:
 ---
 Hello.
 
-I am Wiseindy. And yes, I believe in aliens.
+I am Wiseindy.
 
-This is where you will find all that I've created in the past, and everything that I'll be doing in the future. The site's pretty new, so you might not find a lot of content at the moment. From illustrations to apps to blog posts, I'll be posting everything here from now on.
-
-Lots of interesting things to come soon.
+This is where you will find all that I've created in the past, and everything that I'll be doing in the future.
+More content to come soon.
 
 Cheers, and thanks for visiting!
