@@ -29,6 +29,7 @@ theme: minima
 excerpt_separator: <!--more-->
 gems:
   - jekyll-feed
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
