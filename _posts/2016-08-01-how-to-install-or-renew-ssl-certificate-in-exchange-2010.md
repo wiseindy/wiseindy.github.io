@@ -109,6 +109,13 @@ Specify the location and click <strong>Save</strong>.
 Verify the information and click <strong>New</strong>.
 
 <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/08/how-to-install-ssl-certificate-in-exchange-2010-07.png"><img class="alignnone size-full wp-image-1041" src="http://wiseindy.com/wp-content/uploads/2015/08/how-to-install-ssl-certificate-in-exchange-2010-07.png" alt="how-to-install-ssl-certificate-in-exchange-2010-07" /></a>
+
+<div class="row">
+  <div class="col-12">
+    {% include adsense-post-content.html %}
+  </div>
+</div>
+
 <h3>Step 6:</h3>
 If all goes well, which it should, you will find that your CSR is generated and saved it in the location you specified. It's basically a text file with a <code>.req</code> extension. We will need this file in a while.
 
