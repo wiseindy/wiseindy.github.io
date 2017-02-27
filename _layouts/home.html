@@ -11,7 +11,8 @@ layout: default
   <ul class="row post-list">
     {% for post in site.posts %}
       {% assign loopindex = forloop.index %}
-      {% if loopindex == 2 %}
+      {% if loopindex == 3 %}
+      <li class="col-12">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Front page - 1 (wiseindy.com) -->
         <ins class="adsbygoogle"
@@ -22,8 +23,23 @@ layout: default
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
+      </li>
       {% endif %}
-      <li class="col-4 post-list-single-wrapper">
+      {% if loopindex == 6 %}
+      <li class="col-12">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Front page - 1 (wiseindy.com) -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4196010817129150"
+             data-ad-slot="7854991800"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </li>
+      {% endif %}
+      <li class="col-4  post-list-single-wrapper">
         <div class="post-list-single">
           <div class="post-featured-image-wrapper">
             <div class="post-featured-image" style="background: url({{ site.baseurl }}{{ post.image }}) no-repeat; background-size: cover; background-position: center;">
