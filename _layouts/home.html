@@ -19,10 +19,10 @@ layout: default
           <div class="post-title">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           </div>
+          <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
           <div class="post-meta">
             <a href="{{ post.url | relative_url }}#disqus_thread"></a>
           </div>
-          <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
           <p>
             <!--{{ post.excerpt }}-->
             {{ post.content | strip_html | truncatewords: 25 }}
