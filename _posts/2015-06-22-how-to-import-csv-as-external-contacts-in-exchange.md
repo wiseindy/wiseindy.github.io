@@ -47,7 +47,7 @@ tags:
 <h3>Step 1:</h3>
 Create a <strong>.CSV</strong> file with this format:
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_01.png"><img class="alignnone size-full wp-image-850" src="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_01.png" alt="import-csv-contacts-exchange_01" width="755" height="122" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_01.png"><img class="alignnone size-full wp-image-850" src="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_01.png" alt="import-csv-contacts-exchange_01" /></a>
 
 Save it as <strong>contacts.csv</strong>. For the purpose of this guide, I have saved it to <strong>D:\contacts.csv</strong>
 
@@ -55,9 +55,9 @@ Also, make sure you have the Organizational Units (OUs) created in your Active D
 <h3>Step 2:</h3>
 Launch <strong>Exchange Management Shell</strong>.
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_02.png"><img class="alignnone size-full wp-image-851" src="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_02.png" alt="import-csv-contacts-exchange_02" width="405" height="464" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_02.png"><img class="alignnone size-full wp-image-851" src="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_02.png" alt="import-csv-contacts-exchange_02" /></a>
 
-<a href="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_03.png"><img class="alignnone size-full wp-image-852" src="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_03.png" alt="import-csv-contacts-exchange_03" width="772" height="431" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_03.png"><img class="alignnone size-full wp-image-852" src="http://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_03.png" alt="import-csv-contacts-exchange_03" /></a>
 <h3>Step 3:</h3>
 Once it launches, type the following code:
 <code>Import-Csv D:\contacts.csv | ForEach-Object { New-MailContact -Name $_."Name" -ExternalEmailAddress $_."Email" -FirstNa
@@ -65,4 +65,4 @@ me $_."FirstName" -OrganizationalUnit $_."Oupath" -Alias $_."Alias" }</code>
 
 Hit <strong>Enter</strong> and you are done!
 
-(header image source: <a href="http://www.freecodesource.com/wallpapers/wallpaper/Microsoft-Office-Logo/" target="_blank">freecodesource.com</a>)
+(header image source: <a target="_blank" href="http://www.freecodesource.com/wallpapers/wallpaper/Microsoft-Office-Logo/" target="_blank">freecodesource.com</a>)
