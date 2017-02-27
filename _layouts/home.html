@@ -13,9 +13,9 @@ layout: default
       <li class="post-list-single">
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <img class="post-featured-image" src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}">
-        <h4 class="post-title">
+        <div class="post-title">
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h4>
+        </div>
       </li>
     {% endfor %}
   </ul>
