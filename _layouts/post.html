@@ -27,16 +27,20 @@ layout: default
   
   <!-- Pagination links -->
   <div id="post-nav">
-    <div >    
+    <div>    
         {% if page.previous.url %}
-        <a class="prev" href="{{page.previous.url}}">
-            <span>&lt; {{page.previous.title}}</span>
-        </a> 
+        <p>
+          <a class="prev" href="{{page.previous.url}}">
+            <span>Previous post: {{page.previous.title}}</span>
+          </a>
+        </p>
         {% endif %} 
         {% if page.next.url %} 
-        <a class="next" href="{{page.next.url}}">
-            <span>{{page.next.title}} &gt;</span>
-        </a> 
+        <p>
+          <a class="next" href="{{page.next.url}}">
+              <span>Next post: {{page.next.title}}</span>
+          </a>
+        </p>
         {% endif %} 
     </div>
   </div>
