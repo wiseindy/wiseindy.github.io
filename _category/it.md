@@ -1,4 +1,4 @@
 ---
 tag: IT
-permalink: "/category/it"
+permalink: "/it"
 ---
