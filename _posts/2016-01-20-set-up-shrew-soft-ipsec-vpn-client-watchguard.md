@@ -7,7 +7,7 @@ layout: post
 guid: http://wiseindy.com/?p=1060
 permalink: /it/set-up-shrew-soft-ipsec-vpn-client-watchguard/
 image: /wp-content/uploads/2016/01/header-set-up-shrew-soft-ipsec-vpn-client-watchguard.jps_.jpg
-featured: /wp-content/uploads/2016/01/header-set-up-shrew-soft-ipsec-vpn-client-watchguard.jps_-featured.jpg
+featured: /images/featured/featured-shrew.jpg
 categories:
   - Firewall
   - IT
