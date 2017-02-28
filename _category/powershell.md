@@ -1,0 +1,4 @@
+---
+tag: Powershell
+permalink: "/powershell"
+---
