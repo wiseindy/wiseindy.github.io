@@ -8,8 +8,6 @@ layout: default
   
   {{ content }}
   
-  {% paginator.posts %}
-  
   <ul class="row post-list">
     {% for post in site.posts %}
       {% assign loopindex = forloop.index %}
