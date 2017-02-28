@@ -9,7 +9,7 @@ permalink: /it/how-to-install-or-renew-ssl-certificate-in-exchange-2010/
 dsq_thread_id:
   - "5585733524"
 image: /wp-content/uploads/2015/08/how-to-install-ssl-certificate-in-exchange-2010.jpg
-featured: /wp-content/uploads/2015/08/how-to-install-ssl-certificate-in-exchange-2010-featured.jpg
+featured: /images/featured/featured-sslexchange.jpg
 categories:
   - Exchange
   - Guides
