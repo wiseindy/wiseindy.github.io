@@ -52,16 +52,28 @@ layout: default
     <h3>Related Posts</h3>
     {% assign firstCategory = page.categories | first %}
     {% assign relatedCount = 0 %}
+    <div class="row">
     {% for related in site.categories[firstCategory] %}
         {% unless page.permalink == related.permalink %}
             {% assign relatedCount = relatedCount | plus: 1 %}
-            <a href="{{related.permalink}}">{{ related.title }}</a>
+            <div class="col-4">
+              <a href="{{related.permalink}}">
+                <div class="post-featured-image-wrapper">
+                  <div class="post-featured-image" style="background: url({{ related.url }}{{ related.featured }}) no-repeat; background-size: cover; background-position: center;">
+                  </div>
+                </div>
+                <div class="post-title">
+                  {{ related.title }}
+                </div>
+              </a>
+            </div>
         {% endunless %}
 
         {% if relatedCount == 3 %}
             {% break %}
         {% endif %}
     {% endfor %}
+    </div>
   </div>
   
   {% if site.disqus.shortname %}
