@@ -1,4 +1,4 @@
 ---
-tag: guides
+tag: Guides
 permalink: "/category/guides"
 ---
