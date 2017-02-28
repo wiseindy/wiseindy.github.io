@@ -1,0 +1,4 @@
+---
+tag: Doodles
+permalink: "/doodles"
+---
