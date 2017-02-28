@@ -1,4 +1,4 @@
 ---
-tag: it
+tag: IT
 permalink: "/category/it"
 ---
