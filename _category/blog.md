@@ -1,0 +1,4 @@
+---
+tag: Blog
+permalink: "/blog"
+---
