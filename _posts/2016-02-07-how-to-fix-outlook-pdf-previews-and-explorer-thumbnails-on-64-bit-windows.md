@@ -9,7 +9,7 @@ permalink: /it/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit
 dsq_thread_id:
   - "5585733488"
 image: /wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows.jpg
-featured: /wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows-featured.jpg
+featured: /images/featured/featured-outlookpreviews.jpg
 categories:
   - Guides
   - IT
