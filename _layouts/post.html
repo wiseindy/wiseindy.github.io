@@ -30,15 +30,17 @@ layout: default
     <div>    
         {% if page.previous.url %}
         <p>
+          Previous post:&nbsp;
           <a class="prev" href="{{page.previous.url}}">
-            <span>Previous post: {{page.previous.title}}</span>
+            <span>{{page.previous.title}}</span>
           </a>
         </p>
         {% endif %} 
         {% if page.next.url %} 
         <p>
+          Next post:&nbsp;
           <a class="next" href="{{page.next.url}}">
-              <span>Next post: {{page.next.title}}</span>
+              <span>{{page.next.title}}</span>
           </a>
         </p>
         {% endif %} 
