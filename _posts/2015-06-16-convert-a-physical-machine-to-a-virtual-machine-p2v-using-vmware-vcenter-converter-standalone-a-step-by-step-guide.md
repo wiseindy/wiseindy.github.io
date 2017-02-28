@@ -9,6 +9,7 @@ permalink: /it/convert-a-physical-machine-to-a-virtual-machine-p2v-using-vmware-
 dsq_thread_id:
   - "5585733521"
 image: /wp-content/uploads/2015/06/convert-physical-machine-to-virtual-machine-using-vmware-vcenter-converter.jpg
+featured: /wp-content/uploads/2015/06/convert-physical-machine-to-virtual-machine-using-vmware-vcenter-converter-featured.jpg
 categories:
   - Guides
   - IT
