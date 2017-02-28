@@ -36,3 +36,6 @@ exclude:
 disqus:
     shortname: wiseindy
 google_analytics: UA-41402704-6
+collections:
+  category:
+    output: true
