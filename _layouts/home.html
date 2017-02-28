@@ -9,7 +9,7 @@ layout: default
   {{ content }}
   
   <ul class="row post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       {% assign loopindex = forloop.index %}
       {% if loopindex == 4 %}
       <li class="col-12">
