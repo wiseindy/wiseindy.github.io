@@ -30,15 +30,13 @@ excerpt_separator: <!--more-->
 gems:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
 disqus:
     shortname: wiseindy
 google_analytics: UA-41402704-6
-paginate: 12
-paginate_path: "page:num"
+paginate: 1
 
 collections:
   category:
