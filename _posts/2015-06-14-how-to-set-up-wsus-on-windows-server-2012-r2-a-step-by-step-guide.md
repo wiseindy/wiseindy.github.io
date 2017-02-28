@@ -9,7 +9,7 @@ permalink: /it/how-to-set-up-wsus-on-windows-server-2012-r2-a-step-by-step-guide
 dsq_thread_id:
   - "5585733469"
 image: /wp-content/uploads/2015/06/windows-server-update-services.jpg
-featured: /wp-content/uploads/2015/06/windows-server-update-services-featured.jpg
+featured: /images/featured/featured-wsus.jpg
 categories:
   - Guides
   - IT
