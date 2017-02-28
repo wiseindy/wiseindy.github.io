@@ -7,6 +7,7 @@ layout: post
 guid: http://wiseindy.com/?p=947
 permalink: /it/exporting-a-users-mailbox-to-pst-in-exchange-2010/
 image: /wp-content/uploads/2015/08/Mailbox.jpg
+featured: /wp-content/uploads/2015/08/Mailbox-featured.jpg
 categories:
   - Exchange
   - Guides
