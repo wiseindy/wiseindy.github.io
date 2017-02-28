@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">{{ page.tag }}</h1>
+  
+  {{ content }}
+  
+  <ul class="row post-list">
+    {% for post in site.categories[page.tag] %}
+      {% assign loopindex = forloop.index %}
+      {% if loopindex == 4 %}
+      <li class="col-12">
+        {% include adsense-home.html %}
+      </li>
+      {% endif %}
+      {% if loopindex == 7 %}
+      <li class="col-12">
+        {% include adsense-home.html %}
+      </li>
+      {% endif %}
+      {% if loopindex == 10 %}
+      <li class="col-12">
+        {% include adsense-home.html %}
+      </li>
+      {% endif %}
+      <li class="col-4  post-list-single-wrapper">
+        <div class="post-list-single">
+          <div class="post-featured-image-wrapper">
+            <div class="post-featured-image" style="background: url({{ site.baseurl }}{{ post.featured }}) no-repeat; background-size: cover; background-position: center;">
+            </div>
+          </div>
+          <div class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </div>
+          <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+          <div class="post-meta">
+            <a href="{{ post.url | relative_url }}#disqus_thread"></a>
+          </div>
+          <p>
+            <!--{{ post.excerpt }}-->
+            {{ post.content | strip_html | truncatewords: 25 }}
+          </p>
+          <div class="post-link-wrapper">
+            <a href="{{ post.url | relative_url }}">Continue reading...</a>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>
