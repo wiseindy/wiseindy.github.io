@@ -9,7 +9,7 @@ permalink: /it/how-to-change-primary-domain-of-free-or-paid-google-apps-account/
 dsq_thread_id:
   - "5585733448"
 image: /wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account.jpg
-featured: /wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-featured.jpg
+featured: /images/featured/featured-googleappsdomain.jpg
 categories:
   - Guides
   - IT
