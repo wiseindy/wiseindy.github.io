@@ -38,6 +38,7 @@ disqus:
     shortname: wiseindy
 google_analytics: UA-41402704-6
 paginate: 12
+paginate_path: "page:num"
 
 collections:
   category:
