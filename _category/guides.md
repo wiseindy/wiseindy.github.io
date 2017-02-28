@@ -1,4 +1,4 @@
 ---
 tag: Guides
-permalink: "/category/guides"
+permalink: "/guides"
 ---
