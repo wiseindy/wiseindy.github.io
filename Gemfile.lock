@@ -3,7 +3,12 @@ GEM
   specs:
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
+    amp-jekyll (1.0.1)
+      fastimage (>= 1.8.0)
+      jekyll (~> 3.0)
+      nokogiri (>= 1.6.0)
     colorator (1.1.0)
+    fastimage (2.1.0)
     ffi (1.9.17)
     ffi (1.9.17-x64-mingw32)
     forwardable-extended (2.6.0)
@@ -33,8 +38,11 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
+    mini_portile2 (2.1.0)
     minima (2.1.0)
       jekyll (~> 3.3)
+    nokogiri (1.7.0.1-x64-mingw32)
+      mini_portile2 (~> 2.1.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -55,6 +63,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  amp-jekyll
   jekyll (= 3.4.0)
   jekyll-feed (~> 0.6)
   jekyll-paginate

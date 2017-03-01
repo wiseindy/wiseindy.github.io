@@ -28,6 +28,7 @@ highlighter: rouge
 theme: minima
 excerpt_separator: <!--more-->
 gems:
+  - amp-jekyll
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
@@ -38,10 +39,11 @@ disqus:
     shortname: wiseindy
 google_analytics: UA-41402704-6
 paginate: 12
-
+ampdir: amp
 collections:
   category:
     output: true
+    
 defaults:
   -
     scope:
