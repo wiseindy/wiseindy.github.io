@@ -3,7 +3,7 @@ id: 84
 title: Experiences
 date: 2013-04-28T11:39:48+00:00
 author: wiseindy
-layout: page
+layout: single
 guid: http://wiseindy.com/?page_id=84
 dsq_thread_id:
   - "5585733406"

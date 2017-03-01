@@ -14,7 +14,8 @@ publicize_twitter_url:
   - http://t.co/2O1d1V7fP5
 dsq_thread_id:
   - "5585733477"
-image: /wp-content/uploads/2014/04/iss007e10807_darker-825x510.jpg
+header:
+  image: /wp-content/uploads/2014/04/iss007e10807_darker.jpg
 categories:
   - Interesting
 tags:

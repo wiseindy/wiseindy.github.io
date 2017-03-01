@@ -9,7 +9,8 @@ permalink: /blog/free-version-of-experiences-ipad-app-now-available/
 publicize_twitter_user:
   - WiseIndy
   - WiseIndy
-image: /wp-content/uploads/2013/05/free-version-of-experiences.jpg
+header:
+  image: /wp-content/uploads/2013/05/free-version-of-experiences.jpg
 categories:
   - Blog
 tags:

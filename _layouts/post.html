@@ -1,82 +1,78 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <img width="1920" height="auto" src="{{ site.baseurl }}{{ page.image }}" sizes="(max-width: 1920px) 100vw, 1920px" title="{{ page.title | escape }}" alt="{{ page.title | escape }}">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
-  
-  <div class="row">
-    <div class="col-12">
-      {% include adsense-post-before.html %}
-    </div>
-  </div>
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
 
-  <div class="row">
-    <div class="col-12">
-      {% include adsense-post-after.html %}
-    </div>
-  </div>
-  
-  <!-- Pagination links -->
-  <br>
-  <div id="post-nav">
-    <div>    
-        {% if page.previous.url %}
-        <p>
-          Previous post:&nbsp;
-          <a class="prev" href="{{page.previous.url}}">
-            <span>{{page.previous.title}}</span>
-          </a>
-        </p>
-        {% endif %} 
-        {% if page.next.url %} 
-        <p>
-          Next post:&nbsp;
-          <a class="next" href="{{page.next.url}}">
-              <span>{{page.next.title}}</span>
-          </a>
-        </p>
-        {% endif %} 
-    </div>
-  </div>
-  
-  <div class="related">
-    <h3>Related Posts</h3>
-    {% assign firstCategory = page.categories | first %}
-    {% assign relatedCount = 0 %}
-    <div class="row">
-    {% for related in site.categories[firstCategory] %}
-        {% unless page.permalink == related.permalink %}
-            {% assign relatedCount = relatedCount | plus: 1 %}
-            <div class="col-4">
-              <a href="{{related.permalink}}">
-                <div class="post-featured-image-wrapper">
-                  <div class="post-featured-image" style="background: url({{ site.url }}{{ related.featured }}) no-repeat; background-size: cover; background-position: center;">
-                  </div>
-                </div>
-                <div class="post-title">
-                  {{ related.title }}
-                </div>
-              </a>
-            </div>
-        {% endunless %}
+<div id="main" role="main">
+  {% include sidebar.html %}
 
-        {% if relatedCount == 3 %}
-            {% break %}
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+          {% if page.read_time %}
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+          {% endif %}
+        </header>
+      {% endunless %}
+
+      <section class="page__content" itemprop="text">
+		{% include adsense-post-before.html %}
+        {{ content }}
+		{% include adsense-post-after.html %}
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+      </section>
+
+      <footer class="page__meta">
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
-    {% endfor %}
+        {% include page__taxonomy.html %}
+        {% if page.modified %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+        {% elsif page.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+        {% endif %}
+      </footer>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+
+      {% include post_pagination.html %}
     </div>
-  </div>
-  
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
+
+    {% if site.comments.provider and page.comments %}
+      {% include comments.html %}
+    {% endif %}
+  </article>
+
+  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
+  {% if page.id and page.related and site.related_posts.size > 0 %}
+    <div class="page__related">
+      {% if site.data.ui-text[site.locale].related_label %}
+        <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
+      {% endif %}
+      <div class="grid__wrapper">
+        {% for post in site.related_posts limit:4 %}
+          {% include archive-single.html type="grid" %}
+        {% endfor %}
+      </div>
+    </div>
   {% endif %}
-</article>
+</div>

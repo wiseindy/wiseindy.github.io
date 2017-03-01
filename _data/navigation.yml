@@ -1,0 +1,16 @@
+# main links
+main:
+    - title: "IT"
+      url: /it/
+    - title: "Guides"
+      url: /guides/
+    - title: "Powershell"
+      url: /powershell/
+    - title: "Networking"
+      url: /networking/
+    - title: "Exchange"
+      url: /exchange/
+    - title: "Doodles"
+      url: /doodles/
+    - title: "About"
+      url: /about/

@@ -8,8 +8,9 @@ guid: http://wiseindy.com/?p=707
 permalink: /it/convert-a-physical-machine-to-a-virtual-machine-p2v-using-vmware-vcenter-converter-standalone-a-step-by-step-guide/
 dsq_thread_id:
   - "5585733521"
-image: /wp-content/uploads/2015/06/convert-physical-machine-to-virtual-machine-using-vmware-vcenter-converter.jpg
-featured: /images/featured/featured-p2v.jpg
+header:
+  image: /wp-content/uploads/2015/06/convert-physical-machine-to-virtual-machine-using-vmware-vcenter-converter.jpg
+  teaser: /images/featured/featured-p2v.jpg
 categories:
   - Guides
   - IT

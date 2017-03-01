@@ -3,7 +3,7 @@ id: 356
 title: Privacy Policy
 date: 2014-01-02T11:44:50+00:00
 author: wiseindy
-layout: page
+layout: single
 guid: http://wiseindy.com/?page_id=356
 sharing_disabled:
   - "1"

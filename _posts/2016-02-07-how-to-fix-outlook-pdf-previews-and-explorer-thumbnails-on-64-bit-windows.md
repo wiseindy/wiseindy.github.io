@@ -8,8 +8,9 @@ guid: http://wiseindy.com/?p=1157
 permalink: /it/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows/
 dsq_thread_id:
   - "5585733488"
-image: /wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows.jpg
-featured: /images/featured/featured-outlookpreview.jpg
+header:
+  image: /wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows.jpg
+  teaser: /images/featured/featured-outlookpreview.jpg
 categories:
   - Guides
   - IT

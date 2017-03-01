@@ -3,7 +3,7 @@ id: 359
 title: Terms of Service
 date: 2014-01-02T12:18:32+00:00
 author: wiseindy
-layout: page
+layout: single
 guid: http://wiseindy.com/?page_id=359
 ---
 <em><strong>The End of Days</strong> app terms of service:</em>

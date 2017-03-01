@@ -14,7 +14,8 @@ publicize_reach:
   - 'a:2:{s:7:"twitter";a:1:{i:3482075;i:59;}s:2:"wp";a:1:{i:0;i:0;}}'
 dsq_thread_id:
   - "5585733432"
-image: /wp-content/uploads/2013/05/empower-network-fail.jpg
+header:
+  image: /wp-content/uploads/2013/05/empower-network-fail.jpg
 categories:
   - Blog
 tags:

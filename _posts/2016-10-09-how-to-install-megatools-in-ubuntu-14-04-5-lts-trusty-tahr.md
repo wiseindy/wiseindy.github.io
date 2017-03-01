@@ -8,8 +8,9 @@ guid: https://wiseindy.com/?p=1232
 permalink: /it/how-to-install-megatools-in-ubuntu-14-04-5-lts-trusty-tahr/
 dsq_thread_id:
   - "5585733554"
-image: /wp-content/uploads/2016/10/how-to-install-megatools-in-ubuntu-14-04-5-lts-trusty-tahr.jpg
-featured: /images/featured/featured-megatools.jpg
+header:
+  image: /wp-content/uploads/2016/10/how-to-install-megatools-in-ubuntu-14-04-5-lts-trusty-tahr.jpg
+  teaser: /assets/images/featured/featured-megatools.jpg
 categories:
   - Guides
   - IT

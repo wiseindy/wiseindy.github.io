@@ -6,8 +6,9 @@ author: wiseindy
 layout: post
 guid: http://wiseindy.com/?p=877
 permalink: /it/virtual-machines-snapshots-arent-backups/
-image: /wp-content/uploads/2015/08/virtual-machines-snapshots-are-not-backups.jpg
-featured: /images/featured/featured-snapshotsbackups.jpg
+header:
+  image: /wp-content/uploads/2015/08/virtual-machines-snapshots-are-not-backups.jpg
+  teaser: /images/featured/featured-snapshotsbackups.jpg
 categories:
   - IT
 ---
