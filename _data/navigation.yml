@@ -1,16 +1,16 @@
 # main links
 main:
     - title: "IT"
-      url: /it/
+      url: /it
     - title: "Guides"
-      url: /guides/
+      url: /guides
     - title: "Powershell"
-      url: /powershell/
+      url: /powershell
     - title: "Networking"
-      url: /networking/
+      url: /networking
     - title: "Exchange"
-      url: /exchange/
+      url: /exchange
     - title: "Doodles"
-      url: /doodles/
+      url: /doodles
     - title: "About"
-      url: /about/
+      url: /about

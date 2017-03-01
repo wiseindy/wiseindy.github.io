@@ -5,24 +5,6 @@ layout: archive
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% for post in paginator.posts %}
-
-  {% assign loopindex = forloop.index %}
-  {% if loopindex == 2 %}
-  <div>
-  {% include adsense-home.html %}
-  </div>
-  {% endif %}
-  {% if loopindex == 4 %}
-  <div>
-  {% include adsense-home.html %}
-  </div>
-  {% endif %}
-  {% if loopindex == 6 %}
-  <div>
-  {% include adsense-home.html %}
-  </div>
-  {% endif %}
-
   {% include archive-single.html %}
 {% endfor %}
 
