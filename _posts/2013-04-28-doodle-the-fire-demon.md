@@ -3,6 +3,7 @@ id: 66
 title: 'Doodle: &#8220;The Fire Demon&#8221;'
 date: 2013-04-28T09:27:43+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=66
 permalink: /doodles/doodle-the-fire-demon/

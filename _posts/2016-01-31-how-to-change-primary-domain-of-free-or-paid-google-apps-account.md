@@ -3,6 +3,7 @@ id: 1094
 title: How to change primary domain of free or paid Google Apps account.
 date: 2016-01-31T08:05:38+00:00
 author: Wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=1094
 permalink: /it/how-to-change-primary-domain-of-free-or-paid-google-apps-account/

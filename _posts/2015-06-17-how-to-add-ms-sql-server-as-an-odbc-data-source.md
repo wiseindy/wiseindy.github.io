@@ -3,6 +3,7 @@ id: 827
 title: How to add MS SQL server as an ODBC data source?
 date: 2015-06-17T05:29:51+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=827
 permalink: /it/how-to-add-ms-sql-server-as-an-odbc-data-source/

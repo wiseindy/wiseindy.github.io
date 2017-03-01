@@ -3,6 +3,7 @@ id: 947
 title: 'How to export a user&#8217;s mailbox to .pst in Exchange 2010'
 date: 2015-08-03T02:01:39+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=947
 permalink: /it/exporting-a-users-mailbox-to-pst-in-exchange-2010/

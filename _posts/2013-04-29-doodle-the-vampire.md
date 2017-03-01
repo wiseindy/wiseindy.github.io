@@ -3,6 +3,7 @@ id: 191
 title: 'Doodle: &#8220;The Vampire&#8221;'
 date: 2013-04-29T22:21:40+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=191
 permalink: /doodles/doodle-the-vampire/

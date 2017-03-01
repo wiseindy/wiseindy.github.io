@@ -3,6 +3,7 @@ id: 74
 title: 'Doodle: &#8220;Evil Guy from Ben 10&#8221;'
 date: 2013-04-28T10:51:33+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=74
 permalink: /doodles/doodle-evil-guy-from-ben-10/

@@ -3,6 +3,7 @@ id: 433
 title: 'Doodle: The Karate Cat'
 date: 2013-05-30T19:44:52+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=329
 permalink: /doodles/doodle-the-karate-cat/

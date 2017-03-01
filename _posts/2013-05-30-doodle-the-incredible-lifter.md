@@ -3,6 +3,7 @@ id: 338
 title: 'Doodle: The Incredible Lifter'
 date: 2013-05-30T19:51:55+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=338
 permalink: /doodles/doodle-the-incredible-lifter/

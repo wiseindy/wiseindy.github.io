@@ -3,6 +3,7 @@ id: 55
 title: 'Doodle: &#8220;The Confused Badass&#8221;'
 date: 2013-04-27T11:53:30+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=55
 permalink: /doodles/doodle-the-confused-badass/

@@ -3,6 +3,7 @@ id: 868
 title: Why should you virtualize even a single server?
 date: 2015-07-12T11:04:55+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=868
 permalink: /blog/why-should-you-virtualize-even-a-single-server/

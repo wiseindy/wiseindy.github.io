@@ -3,6 +3,7 @@ id: 343
 title: 'Doodle: Dreams'
 date: 2013-05-30T19:53:45+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=343
 permalink: /doodles/doodle-dreams/

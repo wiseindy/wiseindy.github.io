@@ -3,6 +3,7 @@ id: 1157
 title: How to Fix Outlook PDF Previews and Explorer thumbnails on 64-bit Windows
 date: 2016-02-07T03:47:20+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=1157
 permalink: /it/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows/

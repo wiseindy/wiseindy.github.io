@@ -3,6 +3,7 @@ id: 707
 title: 'Convert a physical machine to a virtual machine (P2V) using VMware vCenter Converter Standalone &#8211; A Step-by-Step Guide'
 date: 2015-06-16T10:20:37+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=707
 permalink: /it/convert-a-physical-machine-to-a-virtual-machine-p2v-using-vmware-vcenter-converter-standalone-a-step-by-step-guide/

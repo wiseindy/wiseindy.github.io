@@ -3,6 +3,7 @@ id: 61
 title: 'Doodle: &#8220;Zom-B&#8221;'
 date: 2013-04-28T09:22:57+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=61
 permalink: /doodles/doodle-zom-b/

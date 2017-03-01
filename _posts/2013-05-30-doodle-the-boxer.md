@@ -3,6 +3,7 @@ id: 334
 title: 'Doodle: The Boxer'
 date: 2013-05-30T19:50:17+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=334
 permalink: /doodles/doodle-the-boxer/

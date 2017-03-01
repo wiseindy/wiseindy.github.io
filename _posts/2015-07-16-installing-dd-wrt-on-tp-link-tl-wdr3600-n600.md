@@ -3,6 +3,7 @@ id: 886
 title: Installing DD-WRT on TP-Link TL-WDR3600 N600
 date: 2015-07-16T04:46:04+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=886
 permalink: /it/installing-dd-wrt-on-tp-link-tl-wdr3600-n600/

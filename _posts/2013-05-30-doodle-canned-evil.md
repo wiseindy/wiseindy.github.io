@@ -3,6 +3,7 @@ id: 349
 title: 'Doodle: Canned Evil'
 date: 2013-05-30T19:55:01+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=349
 permalink: /doodles/doodle-canned-evil/

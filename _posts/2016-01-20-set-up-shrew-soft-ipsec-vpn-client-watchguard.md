@@ -3,6 +3,7 @@ id: 1060
 title: How to set up Shrew Soft IPSec VPN Client for WatchGuard
 date: 2016-01-20T06:36:14+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=1060
 permalink: /it/set-up-shrew-soft-ipsec-vpn-client-watchguard/

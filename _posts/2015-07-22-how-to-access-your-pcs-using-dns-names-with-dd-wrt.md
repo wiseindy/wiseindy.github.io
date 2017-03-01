@@ -3,6 +3,7 @@ id: 915
 title: How to access your PCs using DNS names with DD-WRT
 date: 2015-07-22T02:53:06+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=915
 permalink: /it/how-to-access-your-pcs-using-dns-names-with-dd-wrt/

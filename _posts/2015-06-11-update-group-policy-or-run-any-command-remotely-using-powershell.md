@@ -3,6 +3,7 @@ id: 625
 title: Update group policy (or run any command) remotely using Powershell
 date: 2015-06-11T10:34:55+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=625
 permalink: /it/update-group-policy-or-run-any-command-remotely-using-powershell/

@@ -3,6 +3,7 @@ id: 78
 title: 'Doodle: &#8220;Just had lunch&#8221;'
 date: 2013-04-28T11:04:34+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=78
 permalink: /doodles/doodle-just-had-lunch/

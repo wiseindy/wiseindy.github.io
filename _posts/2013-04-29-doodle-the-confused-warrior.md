@@ -3,6 +3,7 @@ id: 186
 title: 'Doodle: &#8220;The Confused Warrior&#8221;'
 date: 2013-04-29T22:17:46+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=186
 permalink: /doodles/doodle-the-confused-warrior/

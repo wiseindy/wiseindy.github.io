@@ -3,6 +3,7 @@ id: 849
 title: How to import .CSV as external contacts in Exchange?
 date: 2015-06-22T09:00:59+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=849
 permalink: /it/how-to-import-csv-as-external-contacts-in-exchange/

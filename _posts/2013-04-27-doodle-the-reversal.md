@@ -3,6 +3,7 @@ id: 44
 title: 'Doodle: &#8220;The Reversal&#8221;'
 date: 2013-04-27T11:08:42+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=44
 permalink: /doodles/doodle-the-reversal/

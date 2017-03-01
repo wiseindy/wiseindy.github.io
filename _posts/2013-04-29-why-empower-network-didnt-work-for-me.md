@@ -3,6 +3,7 @@ id: 161
 title: 'Why Empower Network didn&#8217;t work for me.'
 date: 2013-04-29T17:48:46+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=161
 permalink: /blog/why-empower-network-didnt-work-for-me/

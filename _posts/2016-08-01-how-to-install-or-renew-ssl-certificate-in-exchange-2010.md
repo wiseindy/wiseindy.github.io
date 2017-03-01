@@ -3,6 +3,7 @@ id: 1025
 title: How to install or renew SSL certificate in Exchange 2010
 date: 2016-08-01T08:00:08+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=1025
 permalink: /it/how-to-install-or-renew-ssl-certificate-in-exchange-2010/

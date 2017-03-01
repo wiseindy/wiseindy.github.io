@@ -3,6 +3,7 @@ id: 70
 title: 'Doodle: &#8220;Hello, Human&#8221;'
 date: 2013-04-28T09:32:33+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=70
 permalink: /doodles/doodle-hello-human/

@@ -3,6 +3,7 @@ id: 877
 title: 'Virtual Machines: Snapshots aren&#8217;t backups'
 date: 2015-08-23T06:50:33+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=877
 permalink: /it/virtual-machines-snapshots-arent-backups/

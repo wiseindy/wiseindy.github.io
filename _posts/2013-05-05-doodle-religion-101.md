@@ -3,6 +3,7 @@ id: 196
 title: 'Doodle: &#8220;Religion 101&#8221;'
 date: 2013-05-05T10:57:29+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=196
 permalink: /doodles/doodle-religion-101/

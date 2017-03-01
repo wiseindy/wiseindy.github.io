@@ -3,6 +3,7 @@ id: 59
 title: 'Doodle: &#8220;Sup&#8221;'
 date: 2013-04-28T09:21:55+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=59
 permalink: /doodles/doodle-sup/

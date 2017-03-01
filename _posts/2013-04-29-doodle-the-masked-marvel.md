@@ -3,6 +3,7 @@ id: 182
 title: 'Doodle: &#8220;The Masked Marvel&#8221;'
 date: 2013-04-29T22:16:31+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.com/?p=182
 permalink: /doodles/doodle-the-masked-marvel/

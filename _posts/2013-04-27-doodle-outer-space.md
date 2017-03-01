@@ -3,6 +3,7 @@ id: 37
 title: 'Doodle: &#8220;Outer Space&#8221;'
 date: 2013-04-27T10:48:18+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=37
 permalink: /doodles/doodle-outer-space/

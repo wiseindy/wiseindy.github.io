@@ -3,6 +3,7 @@ id: 381
 title: 'How to set up WSUS on Windows Server 2012 R2 &#8211; A Step-by-Step Guide'
 date: 2015-06-14T08:21:40+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: https://wiseindy.wordpress.com/?p=381
 permalink: /it/how-to-set-up-wsus-on-windows-server-2012-r2-a-step-by-step-guide/
