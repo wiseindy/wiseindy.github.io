@@ -3,6 +3,7 @@ id: 1232
 title: How to install megatools in Ubuntu 14.04.5 LTS (Trusty Tahr)
 date: 2016-10-09T05:43:44+00:00
 author: wiseindy
+comments: true
 layout: post
 guid: https://wiseindy.com/?p=1232
 permalink: /it/how-to-install-megatools-in-ubuntu-14-04-5-lts-trusty-tahr/
