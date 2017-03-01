@@ -15,25 +15,7 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
-  {% include sidebar.html %}
-
-  {% assign loopindex = forloop.index %}
-  {% if loopindex == 3 %}
-  <div>
-  {% include adsense-home.html %}
-  </div>
-  {% endif %}
-  {% if loopindex == 5 %}
-  <div>
-  {% include adsense-home.html %}
-  </div>
-  {% endif %}
-  {% if loopindex == 7 %}
-  <div>
-  {% include adsense-home.html %}
-  </div>
-  {% endif %}
-  
+  {% include sidebar.html %}  
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 class="page__title">{{ page.title }}</h1>

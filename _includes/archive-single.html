@@ -11,6 +11,24 @@
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
+
+  {% assign loopindex = forloop.index %}
+  {% if loopindex == 3 %}
+  <div>
+  {% include adsense-home.html %}
+  </div>
+  {% endif %}
+  {% if loopindex == 5 %}
+  <div>
+  {% include adsense-home.html %}
+  </div>
+  {% endif %}
+  {% if loopindex == 7 %}
+  <div>
+  {% include adsense-home.html %}
+  </div>
+  {% endif %}
+
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
