@@ -9,7 +9,7 @@ guid: http://wiseindy.com/?p=877
 permalink: /it/virtual-machines-snapshots-arent-backups/
 header:
   image: /wp-content/uploads/2015/08/virtual-machines-snapshots-are-not-backups.jpg
-  teaser: /images/featured/featured-snapshotsbackups.jpg
+  teaser: /assets/images/featured/featured-snapshotsbackups.jpg
 categories:
   - IT
 ---

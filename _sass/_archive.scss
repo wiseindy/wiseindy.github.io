@@ -67,8 +67,19 @@
   }
 }
 
+.archive__item-teaser-mini {
+  border-radius: $border-radius;
+  overflow: hidden;
+  width: 100px;
+  height: 75px;
+  margin: 0 10px 0 0;
+  display: flex;
+  flex: 0 0 100px;
+  border: 1px solid #dddddd;
+}
+
 .archive__item:hover {
-  .archive__item-teaser {
+  .archive__item-teaser, .archive__item-teaser-mini {
     box-shadow: 0 0 10px rgba(#000, 0.25);
   }
 

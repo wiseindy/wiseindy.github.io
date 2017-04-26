@@ -11,7 +11,7 @@ dsq_thread_id:
   - "5585733448"
 header:
   image: /wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account.jpg
-  teaser: /images/featured/featured-googleappsdomain.jpg
+  teaser: /assets/images/featured/featured-googleappsdomain.jpg
 categories:
   - Guides
   - IT

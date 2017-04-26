@@ -11,7 +11,7 @@ dsq_thread_id:
   - "5585733469"
 header:
   image: /wp-content/uploads/2015/06/windows-server-update-services.jpg
-  teaser: /images/featured/featured-wsus.jpg
+  teaser: /assets/images/featured/featured-wsus.jpg
 categories:
   - Guides
   - IT

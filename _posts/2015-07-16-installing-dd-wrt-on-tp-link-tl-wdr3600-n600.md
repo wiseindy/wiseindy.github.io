@@ -17,7 +17,7 @@ dsq_thread_id:
   - "5585733411"
 header:
   image: /wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-header.jpg
-  teaser: /images/featured/featured-installddwrt.jpg
+  teaser: /assets/images/featured/featured-installddwrt.jpg
 categories:
   - Guides
   - IT

@@ -9,7 +9,7 @@ guid: http://wiseindy.com/?p=625
 permalink: /it/update-group-policy-or-run-any-command-remotely-using-powershell/
 header:
   image: /wp-content/uploads/2015/06/poweshell.jpg
-  teaser: /images/featured/featured-powershell.jpg
+  teaser: /assets/images/featured/featured-powershell.jpg
 categories:
   - IT
   - Powershell

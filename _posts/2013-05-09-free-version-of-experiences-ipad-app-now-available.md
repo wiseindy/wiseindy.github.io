@@ -1,9 +1,8 @@
 ---
 id: 218
-title: 'Free version of &#8220;Experiences&#8221; iPad app now available!'
+title: 'Free version of Experiences iPad app now available'
 date: 2013-05-09T16:05:15+00:00
 author: wiseindy
-v
 layout: post
 guid: http://wiseindy.com/?p=218
 permalink: /blog/free-version-of-experiences-ipad-app-now-available/

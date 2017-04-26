@@ -9,7 +9,7 @@ guid: http://wiseindy.com/?p=915
 permalink: /it/how-to-access-your-pcs-using-dns-names-with-dd-wrt/
 header:
   image: /wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt.jpg
-  teaser: /images/featured/featured-dnsnames.jpg
+  teaser: /assets/images/featured/featured-dnsnames.jpg
 categories:
   - Guides
   - IT

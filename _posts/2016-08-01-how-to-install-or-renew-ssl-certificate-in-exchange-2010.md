@@ -11,7 +11,7 @@ dsq_thread_id:
   - "5585733524"
 header:
   image: /wp-content/uploads/2015/08/how-to-install-ssl-certificate-in-exchange-2010.jpg
-  teaser: /images/featured/featured-sslexchange.jpg
+  teaser: /assets/images/featured/featured-sslexchange.jpg
 categories:
   - Exchange
   - Guides

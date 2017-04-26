@@ -11,7 +11,7 @@ dsq_thread_id:
   - "5585733521"
 header:
   image: /wp-content/uploads/2015/06/convert-physical-machine-to-virtual-machine-using-vmware-vcenter-converter.jpg
-  teaser: /images/featured/featured-p2v.jpg
+  teaser: /assets/images/featured/featured-p2v.jpg
 categories:
   - Guides
   - IT

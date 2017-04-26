@@ -9,7 +9,7 @@ guid: http://wiseindy.com/?p=868
 permalink: /blog/why-should-you-virtualize-even-a-single-server/
 header:
   image: /wp-content/uploads/2015/07/why-should-you-virtualize-even-a-single-server.jpg
-  teaser: /images/featured/featured-whyvirtualize.jpg
+  teaser: /assets/images/featured/featured-whyvirtualize.jpg
 categories:
   - Blog
   - IT

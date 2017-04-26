@@ -9,7 +9,7 @@ guid: http://wiseindy.com/?p=849
 permalink: /it/how-to-import-csv-as-external-contacts-in-exchange/
 header:
   image: /wp-content/uploads/2015/06/import-csv-contacts-exchange.jpeg
-  teaser: /images/featured/featured-csv.jpg
+  teaser: /assets/images/featured/featured-csv.jpg
 categories:
   - Guides
   - IT

@@ -9,7 +9,7 @@ guid: http://wiseindy.com/?p=827
 permalink: /it/how-to-add-ms-sql-server-as-an-odbc-data-source/
 header:
   image: /wp-content/uploads/2015/06/how-to-add-odbc-data-source_microsoft_sql_server.jpg
-  teaser: /images/featured/featured-odbc.jpg
+  teaser: /assets/images/featured/featured-odbc.jpg
 categories:
   - Guides
   - IT
