@@ -62,6 +62,8 @@ Click on **For developers** and enable **Developer mode**. If it asks you to res
 
 ![Enable developer mode in Windows 10](/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-005.png "Select For developers and enable developer mode")
 
+**Note:** [If you get an error message **Developer mode package failed to install. Error code 0x80004005** while trying to enable developer mode, please click here to see how to fix it](/it/windows-10-developer-mode-fix-error-0x80004005/)
+
 ## Step 3:
 
 Now, let's enable **Windows Subsystem for Linux**. Click the **Start** button and search for **Turn Windows features on or off**.
