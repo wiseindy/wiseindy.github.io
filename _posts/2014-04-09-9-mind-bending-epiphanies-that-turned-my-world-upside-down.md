@@ -5,7 +5,6 @@ date: 2014-04-09T13:15:35+00:00
 author: wiseindy
 layout: post
 guid: http://wiseindy.com/?p=364
-permalink: /interesting/9-mind-bending-epiphanies-that-turned-my-world-upside-down/
 publicize_twitter_user:
   - WiseIndy
   - WiseIndy
@@ -16,6 +15,7 @@ dsq_thread_id:
   - "5585733477"
 header:
   image: /wp-content/uploads/2014/04/iss007e10807_darker.jpg
+  teaser: /wp-content/uploads/2014/04/iss007e10807_darker.jpg
 categories:
   - Interesting
 tags:

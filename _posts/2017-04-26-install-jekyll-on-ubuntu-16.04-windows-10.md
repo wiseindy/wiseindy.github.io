@@ -4,12 +4,10 @@ date: 2017-04-26T11:00:00+00:00
 author: wiseindy
 comments: true
 layout: post
-permalink: /it/install-jekyll-on-ubuntu-16.04-windows-10/
 header:
   image: /assets/images/featured/featured-jekyll-full.jpg
   teaser: /assets/images/featured/featured-jekyll.jpg
 categories:
-  - Guides
   - IT
 tags:
   - jekyll
@@ -24,6 +22,7 @@ tags:
   - ubuntu
   - static
   - static site generator
+  - Guides
 ---
 
 This guide will show you step by step how to install Jekyll 3.4.3 on a machine running Ubuntu or Windows 10.

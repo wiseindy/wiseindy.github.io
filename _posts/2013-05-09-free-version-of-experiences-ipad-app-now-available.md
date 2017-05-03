@@ -11,6 +11,7 @@ publicize_twitter_user:
   - WiseIndy
 header:
   image: /wp-content/uploads/2013/05/free-version-of-experiences.jpg
+  teaser: /wp-content/uploads/2013/05/free-version-of-experiences.jpg
 categories:
   - Blog
 tags:

@@ -6,7 +6,6 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=161
-permalink: /blog/why-empower-network-didnt-work-for-me/
 publicize_twitter_user:
   - WiseIndy
   - WiseIndy
@@ -17,6 +16,7 @@ dsq_thread_id:
   - "5585733432"
 header:
   image: /wp-content/uploads/2013/05/empower-network-fail.jpg
+  teaser: /wp-content/uploads/2013/05/empower-network-fail.jpg
 categories:
   - Blog
 tags:

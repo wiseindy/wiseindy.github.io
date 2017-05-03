@@ -6,15 +6,12 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=1025
-permalink: /it/how-to-install-or-renew-ssl-certificate-in-exchange-2010/
 dsq_thread_id:
   - "5585733524"
 header:
   image: /wp-content/uploads/2015/08/how-to-install-ssl-certificate-in-exchange-2010.jpg
   teaser: /assets/images/featured/featured-sslexchange.jpg
 categories:
-  - Exchange
-  - Guides
   - IT
 tags:
   - certificate
@@ -31,6 +28,7 @@ tags:
   - signing
   - ssl
   - trusted
+  - Guides
 ---
 You will need to create and assign a new SSL certificate if you're putting up a new Exchange server into production or renewing it for an existing server. The steps are fairly straightforward, however it may seem daunting and completely foreign for new users who aren't familiar with certificates.
 

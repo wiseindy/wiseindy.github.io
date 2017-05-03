@@ -6,12 +6,12 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=78
-permalink: /doodles/doodle-just-had-lunch/
+header:
+  teaser: /wp-content/uploads/2013/04/just-had-lunch.png
 publicize_twitter_user:
   - WiseIndy
   - WiseIndy
 categories:
-  - Complete Illustrations
   - Doodles
 tags:
   - full

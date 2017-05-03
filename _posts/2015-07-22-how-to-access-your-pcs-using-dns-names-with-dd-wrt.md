@@ -6,14 +6,11 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=915
-permalink: /it/how-to-access-your-pcs-using-dns-names-with-dd-wrt/
 header:
   image: /wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt.jpg
   teaser: /assets/images/featured/featured-dnsnames.jpg
 categories:
-  - Guides
   - IT
-  - Networking
 tags:
   - cmd
   - connection-specific DNS Suffix
@@ -37,6 +34,8 @@ tags:
   - release
   - renew
   - resolve
+  - networking
+  - Guides
 ---
 Pretty sure you must've noticed it
 

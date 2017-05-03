@@ -6,7 +6,8 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=37
-permalink: /doodles/doodle-outer-space/
+header:
+  teaser: /wp-content/uploads/2013/04/outer_space1.png
 publicize_twitter_user:
   - WiseIndy
   - WiseIndy
@@ -15,7 +16,6 @@ publicize_reach:
   - 'a:2:{s:7:"twitter";a:1:{i:3482075;i:59;}s:2:"wp";a:1:{i:0;i:0;}}'
 categories:
   - Doodles
-  - Rough Sketches
 format: image
 ---
 <img class="alignnone size-full wp-image-42" alt="Outer_Space" src="http://wiseindy.com/wp-content/uploads/2013/04/outer_space1.png" width="960" height="1494" />

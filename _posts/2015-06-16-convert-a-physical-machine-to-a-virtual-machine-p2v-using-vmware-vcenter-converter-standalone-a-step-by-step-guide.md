@@ -6,14 +6,12 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=707
-permalink: /it/convert-a-physical-machine-to-a-virtual-machine-p2v-using-vmware-vcenter-converter-standalone-a-step-by-step-guide/
 dsq_thread_id:
   - "5585733521"
 header:
   image: /wp-content/uploads/2015/06/convert-physical-machine-to-virtual-machine-using-vmware-vcenter-converter.jpg
   teaser: /assets/images/featured/featured-p2v.jpg
 categories:
-  - Guides
   - IT
 tags:
   - bare metal
@@ -32,6 +30,7 @@ tags:
   - vmware
   - vsphere
   - windows server
+  - Guides
 ---
 In this guide, I will walk you through a step-by-step procedure to convert my physical, bare-metal Windows Server 2003 to a virtual machine. We will be doing a remote hot cloning, i.e., virtualizing a powered on physical machine.
 

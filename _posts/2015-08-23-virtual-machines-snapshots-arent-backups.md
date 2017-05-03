@@ -6,12 +6,16 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=877
-permalink: /it/virtual-machines-snapshots-arent-backups/
 header:
   image: /wp-content/uploads/2015/08/virtual-machines-snapshots-are-not-backups.jpg
   teaser: /assets/images/featured/featured-snapshotsbackups.jpg
 categories:
   - IT
+tags:
+  - Guides
+  - virtual machines
+  - backup
+  - snapshot
 ---
 Backups, Snapshots and Archives. They are three different things, however they're frequently confused to be the same. Does the advent of virtualization mean traditional backups can be replaced by new data protection methods such as snapshots?
 

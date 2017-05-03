@@ -6,7 +6,6 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=886
-permalink: /it/installing-dd-wrt-on-tp-link-tl-wdr3600-n600/
 enclosure:
   - |
     http://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-05.webm
@@ -19,9 +18,7 @@ header:
   image: /wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-header.jpg
   teaser: /assets/images/featured/featured-installddwrt.jpg
 categories:
-  - Guides
   - IT
-  - Networking
 tags:
   - custom firmware
   - dd-wrt
@@ -37,6 +34,7 @@ tags:
   - tp-link
   - wdr3600
   - wl-wdr3600
+  - Guides
 ---
 <a target="_blank" href="https://en.wikipedia.org/wiki/DD-WRT" target="_blank">DD-WRT</a> is a third-party firmware project that is designed to replace the original firmware for commercial wireless routers and wireless access points. It is a Linux-based firmware and is a solid alternative to the original firmware in your router.
 

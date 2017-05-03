@@ -6,7 +6,8 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=191
-permalink: /doodles/doodle-the-vampire/
+header:
+  teaser: /wp-content/uploads/2013/04/the_vampire.png
 publicize_reach:
   - 'a:2:{s:7:"twitter";a:1:{i:3482075;i:59;}s:2:"wp";a:1:{i:0;i:2;}}'
   - 'a:2:{s:7:"twitter";a:1:{i:3482075;i:59;}s:2:"wp";a:1:{i:0;i:2;}}'
@@ -14,7 +15,6 @@ publicize_twitter_user:
   - WiseIndy
   - WiseIndy
 categories:
-  - Complete Illustrations
   - Doodles
 tags:
   - illustration

@@ -4,12 +4,10 @@ date: 2017-04-27T12:00:00+00:00
 author: wiseindy
 comments: true
 layout: post
-permalink: /it/install-openvpn-ubuntu-1404/
 header:
   image: /assets/images/featured/featured-openvpn-full.jpg
   teaser: /assets/images/featured/featured-openvpn.jpg
 categories:
-  - Guides
   - IT
 tags:
   - openvpn
@@ -20,6 +18,7 @@ tags:
   - vpn
   - pia
   - vps
+  - guides
 ---
 
 This is a detailed & step-by-step guide that will show you how to install and configure OpenVPN on Ubuntu 14.04. You can use OpenVPN to access the Internet safely and securely while on the move. To learn more about OpenVPN, you can check out the [Wikipedia link](https://en.wikipedia.org/wiki/OpenVPN) or read about it on the [official site](https://openvpn.net/

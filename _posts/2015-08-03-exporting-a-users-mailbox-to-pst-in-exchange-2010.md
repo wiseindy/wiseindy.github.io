@@ -6,15 +6,11 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=947
-permalink: /it/exporting-a-users-mailbox-to-pst-in-exchange-2010/
 header:
   image: /wp-content/uploads/2015/08/Mailbox.jpg
   teaser: /assets/images/featured/featured-exportmailbox.jpg
 categories:
-  - Exchange
-  - Guides
   - IT
-  - Powershell
 tags:
   - emc
   - exchange
@@ -27,6 +23,7 @@ tags:
   - microsoft exchange
   - powershell
   - pst
+  - Guides
 ---
 A mailbox export request is a process of exporting mailbox or archive data to a <code>.pst</code> file. It's very simple to do with Exchange Management Shell.
 

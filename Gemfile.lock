@@ -19,9 +19,14 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
+    amp-jekyll (1.0.1)
+      fastimage (>= 1.8.0)
+      jekyll (~> 3.0)
+      nokogiri (>= 1.6.0)
     colorator (1.1.0)
     faraday (0.12.1)
       multipart-post (>= 1.2, < 3)
+    fastimage (2.1.0)
     ffi (1.9.18)
     ffi (1.9.18-x64-mingw32)
     forwardable-extended (2.6.0)
@@ -94,6 +99,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  amp-jekyll
   bundler (~> 1.12)
   minimal-mistakes-jekyll!
   rake (~> 10.0)

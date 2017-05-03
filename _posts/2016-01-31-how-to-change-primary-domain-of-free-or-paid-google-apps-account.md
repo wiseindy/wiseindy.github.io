@@ -6,14 +6,12 @@ author: Wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=1094
-permalink: /it/how-to-change-primary-domain-of-free-or-paid-google-apps-account/
 dsq_thread_id:
   - "5585733448"
 header:
   image: /wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account.jpg
   teaser: /assets/images/featured/featured-googleappsdomain.jpg
 categories:
-  - Guides
   - IT
 tags:
   - domain
@@ -21,6 +19,7 @@ tags:
   - google apps
   - google apps for business
   - google apps for work
+  - Guides
 ---
 Back in the day, Google Apps for Business (Work) was free for up to 10 users. Sadly, that is no longer the case. If you are one of the lucky ones to have grabbed an account during those times and you're now looking for ways to change that domain, well, you've come to the right place. This guide will show you how to do this AND it's applicable for both free Google Apps accounts and paid Google Apps subscriptions.
 

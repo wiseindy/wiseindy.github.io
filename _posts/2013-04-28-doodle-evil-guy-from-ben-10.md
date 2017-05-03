@@ -6,9 +6,9 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=74
-permalink: /doodles/doodle-evil-guy-from-ben-10/
+header:
+  teaser: /wp-content/uploads/2013/04/evil-guy-from-ben-10.png
 categories:
-  - Complete Illustrations
   - Doodles
 format: image
 ---

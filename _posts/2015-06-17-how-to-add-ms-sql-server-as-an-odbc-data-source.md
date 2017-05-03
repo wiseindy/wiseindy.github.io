@@ -6,12 +6,10 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=827
-permalink: /it/how-to-add-ms-sql-server-as-an-odbc-data-source/
 header:
   image: /wp-content/uploads/2015/06/how-to-add-odbc-data-source_microsoft_sql_server.jpg
   teaser: /assets/images/featured/featured-odbc.jpg
 categories:
-  - Guides
   - IT
 tags:
   - connection
@@ -23,6 +21,7 @@ tags:
   - odbc
   - sql
   - sql server
+  - Guides
 ---
 <a target="_blank" href="https://en.wikipedia.org/wiki/Open_Database_Connectivity" target="_blank">ODBC</a> stands for <a target="_blank" href="https://en.wikipedia.org/wiki/Open_Database_Connectivity" target="_blank">Open Database Connectivity</a>. It is an API that allows you to access database systems. This connection was developed with an aim to make it independent of database systems and operating systems.
 
@@ -45,7 +44,7 @@ In this quick guide, we will see how a connection can be established to a Micro
 <h3>Step 1:</h3>
 Click the <strong>Start</strong> button. Either navigate to <strong>Administrative Tools &gt; Data Sources (ODBC)</strong> or simply search for <strong>ODBC</strong>.
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_02.png"><img class="alignnone wp-image-829 size-medium" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_02-163x300.png" alt="how-to-add-odbc-data-source_02" /></a>  <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_01.png"><img class="alignnone wp-image-828 size-medium" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_01-250x300.png" alt="How to add ODBC data source - Microsoft SQL Server" /></a>
+<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_02.png"><img class="alignnone wp-image-829 size-medium" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_02.png" alt="how-to-add-odbc-data-source_02" /></a>  <a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_01.png"><img class="alignnone wp-image-828 size-medium" src="http://wiseindy.com/wp-content/uploads/2015/06/how-to-add-odbc-data-source_01.png" alt="How to add ODBC data source - Microsoft SQL Server" /></a>
 <h3>Step 2:</h3>
 In the <strong>ODBC Data Source Administrator</strong> window, click <strong>Add</strong>.
 

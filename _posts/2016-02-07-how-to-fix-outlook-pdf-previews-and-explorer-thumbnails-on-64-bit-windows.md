@@ -6,14 +6,12 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=1157
-permalink: /it/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows/
 dsq_thread_id:
   - "5585733488"
 header:
   image: /wp-content/uploads/2016/02/how-to-fix-outlook-pdf-previews-and-explorer-thumbnails-on-64-bit-windows.jpg
   teaser: /assets/images/featured/featured-outlookpreview.jpg
 categories:
-  - Guides
   - IT
 tags:
   - "64"
@@ -37,6 +35,7 @@ tags:
   - windows 8
   - windows 8.1
   - x64
+  - Guides
 ---
 “This file cannot be previewed because of an error with the following previewer: PDF Preview Handler for Vista”.
 

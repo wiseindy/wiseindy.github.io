@@ -4,12 +4,10 @@ date: 2017-04-26T05:43:44+00:00
 author: wiseindy
 comments: true
 layout: post
-permalink: /it/enabling-linux-bash-shell-in-windows-10/
 header:
   image: /assets/images/featured/featured-bash-full.jpg
   teaser: /assets/images/featured/featured-bash.jpg
 categories:
-  - Guides
   - IT
 tags:
   - windows 10
@@ -21,6 +19,7 @@ tags:
   - linux
   - ubuntu
   - ubuntu 14.04
+  - Guides
 ---
 
 Windows 10 (the new Anniversary update, specifically) has a new feature called "Windows Subsystem for Linux". It's basically a full-fledged Ubuntu based bash shell running directly under Windows. Pretty cool, eh? This guide will show you how exactly to enable it.

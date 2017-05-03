@@ -6,14 +6,11 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=849
-permalink: /it/how-to-import-csv-as-external-contacts-in-exchange/
 header:
   image: /wp-content/uploads/2015/06/import-csv-contacts-exchange.jpeg
   teaser: /assets/images/featured/featured-csv.jpg
 categories:
-  - Guides
   - IT
-  - Powershell
 tags:
   - cmdlet
   - contacts
@@ -32,6 +29,7 @@ tags:
   - windows
   - windows server
   - windows server 2008 r2
+  - Guides
 ---
 <h3>What you need:</h3>
 <ul>

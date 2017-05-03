@@ -6,14 +6,11 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=1060
-permalink: /it/set-up-shrew-soft-ipsec-vpn-client-watchguard/
 header:
   image: /wp-content/uploads/2016/01/header-set-up-shrew-soft-ipsec-vpn-client-watchguard.jps_.jpg
   teaser: /assets/images/featured/featured-shrew.jpg
 categories:
-  - Firewall
   - IT
-  - Networking
 tags:
   - firebox
   - firewall
@@ -26,6 +23,7 @@ tags:
   - vpn
   - watchguard
   - xtm
+  - Guides
 ---
 This guide will show you how to enable Mobile VPN with IPSec for WatchGuard Firebox M300. It's a pretty straightfoward process, however it took me quite a while to figure out initially. Hope this guide makes it easier for you.
 

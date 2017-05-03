@@ -6,7 +6,8 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=196
-permalink: /doodles/doodle-religion-101/
+header:
+  teaser: /wp-content/uploads/2013/05/religion_101.png
 publicize_twitter_user:
   - WiseIndy
   - WiseIndy
@@ -16,7 +17,6 @@ tagazine-media:
 dsq_thread_id:
   - "5585733499"
 categories:
-  - Complete Illustrations
   - Doodles
 tags:
   - religion

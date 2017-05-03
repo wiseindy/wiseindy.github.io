@@ -6,14 +6,12 @@ author: wiseindy
 comments: true
 layout: post
 guid: https://wiseindy.com/?p=1232
-permalink: /it/how-to-install-megatools-in-ubuntu-14-04-5-lts-trusty-tahr/
 dsq_thread_id:
   - "5585733554"
 header:
   image: /wp-content/uploads/2016/10/how-to-install-megatools-in-ubuntu-14-04-5-lts-trusty-tahr.jpg
   teaser: /assets/images/featured/featured-megatools.jpg
 categories:
-  - Guides
   - IT
 tags:
   - "14.04"
@@ -36,6 +34,7 @@ tags:
   - megatools
   - ubuntu
   - ubuntu 14.04
+  - Guides
 ---
 Megatools is a great collection of command line utilities that allow you to interact with your <a target="_blank" href="https://mega.nz">mega.nz</a> account directly from the command line. You can directly download using the cli on your Ubuntu machine. They are a great set of tools, however, installing them does get confusing for a new Linux user. This guide will show you how to install it and set it up in no time.
 

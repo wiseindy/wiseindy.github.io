@@ -4,12 +4,10 @@ date: 2017-04-26T10:00:00+00:00
 author: wiseindy
 comments: true
 layout: post
-permalink: /it/windows-10-developer-mode-fix-error-0x80004005/
 header:
   image: /assets/images/featured/featured-developer-full.jpg
   teaser: /assets/images/featured/featured-developer.jpg
 categories:
-  - Guides
   - IT
 tags:
   - windows 10
@@ -25,6 +23,7 @@ tags:
   - regedit
   - error 0x80004005
   - 0x80004005
+  - Guides
 ---
 
 "Developer mode package failed to install. Error code 0x80004005". A few people, including me, faced issues when trying to enable developer mode in Windows 10. This guide will show you how to fix it.

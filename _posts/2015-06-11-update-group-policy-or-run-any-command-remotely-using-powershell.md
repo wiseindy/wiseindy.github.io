@@ -6,18 +6,17 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=625
-permalink: /it/update-group-policy-or-run-any-command-remotely-using-powershell/
 header:
   image: /wp-content/uploads/2015/06/poweshell.jpg
   teaser: /assets/images/featured/featured-powershell.jpg
 categories:
   - IT
-  - Powershell
 tags:
   - gpupdate
   - group policy
   - powershell
   - pstools
+  - Guides
 ---
 <p style="text-align: left;">This script allows you to run any command remotely using Powershell on your network. I usually use this to update group policy configurations on all PCs on my network remotely.</p>
 <!--more-->

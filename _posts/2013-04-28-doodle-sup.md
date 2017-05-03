@@ -6,7 +6,8 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.wordpress.com/?p=59
-permalink: /doodles/doodle-sup/
+header:
+  teaser: /wp-content/uploads/2013/04/sup2.png
 publicize_reach:
   - 'a:2:{s:7:"twitter";a:1:{i:3482075;i:60;}s:2:"wp";a:1:{i:0;i:0;}}'
   - 'a:2:{s:7:"twitter";a:1:{i:3482075;i:60;}s:2:"wp";a:1:{i:0;i:0;}}'

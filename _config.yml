@@ -80,7 +80,7 @@ author:
   name             : "Wiseindy"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Sysadmin by day, developer by night."
-  location         : "Earth"
+  location         : "Toronto, ON"
   email            : wiseindy (at) live (dot) com
   uri              : https://wiseindy.com
   bitbucket        :
@@ -97,7 +97,7 @@ author:
   linkedin         :
   pinterest        :
   soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
+  stackoverflow    : "1135804/wiseindy"
   steam            :
   tumblr           :
   twitter          : wiseindy
@@ -105,6 +105,7 @@ author:
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  # spiceworks     : https://community.spiceworks.com/people/inderjotsingh
 
 
 # Reading Files
@@ -172,6 +173,7 @@ sass:
 
 # Outputting
 # permalink: /:categories/:title/
+permalink: /:categories/:title/
 paginate: 7 # amount of posts to show
 paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -184,6 +186,7 @@ gems:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - amp-jekyll
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -194,6 +197,8 @@ whitelist:
   - jemoji
 
 
+ampdir: amp
+  
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)

@@ -6,14 +6,12 @@ author: wiseindy
 comments: true
 layout: post
 guid: https://wiseindy.wordpress.com/?p=381
-permalink: /it/how-to-set-up-wsus-on-windows-server-2012-r2-a-step-by-step-guide/
 dsq_thread_id:
   - "5585733469"
 header:
   image: /wp-content/uploads/2015/06/windows-server-update-services.jpg
   teaser: /assets/images/featured/featured-wsus.jpg
 categories:
-  - Guides
   - IT
 tags:
   - guide
@@ -24,6 +22,7 @@ tags:
   - windows update for business
   - wsus
   - wub
+  - Guides
 ---
 Windows Server Update Services (WSUS) is a free patch management tool by Microsoft. It allows sysadmins to centrally push Microsoft product updates to computers that are running Windows on their network.
 

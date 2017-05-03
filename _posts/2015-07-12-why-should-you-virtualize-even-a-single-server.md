@@ -6,13 +6,11 @@ author: wiseindy
 comments: true
 layout: post
 guid: http://wiseindy.com/?p=868
-permalink: /blog/why-should-you-virtualize-even-a-single-server/
 header:
   image: /wp-content/uploads/2015/07/why-should-you-virtualize-even-a-single-server.jpg
   teaser: /assets/images/featured/featured-whyvirtualize.jpg
 categories:
   - Blog
-  - IT
 tags:
   - abstraction
   - advantages
@@ -37,6 +35,7 @@ tags:
   - windows
   - windows server
   - xenserver
+  - Blog
 ---
 I believe the default mindset these days should be always virtualized. It doesn't matter if you are looking to implement a single server or several. Of course, there may be outlier cases where virtualization cannot be applied (special case hardware, huge computer clusters, etc.). While providing business requirements or planning a new project, start with the "always virtualized" mindset and work from there.
 
