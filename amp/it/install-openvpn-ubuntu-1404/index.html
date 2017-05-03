@@ -1,0 +1,785 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to install OpenVPN server on Ubuntu 14.04 - A Step-by-Step Guide</title>
+    <link rel="canonical" href="http://localhost:4000/it/install-openvpn-ubuntu-1404/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+
+<h1 class="post-title">
+How to install OpenVPN server on Ubuntu 14.04 - A Step-by-Step Guide
+<amp-img src="/assets/images/featured/featured-openvpn-full.jpg" width="1280" height="960" layout="responsive"><noscript><img src="/assets/images/featured/featured-openvpn-full.jpg" width="1280" height="960"></noscript></amp-img>
+</h1>
+
+<amp-ad
+layout="fixed-height"
+height=100
+type="adsense"
+data-ad-client="ca-pub-4196010817129150"
+data-ad-slot="1808458201">
+</amp-ad>
+
+<span>
+2017-04-27 15:00:00 +0300 - wiseindy
+</span>
+<p>This is a detailed &amp; step-by-step guide that will show you how to install and configure OpenVPN on Ubuntu 14.04. You can use OpenVPN to access the Internet safely and securely while on the move. To learn more about OpenVPN, you can check out the <a href="https://en.wikipedia.org/wiki/OpenVPN">Wikipedia link</a> or read about it on the <a href="https://openvpn.net/">official site</a></p>
+
+<!--more-->
+<h2 id="what-you-need">What you need:</h2>
+
+<ul>
+  <li>An Ubuntu 14.04 system.</li>
+  <li>Root access</li>
+  <li>And as always, an internet connection</li>
+</ul>
+
+<p>This guide is split into 4 main sections.
+Don’t worry if the titles look intimidating. If you follow the instructions, it should go smoothly and you should have a functioning OpenVPN server to which you can connect to from anywhere and using any device.</p>
+
+<ol>
+  <li><a href="#part-1">Installation and configuration of OpenVPN server</a></li>
+  <li><a href="#part-2">Creating a Certificate Authority and Server-Side Certificate and Key</a></li>
+  <li><a href="#part-3">Generate Certificates and Keys for your devices</a></li>
+  <li><a href="#part-4">Create a Unified OpenVPN Profile for each of your devices</a></li>
+</ol>
+
+<h1 id="part-1">Part 1</h1>
+
+<h2 id="installation-and-configuration-of-openvpn-server">Installation and configuration of OpenVPN server</h2>
+
+<h3 id="step-11">Step 1.1:</h3>
+
+<p>First, update your package lists and then install the <code class="highlighter-rouge">openvpn</code> and <code class="highlighter-rouge">easy-rsa</code> package.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>sudo apt-get update
+sudo apt-get install openvpn easy-rsa
+</code></pre>
+</div>
+
+<h3 id="step-12">Step 1.2:</h3>
+
+<p>From now onwards, all the steps below have to be run as <code class="highlighter-rouge">root</code>. So, go ahead and login as root.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>su
+</code></pre>
+</div>
+
+<h3 id="step-13">Step 1.3:</h3>
+
+<p>Lets extract the sample VPN server configuration file to this location: <code class="highlighter-rouge">/etc/openvpn</code></p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz &gt; /etc/openvpn/server.conf
+</code></pre>
+</div>
+
+<p><em>Note: <code class="highlighter-rouge">gunzip</code> is a utility that uncompresses a <code class="highlighter-rouge">gzip</code> file. <code class="highlighter-rouge">gz</code> or <code class="highlighter-rouge">.Z</code> is the extension for <code class="highlighter-rouge">gzip</code> files.</em></p>
+
+<h3 id="step-14">Step 1.4:</h3>
+
+<p>Still as root, open this file.</p>
+
+<p>I prefer <code class="highlighter-rouge">vim</code> to open files on ubuntu. If you prefer <code class="highlighter-rouge">nano</code> instead, you can use that too.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>vi /etc/openvpn/server.conf
+</code></pre>
+</div>
+
+<h3 id="step-15">Step 1.5:</h3>
+
+<p>Now, we have to modify a few lines in this file.</p>
+
+<p>Search for a section that looks like this</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Diffie hellman parameters.</span>
+<span class="c"># Generate your own with:</span>
+<span class="c">#   openssl dhparam -out dh1024.pem 1024</span>
+<span class="c"># Substitute 2048 for 1024 if you are using</span>
+<span class="c"># 2048 bit keys.</span>
+dh dh1024.pem
+</code></pre>
+</div>
+
+<p>Change <code class="highlighter-rouge">dh1024.pem</code> to <code class="highlighter-rouge">dh2048.pem</code>. This doubles the RSA key length when we generate the server and client keys later in the guide.</p>
+
+<h3 id="step-16">Step 1.6:</h3>
+
+<p>Find and uncomment the line below. To uncomment, simply remove the semicolon <code class="highlighter-rouge">;</code> in front of the line.</p>
+
+<p>Before:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># If enabled, this directive will configure</span>
+<span class="c"># all clients to redirect their default</span>
+<span class="c"># network gateway through the VPN, causing</span>
+<span class="c"># all IP traffic such as web browsing and</span>
+<span class="c"># and DNS lookups to go through the VPN</span>
+<span class="c"># (The OpenVPN server machine may need to NAT</span>
+<span class="c"># or bridge the TUN/TAP interface to the internet</span>
+<span class="c"># in order for this to work properly).</span>
+;push <span class="s2">"redirect-gateway def1 bypass-dhcp"</span>
+</code></pre>
+</div>
+
+<p>After:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># If enabled, this directive will configure</span>
+<span class="c"># all clients to redirect their default</span>
+<span class="c"># network gateway through the VPN, causing</span>
+<span class="c"># all IP traffic such as web browsing and</span>
+<span class="c"># and DNS lookups to go through the VPN</span>
+<span class="c"># (The OpenVPN server machine may need to NAT</span>
+<span class="c"># or bridge the TUN/TAP interface to the internet</span>
+<span class="c"># in order for this to work properly).</span>
+push <span class="s2">"redirect-gateway def1 bypass-dhcp"</span>
+</code></pre>
+</div>
+
+<p>This makes sure that the OpenVPN server will pass the client device’s web traffic to its destination.</p>
+
+<h3 id="step-17">Step 1.7:</h3>
+
+<p>Still in the same file, find and uncomment the following two lines. To uncomment, simply remove the semicolon <code class="highlighter-rouge">;</code> in front of the two lines.</p>
+
+<p>Before:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Certain Windows-specific network settings</span>
+<span class="c"># can be pushed to clients, such as DNS</span>
+<span class="c"># or WINS server addresses.  CAVEAT:</span>
+<span class="c"># http://openvpn.net/faq.html#dhcpcaveats</span>
+<span class="c"># The addresses below refer to the public</span>
+<span class="c"># DNS servers provided by opendns.com.</span>
+;push <span class="s2">"dhcp-option DNS 208.67.222.222"</span>
+;push <span class="s2">"dhcp-option DNS 208.67.220.220"</span>
+</code></pre>
+</div>
+
+<p>After:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Certain Windows-specific network settings</span>
+<span class="c"># can be pushed to clients, such as DNS</span>
+<span class="c"># or WINS server addresses.  CAVEAT:</span>
+<span class="c"># http://openvpn.net/faq.html#dhcpcaveats</span>
+<span class="c"># The addresses below refer to the public</span>
+<span class="c"># DNS servers provided by opendns.com.</span>
+push <span class="s2">"dhcp-option DNS 208.67.222.222"</span>
+push <span class="s2">"dhcp-option DNS 208.67.220.220"</span>
+</code></pre>
+</div>
+
+<p>The two IP addresses above belong to OpenDNS and will be used to lookup DNS request where possible. You can use any DNS service of your choice. Here we have used OpenDNS, and hence their IP addresses are listed in the file.</p>
+
+<h3 id="step-18">Step 1.8:</h3>
+
+<p>This is the last thing to change in the file. Look for this section below and uncomment the two lines by removing the semicolons <code class="highlighter-rouge">;</code></p>
+
+<p>Before:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># You can uncomment this out on</span>
+<span class="c"># non-Windows systems.</span>
+;user nobody
+;group nogroup
+</code></pre>
+</div>
+
+<p>After:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># You can uncomment this out on</span>
+<span class="c"># non-Windows systems.</span>
+user nobody
+group nogroup
+</code></pre>
+</div>
+
+<p>Save and close the file.</p>
+
+<h3 id="step-19">Step 1.9:</h3>
+
+<h4 id="packet-forwarding">Packet Forwarding</h4>
+
+<p>We need to now enable an option that allows the server to forward traffic from client devices out to the Internet. If this is not done, the client traffic will stop at the server. To enable packet forwarding, run this command.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="nb">echo </span>1 &gt; /proc/sys/net/ipv4/ip_forward
+</code></pre>
+</div>
+
+<p>This setting is not yet permanent and will not survive a reboot. To make it permanent, we need to edit the <code class="highlighter-rouge">sysctl.conf</code> file.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>vi /etc/sysctl.conf
+</code></pre>
+</div>
+
+<p>In this file, find and uncomment the following line. To uncomment, remove the <code class="highlighter-rouge">#</code> in front of the line.</p>
+
+<p>Before:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Uncomment the next line to enable packet forwarding for IPv4</span>
+<span class="c">#net.ipv4.ip_forward=1</span>
+</code></pre>
+</div>
+
+<p>After:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Uncomment the next line to enable packet forwarding for IPv4</span>
+net.ipv4.ip_forward<span class="o">=</span>1
+</code></pre>
+</div>
+
+<p>Save the file and exit.</p>
+
+<h3 id="step-110">Step 1.10:</h3>
+
+<h4 id="set-up-firewall-rules-in-the-uncomplicated-firewall-ufw">Set up firewall rules in the Uncomplicated Firewall (ufw)</h4>
+
+<p>We will be using OpenVPN over UDP, so the firewall must allow UDP traffic over port <strong>1194</strong>.</p>
+
+<p>Still as root, enter the following command:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>ufw allow 1194/udp
+</code></pre>
+</div>
+
+<p>Open the firewall’s (ufw) primary configuration file. We habe to set the firewall forwarding policy.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>vi /etc/default/ufw
+</code></pre>
+</div>
+
+<p>Search for the string <code class="highlighter-rouge">DEFAULT_FORWARD_POLICY="DROP"</code> in this file. Change the <code class="highlighter-rouge">DROP</code> to <code class="highlighter-rouge">ACCEPT</code>.</p>
+
+<p>Before:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="nv">DEFAULT_FORWARD_POLICY</span><span class="o">=</span><span class="s2">"DROP"</span>
+</code></pre>
+</div>
+
+<p>After:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="nv">DEFAULT_FORWARD_POLICY</span><span class="o">=</span><span class="s2">"ACCEPT"</span>
+</code></pre>
+</div>
+
+<p>Save the file and exit.</p>
+
+<h3 id="step-111">Step 1.11:</h3>
+
+<p>There’s one more step before we can move on to the next section.</p>
+
+<p>We need to add add additional firewall rules.</p>
+
+<p>Open this file</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>vi /etc/ufw/before.rules
+</code></pre>
+</div>
+
+<p>We will be adding rules for NAT (network address translation) and IP masquerading of connected devices.</p>
+
+<p>Modify this file to look like this.</p>
+
+<p>Before:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c">#</span>
+<span class="c"># rules.before</span>
+<span class="c">#</span>
+<span class="c"># Rules that should be run before the ufw command line added rules. Custom</span>
+<span class="c"># rules should be added to one of these chains:</span>
+<span class="c">#   ufw-before-input</span>
+<span class="c">#   ufw-before-output</span>
+<span class="c">#   ufw-before-forward</span>
+<span class="c">#</span>
+
+<span class="c"># Don't delete these required lines, otherwise there will be errors</span>
+<span class="k">*</span>filter
+</code></pre>
+</div>
+
+<p>After:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c">#</span>
+<span class="c"># rules.before</span>
+<span class="c">#</span>
+<span class="c"># Rules that should be run before the ufw command line added rules. Custom</span>
+<span class="c"># rules should be added to one of these chains:</span>
+<span class="c">#   ufw-before-input</span>
+<span class="c">#   ufw-before-output</span>
+<span class="c">#   ufw-before-forward</span>
+<span class="c">#</span>
+
+<span class="c">#################################</span>
+<span class="c"># START OPENVPN RULES</span>
+<span class="c"># NAT table rules</span>
+<span class="k">*</span>nat
+:POSTROUTING ACCEPT <span class="o">[</span>0:0] 
+<span class="c"># Allow traffic from OpenVPN client to eth0</span>
+-A POSTROUTING -s 10.8.0.0/8 -o eth0 -j MASQUERADE
+COMMIT
+<span class="c"># END OPENVPN RULES</span>
+<span class="c">#################################</span>
+
+<span class="c"># Don't delete these required lines, otherwise there will be errors</span>
+<span class="k">*</span>filter
+</code></pre>
+</div>
+
+<p>Once you’ve added the section, enable the firewall (ufw).</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>ufw <span class="nb">enable</span>
+</code></pre>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    
+   
+
+
+  </div>
+</div>
+
+<h1 id="part-2">Part 2</h1>
+
+<h2 id="creating-a-certificate-authority-and-server-side-certificate-and-key">Creating a Certificate Authority and Server-Side Certificate and Key</h2>
+
+<p>Okay, so we have installed and configured OpenVPN and the firewall settings in the above section. Now, let’s go ahead and create certificates and keys for our new OpenVPN server.</p>
+
+<h4 id="creating-a-certificate-authority-ca">Creating a certificate authority (CA)</h4>
+
+<h3 id="step-21">Step 2.1:</h3>
+
+<p>Make sure you’re still logged in as root.</p>
+
+<p>Copy the Easy-RSA generation scripts to <code class="highlighter-rouge">/etc/openvpn</code></p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>cp -r /usr/share/easy-rsa/ /etc/openvpn
+</code></pre>
+</div>
+
+<h3 id="step-22">Step 2.2:</h3>
+
+<p>Now, create a directory to store our keys.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>mkdir /etc/openvpn/easy-rsa/keys
+</code></pre>
+</div>
+
+<h3 id="step-23">Step 2.3:</h3>
+
+<p>Now we will edit the <code class="highlighter-rouge">vars</code> file and add in some default values for a person or a business. The information that is entered into this file will be copied to the certificates and keys and will help us in identifying them later.</p>
+
+<p>You can put in any values you like. Here is an example.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="nb">export </span><span class="nv">KEY_COUNTRY</span><span class="o">=</span><span class="s2">"CA"</span>
+<span class="nb">export </span><span class="nv">KEY_PROVINCE</span><span class="o">=</span><span class="s2">"ON"</span>
+<span class="nb">export </span><span class="nv">KEY_CITY</span><span class="o">=</span><span class="s2">"Toronto"</span>
+<span class="nb">export </span><span class="nv">KEY_ORG</span><span class="o">=</span><span class="s2">"Wiseindy"</span>
+<span class="nb">export </span><span class="nv">KEY_EMAIL</span><span class="o">=</span><span class="s2">"wiseindy@example.com"</span>
+<span class="nb">export </span><span class="nv">KEY_OU</span><span class="o">=</span><span class="s2">"WiseOU"</span>
+</code></pre>
+</div>
+
+<p>There is one more line to edit in this file before you close it. We need to set the default filename for the server key and certificate. In this tutorial we’ve used the name <code class="highlighter-rouge">server</code> for simplicity. If you’re using a different name, please make sure you replace <code class="highlighter-rouge">server</code> with your custom name in the commands.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="nb">export </span><span class="nv">KEY_NAME</span><span class="o">=</span><span class="s2">"server"</span>
+</code></pre>
+</div>
+
+<p>Save and close the file.</p>
+
+<h3 id="step-24">Step 2.4:</h3>
+
+<p>The next step is to generate the Diffie-Hellman parameters.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>openssl dhparam -out /etc/openvpn/dh2048.pem 2048
+</code></pre>
+</div>
+
+<h3 id="step-25">Step 2.5:</h3>
+
+<p>Now, navigate to the <code class="highlighter-rouge">easy-rsa</code> directory.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="nb">cd</span> /etc/openvpn/easy-rsa
+</code></pre>
+</div>
+
+<h3 id="step-26">Step 2.6:</h3>
+
+<p>Once you’re in the <code class="highlighter-rouge">easy-rsa</code> directory, run the following command to initialize the PKI (Public Key Infrastructure).</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>. ./vars
+</code></pre>
+</div>
+
+<p>Note the <code class="highlighter-rouge">.</code> (dot) and ` ` (space) in front of <code class="highlighter-rouge">./vars</code>.</p>
+
+<p>The above command will output the following:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>NOTE: If you run ./clean-all, I will be doing a rm -rf on /etc/openvpn/easy-rsa/keys
+</code></pre>
+</div>
+
+<p>You can ignore this warning message since we haven’t yet generated anything.</p>
+
+<h3 id="step-27">Step 2.7:</h3>
+
+<p>Let’s clear the working directory of any example keys and start fresh.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>./clean-all
+</code></pre>
+</div>
+
+<h3 id="step-28">Step 2.8:</h3>
+
+<p>We are all set to create our certificate authority now. When you run the following command, it will ask you to confirm the values you had entered in the <code class="highlighter-rouge">vars</code> file in step 2.6. Hit enter to confirm the values.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>./build-ca
+</code></pre>
+</div>
+
+<h4 id="generate-a-certificate-and-key-for-the-server">Generate a Certificate and Key for the Server</h4>
+
+<h3 id="step-29">Step 2.9:</h3>
+
+<p>Well, we now have a certificate authority (CA) set up. Let’s build our server key now.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>./build-key-server server
+</code></pre>
+</div>
+
+<p><em>Note: Note that I’ve used the name <strong>server</strong> in the above command. This is because I’ve set <code class="highlighter-rouge">export KEY_NAME="server"</code> in the <code class="highlighter-rouge">vars</code> file (step 2.6). If you’ve used a different name, make sure you modify the command accordingly</em></p>
+
+<p>When you run this command, you’ll see a similar output as the previous step. You can hit enter to confirm them. However, this time you will see two additional prompts.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>Please enter the following <span class="s1">'extra'</span> attributes
+to be sent with your certificate request
+A challenge password <span class="o">[]</span>:
+An optional company name <span class="o">[]</span>:
+</code></pre>
+</div>
+
+<p>Both of the should be left blank. Hit Enter to continue.</p>
+
+<p>When it prompts you to sign the certificate and commit, type <code class="highlighter-rouge">y</code> for both the prompts and hit enter.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>Sign the certificate? <span class="o">[</span>y/n]  y
+1 out of 1 certificate requests certified, commit? <span class="o">[</span>y/n]  y
+</code></pre>
+</div>
+
+<p>Now you should see the following output. This means that all is good so far.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>Write out database with 1 new entries
+Data Base Updated
+</code></pre>
+</div>
+
+<h3 id="step-210">Step 2.10</h3>
+
+<h4 id="move-the-server-certificates-and-keys">Move the Server Certificates and Keys</h4>
+
+<p>Well, we’ve now generated the server CA, keys and certificate. Let’s copy these over to the correct location <code class="highlighter-rouge">/etc/openvpn/</code>.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>cp /etc/openvpn/easy-rsa/keys/<span class="o">{</span>server.crt,server.key,ca.crt<span class="o">}</span> /etc/openvpn
+</code></pre>
+</div>
+
+<h3 id="step-211">Step 2.11</h3>
+
+<p>Well, guess what? Our OpenVPN server is ready now. Let’s start it.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>service openvpn start
+</code></pre>
+</div>
+
+<h1 id="part-3">Part 3</h1>
+
+<h2 id="generate-certificates-and-keys-for-your-devices">Generate Certificates and Keys for your devices</h2>
+
+<p>In the previous section, we created the key and certificate for our server. We are going to do that for our devices now.</p>
+
+<p>We will build one for a client device called <code class="highlighter-rouge">myphone</code>. You can name your client device anything. Just make sure to substitute the name in the commands that follow.</p>
+
+<h3 id="step-31">Step 3.1:</h3>
+
+<p>You should still be root and still working from this directory <code class="highlighter-rouge">/etc/openvpn/easy-rsa</code>.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>./build-key myphone
+</code></pre>
+</div>
+
+<p>Like in the previous steps, you’ll be asked to confirm the Distinguised Name variables. Hit enter to accept the defaults.</p>
+
+<h3 id="step-32">Step 3.2:</h3>
+
+<p>Now copy the sample client configuration file to the <code class="highlighter-rouge">easy-rsa/keys</code> directory. This file will be used as a template. We will be editing this template file for each of our devices.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>cp /usr/share/doc/openvpn/examples/sample-config-files/client.conf /etc/openvpn/easy-rsa/keys/myphone.ovpn
+</code></pre>
+</div>
+
+<p>You can repeat this section (steps 3.1 and 3.2) for each client device. Just make sure you use a different name for each of your devices (in this case we’ve used <code class="highlighter-rouge">myphone</code>)</p>
+
+<h1 id="part-4">Part 4</h1>
+
+<h2 id="create-a-unified-openvpn-profile-for-each-of-your-devices">Create a Unified OpenVPN Profile for each of your devices</h2>
+
+<p>Now that you have created keys and certificates for your device <code class="highlighter-rouge">myphone</code>, let’s create one unified <code class="highlighter-rouge">.ovpn</code> file which will contain all this information.</p>
+
+<h3 id="step-41">Step 4.1:</h3>
+
+<p>From the <code class="highlighter-rouge">/etc/openvpn/easy-rsa</code> directory, copy the following files to your computer (the one you’re reading this article on). We will be editing these in a text editor (Notepad, TextEdit, etc.).</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>myphone.crt
+myphone.key
+myphone.ovpn
+ca.crt
+</code></pre>
+</div>
+
+<h3 id="step-42">Step 4.2</h3>
+
+<p>Open the <code class="highlighter-rouge">myphone.ovpn</code> file in a text editor like Notepad (Windows) or TextEdit (macOS) or whatever you prefere, really.</p>
+
+<p>Add your server’s IP address to the this section in the beginning of the file. Replace <code class="highlighter-rouge">my-server-1</code> with your server’s IP address.</p>
+
+<p>Before:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># The hostname/IP and port of the server.</span>
+<span class="c"># You can have multiple remote entries</span>
+<span class="c"># to load balance between the servers.</span>
+remote my-server-1 1194
+</code></pre>
+</div>
+
+<p>After:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># The hostname/IP and port of the server.</span>
+<span class="c"># You can have multiple remote entries</span>
+<span class="c"># to load balance between the servers.</span>
+remote 142.189.11.1 1194
+</code></pre>
+</div>
+
+<h3 id="step-43">Step 4.3</h3>
+
+<p>In the same file, scroll down and uncomment this section (This doesn’t apply to Windows, so you can skip it if you’re going to use thie VPN profile on a Windows machine).</p>
+
+<p>Before:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Downgrade privileges after initialization (non-Windows only)</span>
+;user nobody
+;group nogroup
+</code></pre>
+</div>
+
+<p>After:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Downgrade privileges after initialization (non-Windows only)</span>
+user nobody
+group nogroup
+</code></pre>
+</div>
+
+<h3 id="step-44">Step 4.4:</h3>
+
+<p>Scroll further down and this time you’ll <strong>comment</strong> a few lines instead of uncommenting. We do this because we are directly including the <code class="highlighter-rouge">.crt</code> and <code class="highlighter-rouge">.key</code> files within this <code class="highlighter-rouge">.ovpn</code> file.</p>
+
+<p>Before:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># SSL/TLS parms.</span>
+<span class="c"># . . .</span>
+ca ca.crt
+cert client.crt
+key client.key
+</code></pre>
+</div>
+
+<p>After:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># SSL/TLS parms.</span>
+<span class="c"># . . .</span>
+<span class="c">#ca ca.crt</span>
+<span class="c">#cert client.crt</span>
+<span class="c">#key client.key</span>
+</code></pre>
+</div>
+
+<h3 id="step-45">Step 4.5:</h3>
+
+<p>At the end of the file, add this text to block outside DNS</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Prevent DNS leak</span>
+block-outside-dns
+</code></pre>
+</div>
+
+<h3 id="step-46">Step 4.6:</h3>
+
+<p>Now, at the end of the file, we will be copying and pasting the contents of <code class="highlighter-rouge">ca.crt</code>, <code class="highlighter-rouge">myphone.crt</code>, and <code class="highlighter-rouge">myphone.key</code> files.</p>
+
+<p>Open the <code class="highlighter-rouge">.crt</code> and <code class="highlighter-rouge">.key</code> files in a text editor and copy-paste the content as shown below</p>
+
+<p>This is how we will be doing it.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>&lt;ca&gt;
+  <span class="o">(</span>insert ca.crt here<span class="o">)</span>
+&lt;/ca&gt;
+
+&lt;cert&gt;
+  <span class="o">(</span>insert myphone.crt here<span class="o">)</span>
+&lt;/cert&gt;
+
+&lt;key&gt;
+  <span class="o">(</span>insert myphone.key here<span class="o">)</span>
+&lt;/key&gt;
+</code></pre>
+</div>
+
+<p>Once you’re done copy-pasting the content, the end of your <code class="highlighter-rouge">.ovpn</code> file should look like this:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>&lt;ca&gt;
+-----BEGIN CERTIFICATE-----
+. . .
+-----END CERTIFICATE-----
+&lt;/ca&gt;
+  
+&lt;cert&gt;
+Certificate:
+. . .
+-----END CERTIFICATE-----
+. . .
+-----END CERTIFICATE-----
+&lt;/cert&gt;
+  
+&lt;key&gt;
+-----BEGIN PRIVATE KEY-----
+. . .
+-----END PRIVATE KEY-----
+&lt;/key&gt;
+</code></pre>
+</div>
+
+<p>Save the changes and close the file.</p>
+
+<h3 id="step-47">Step 4.7:</h3>
+
+<h4 id="windows">Windows</h4>
+<p>If you’re using Windows, install the official <a href="https://openvpn.net/index.php/open-source/downloads.html">OpenVPN client from here</a>.
+After installation, paste your <code class="highlighter-rouge">myphone.ovpn</code> file here <code class="highlighter-rouge">C:\Program Files\OpenVPN\config\</code>.</p>
+
+<p>To connect to your VPN server, right-click the OpenVPN client in the taskbar and click <strong>Connect</strong>.</p>
+
+<p><amp-img src="/assets/images/posts/2017-04-27-install-openvpn-ubuntu-1404-001.png" alt="Connect to OpenVPN" title="Connect to OpenVPN" width="356" height="247" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-27-install-openvpn-ubuntu-1404-001.png" alt="Connect to OpenVPN" title="Connect to OpenVPN" width="356" height="247"></noscript></amp-img></p>
+
+<p>To verify if you’re connected, go to <a href="https://google.com">Google</a> and type <code class="highlighter-rouge">What is my IP</code>. If it returns the IP address of your OpenVPN server, all is well and your VPN is working as expected.</p>
+
+<h4 id="macos">macOS</h4>
+<p>For macOS, install <a href="https://tunnelblick.net/downloads.html">Tunnelblick</a> and import your <code class="highlighter-rouge">.ovpn</code> profile.
+<strong>Note:</strong> If you get an error and Tunnelblick is unable to connect, remove the following text from your <code class="highlighter-rouge">.ovpn</code> profile.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Prevent DNS leak</span>
+block-outside-dns
+</code></pre>
+</div>
+
+<h4 id="android">Android</h4>
+<p>For Android, download the <a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn&amp;hl=en">OpenVPN Connect app from the Google Play Store</a>. Import your <code class="highlighter-rouge">.ovpn</code> profile and you’re all set!</p>
+
+<h4 id="ios">iOS</h4>
+<p>For iPhone and iPad, download the <a href="https://itunes.apple.com/us/app/openvpn-connect/id590379981?mt=8">OpenVPN Connect app from the Apple App Store</a>. Import your <code class="highlighter-rouge">.ovpn</code> profile and you’re all set!</p>
+
+<p>Guess what? You’re done.</p>
+
+<p>I recommened you create separate <code class="highlighter-rouge">.ovpn</code> files for each of your devices instead of using the same key &amp; certificate for everything.</p>
+
+<p><strong>To create <code class="highlighter-rouge">.ovpn</code> profiles for more devices, <a href="#part-3">repeat steps from part 3 onwards</a>.</strong></p>
+
+<p>(header image source: <a href="https://commons.wikimedia.org/wiki/File:Old_key_in_door_lock.jpg">commons.wikimedia.org</a>)</p>
+
+
+<amp-ad
+markdown="0"
+layout="responsive"
+width=300
+height=250
+type="adsense"
+data-ad-client="ca-pub-4196010817129150"
+data-ad-slot="1808458201">
+</amp-ad>
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/wiseindy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2017 Wiseindy. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+</body>
+</html>
