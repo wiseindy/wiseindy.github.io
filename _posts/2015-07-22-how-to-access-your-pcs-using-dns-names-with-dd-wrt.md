@@ -5,7 +5,7 @@ date: 2015-07-22T02:53:06+00:00
 author: wiseindy
 comments: true
 layout: post
-guid: http://wiseindy.com/?p=915
+guid: https://wiseindy.com/?p=915
 header:
   image: /wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt.jpg
   teaser: /assets/images/featured/featured-dnsnames.jpg
@@ -72,13 +72,13 @@ To fix this you need to configure a "DNS Suffix" for your network.
 <h3>So how do I get this "DNS Suffix" thing?</h3>
 If you open up command prompt and type <code>ipconfig</code>, you'll notice that the <strong>Connection-specific DNS Suffix</strong> is blank.
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-03.png"><img class="alignnone size-full wp-image-926" src="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-03.png" alt="How to access your PCs using DNS names with DD-WRT" width="540" height="94" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-03.png"><img class="alignnone size-full wp-image-926" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-03.png" alt="How to access your PCs using DNS names with DD-WRT" width="540" height="94" /></a>
 
-It's extremely simple to do this on a router which has the <a target="_blank" href="https://en.wikipedia.org/wiki/DD-WRT" target="_blank">DD-WRT</a> firmware installed. In case you don't have a router with DD-WRT, <a target="_blank" href="http://wiseindy.com/it/installing-dd-wrt-on-tp-link-tl-wdr3600-n600/" target="_blank">here's my guide</a> to install DD-WRT on one.
+It's extremely simple to do this on a router which has the <a target="_blank" href="https://en.wikipedia.org/wiki/DD-WRT" target="_blank">DD-WRT</a> firmware installed. In case you don't have a router with DD-WRT, <a target="_blank" href="https://wiseindy.com/it/installing-dd-wrt-on-tp-link-tl-wdr3600-n600/" target="_blank">here's my guide</a> to install DD-WRT on one.
 
 Open up a browser and navigate to your router homepage. After logging in, click on the <strong>Services</strong> tab.
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-001.png"><img class="alignnone size-full wp-image-924" src="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-001.png" alt="How to access your PCs using DNS names with DD-WRT" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-001.png"><img class="alignnone size-full wp-image-924" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-001.png" alt="How to access your PCs using DNS names with DD-WRT" /></a>
 <ul>
 	<li>For “Used Domain” select “LAN &amp; WLAN” from the dropdown.</li>
 	<li>For "LAN domain", pick whatever you like. It should be of the form <code>domain.com</code> or <code>sub.domain.com</code>, etc.
@@ -92,7 +92,7 @@ Open up a browser and navigate to your router homepage. After logging in, click 
 </ul>
 </li>
 </ul>
-<img class="alignnone size-full wp-image-925" src="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-02.png" alt="How to access your PCs using DNS names with DD-WRT" />
+<img class="alignnone size-full wp-image-925" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-02.png" alt="How to access your PCs using DNS names with DD-WRT" />
 
 Scroll down, click <strong>Save</strong>. Then hit <strong>Apply</strong>.
 
@@ -101,13 +101,13 @@ To get the new settings on your PC, you'll need to refresh the IP configuration.
 <code>ipconfig /release</code>
 <code>ipconfig /renew</code>
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-05.png"><img class="alignnone size-full wp-image-927" src="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-05.png" alt="How to access your PCs using DNS names with DD-WRT" width="305" height="39" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-05.png"><img class="alignnone size-full wp-image-927" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-05.png" alt="How to access your PCs using DNS names with DD-WRT" width="305" height="39" /></a>
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-06.png"><img class="alignnone size-full wp-image-928" src="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-06.png" alt="How to access your PCs using DNS names with DD-WRT" width="289" height="39" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-06.png"><img class="alignnone size-full wp-image-928" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-06.png" alt="How to access your PCs using DNS names with DD-WRT" width="289" height="39" /></a>
 
 Type <code>ipconfig</code>. You should see that a DNS suffix is now defined.
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-4.png"><img class="alignnone size-full wp-image-929" src="http://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-4.png" alt="How to access your PCs using DNS names with DD-WRT" width="540" height="94" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-4.png"><img class="alignnone size-full wp-image-929" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-4.png" alt="How to access your PCs using DNS names with DD-WRT" width="540" height="94" /></a>
 
 Now, since you have a DNS suffix, the resulting FQDN for this machine will be <code>wiseindy-pc.wise.lan</code>. The hostname can now be resolved to its IP address easily.
 
