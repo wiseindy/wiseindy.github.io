@@ -1,0 +1,136 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to export a user&#8217;s mailbox to .pst in Exchange 2010</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/it/exporting-a-users-mailbox-to-pst-in-exchange-2010/" />-->
+	<link rel="canonical" href="https://wiseindy.com/it/exporting-a-users-mailbox-to-pst-in-exchange-2010/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">How to export a user’s mailbox to .pst in Exchange 2010</div>
+<amp-img src="/wp-content/uploads/2015/08/Mailbox.jpg" width="1920" height="1080" layout="responsive"><noscript><img src="/wp-content/uploads/2015/08/Mailbox.jpg" width="1920" height="1080"></noscript></amp-img>
+	</h1>
+
+	<amp-ad
+	layout="fixed-height"
+	height=100
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	<span>
+	2015-08-03 02:01:39 +0000 - wiseindy
+	</span>
+	
+	<p>A mailbox export request is a process of exporting mailbox or archive data to a <code>.pst</code> file. It’s very simple to do with Exchange Management Shell.</p>
+
+<!--more-->
+
+<p>The first thing you need to know is that <a target="_blank" href="https://msdn.microsoft.com/en-us/library/cc505910.aspx">Exchange Management <strong>Shell</strong></a> is not the same as <a target="_blank" href="https://msdn.microsoft.com/en-us/library/cc505909.aspx">Exchange Management <strong>Console</strong></a>. As the name suggests, the <strong>Shell</strong> is a Powershell based command-line interface to manage Exchange.</p>
+<h3>Before you begin</h3>
+<ol>
+	<li>The first thing to keep in mind that you can <strong>only export to a UNC path.</strong>
+</li>
+	<li>
+<strong>Exchange Trusted Subsystem</strong> security group needs to have <strong>modify</strong> NTFS permissions on the destination folder.</li>
+</ol>
+<h3>Let's export</h3>
+<p>To export, simply fire up the <strong>Exchange Management Shell</strong> and use the <code>New-MailboxExportRequest</code> cmdlet. Lets assume that the user whose mailbox we are exporting is called “John Doe” and his username is “johndoe”</p>
+<pre>New-MailboxExportRequest -Mailbox johndoe -FilePath "\\server\folder\file.pst"</pre>
+<p>You can start many export requests at the same time. They will be added to the queue.</p>
+
+<p><strong>Note</strong>: You may get an error as follows:</p>
+<pre>The term "New-MailboxExportRequest" is not recognized.</pre>
+<p>This may happen because of missing roles. In order to resolve this issue, grant the account performing the export request the ‘Import Export Mailbox’ role assignment.</p>
+<pre>New-ManagementRoleAssignment –Role “Mailbox Import Export” –User "DOMAIN\USER"</pre>
+<p>Restart your powershell session and try again.</p>
+<h3>See the export status</h3>
+<p>To see the status while it is exporting, use this cmdlet:</p>
+<pre>Get-MailboxExportRequest</pre>
+<p>You can use various formatting options:</p>
+<pre>Get-MailboxExportRequest | Format-List</pre>
+<pre>Get-MailboxExportRequest | Format-Wide -Property Mailbox</pre>
+<pre>Get-MailboxExportRequest | Format-Table</pre>
+<pre>Get-MailboxExportRequest | Format-Table -Wrap</pre>
+<pre>Get-MailboxExportRequest | Format-Table -Property Mailbox, Status</pre>
+
+<div class="row">
+  <div class="col-12">
+    
+	<div>
+		<amp-ad layout="responsive" width="300" height="250" type="adsense" data-ad-client="ca-pub-4196010817129150" data-ad-slot="9331725005">
+		</amp-ad>
+	</div>
+
+
+  </div>
+</div>
+
+<h3>Clear completed export requests</h3>
+<p>Completed mailbox export requests aren’t cleared automatically. You can remove fully or partially completed mailbox export requests by using the following cmdlets.</p>
+
+<p>This will remove the export request <strong>only</strong> for the user “John Doe”.</p>
+<pre>Remove-MailboxExportRequest -Identity "John Doe\MailboxExport"</pre>
+<p>This will remove <strong>all</strong> completed export requests.</p>
+<pre>Get-MailboxExportRequest -Status Completed | Remove-MailboxExportRequest</pre>
+<p>To read more about exporting mailboxes, you can check out <a target="_blank" href="https://technet.microsoft.com/en-us/library/ff459227(v=exchg.141).aspx">this TechNet article</a> by Microsoft.</p>
+
+<p>(header image source: <a target="_blank" href="http://www.wallpaperscastle.com/free-mood-desktop-wallpaper-11761.html">wallpaperscastle.com</a>)</p>
+
+
+	<amp-ad
+	layout="responsive"
+	width=300
+	height=250
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/wiseindy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://wiseindy.com/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2017 Wiseindy. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to import .CSV as external contacts in Exchange?</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/it/how-to-import-csv-as-external-contacts-in-exchange/" />-->
+	<link rel="canonical" href="https://wiseindy.com/it/how-to-import-csv-as-external-contacts-in-exchange/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">How to import .CSV as external contacts in Exchange?</div>
+<amp-img src="/wp-content/uploads/2015/06/import-csv-contacts-exchange.jpeg" width="1680" height="1050" layout="responsive"><noscript><img src="/wp-content/uploads/2015/06/import-csv-contacts-exchange.jpeg" width="1680" height="1050"></noscript></amp-img>
+	</h1>
+
+	<amp-ad
+	layout="fixed-height"
+	height=100
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	<span>
+	2015-06-22 09:00:59 +0000 - wiseindy
+	</span>
+	
+	<h3>What you need:</h3>
+<ul>
+	<li>Microsoft Exchange Server
+<ul>
+	<li>In this guide ,we are using Microsoft Exchange 2010.</li>
+</ul>
+</li>
+	<li>A specially formatted <strong>.CSV</strong> file.
+<ul>
+	<li>This is illustrated below.</li>
+</ul>
+</li>
+</ul>
+<!--more-->
+<h3>Step 1:</h3>
+<p>Create a <strong>.CSV</strong> file with this format:</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_01.png"><amp-img class="alignnone size-full wp-image-850" src="https://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_01.png" alt="import-csv-contacts-exchange_01" width="755" height="122" layout="responsive"><noscript><img class="alignnone size-full wp-image-850" src="https://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_01.png" alt="import-csv-contacts-exchange_01" width="755" height="122"></noscript></amp-img></a></p>
+
+<p>Save it as <strong>contacts.csv</strong>. For the purpose of this guide, I have saved it to <strong>D:\contacts.csv</strong></p>
+
+<p>Also, make sure you have the Organizational Units (OUs) created in your Active Directory before proceeding. If not, you will get an error in <strong>Step 3</strong>.</p>
+
+<div class="row">
+  <div class="col-12">
+    
+	<div>
+		<amp-ad layout="responsive" width="300" height="250" type="adsense" data-ad-client="ca-pub-4196010817129150" data-ad-slot="9331725005">
+		</amp-ad>
+	</div>
+
+
+  </div>
+</div>
+
+<h3>Step 2:</h3>
+<p>Launch <strong>Exchange Management Shell</strong>.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_02.png"><amp-img class="alignnone size-full wp-image-851" src="https://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_02.png" alt="import-csv-contacts-exchange_02" width="405" height="464" layout="responsive"><noscript><img class="alignnone size-full wp-image-851" src="https://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_02.png" alt="import-csv-contacts-exchange_02" width="405" height="464"></noscript></amp-img></a></p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_03.png"><amp-img class="alignnone size-full wp-image-852" src="https://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_03.png" alt="import-csv-contacts-exchange_03" width="772" height="431" layout="responsive"><noscript><img class="alignnone size-full wp-image-852" src="https://wiseindy.com/wp-content/uploads/2015/06/import-csv-contacts-exchange_03.png" alt="import-csv-contacts-exchange_03" width="772" height="431"></noscript></amp-img></a></p>
+<h3>Step 3:</h3>
+<p>Once it launches, type the following code:
+<code>Import-Csv D:\contacts.csv | ForEach-Object { New-MailContact -Name $_."Name" -ExternalEmailAddress $_."Email" -FirstNa
+me $_."FirstName" -OrganizationalUnit $_."Oupath" -Alias $_."Alias" }</code></p>
+
+<p>Hit <strong>Enter</strong> and you are done!</p>
+
+<p>(header image source: <a target="_blank" href="http://www.freecodesource.com/wallpapers/wallpaper/Microsoft-Office-Logo/">freecodesource.com</a>)</p>
+
+
+	<amp-ad
+	layout="responsive"
+	width=300
+	height=250
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/wiseindy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://wiseindy.com/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2017 Wiseindy. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+  </body>
+</html>

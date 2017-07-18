@@ -1,0 +1,166 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to access your PCs using DNS names with DD-WRT</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/it/how-to-access-your-pcs-using-dns-names-with-dd-wrt/" />-->
+	<link rel="canonical" href="https://wiseindy.com/it/how-to-access-your-pcs-using-dns-names-with-dd-wrt/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">How to access your PCs using DNS names with DD-WRT</div>
+<amp-img src="/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt.jpg" width="1440" height="900" layout="responsive"><noscript><img src="/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt.jpg" width="1440" height="900"></noscript></amp-img>
+	</h1>
+
+	<amp-ad
+	layout="fixed-height"
+	height=100
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	<span>
+	2015-07-22 02:53:06 +0000 - wiseindy
+	</span>
+	
+	<p>Pretty sure you must’ve noticed it</p>
+
+<p>Most of us must’ve faced this problem, especially in our home networks. You must’ve noticed that when you’re trying reach one machine from another using it’s IP address, it works perfectly. However when you try to reach it using its hostname/DNS name like <code>wiseindy-pc</code>, it is extremely unreliable and rarely works.</p>
+
+<!--more-->
+
+<p>And if you’ve got the opportunity to work with corporate networks, you’ll notice that this is not the case there. Communicating with machines via hostnames is as reliable as communicating via their individual IP addresses in a corporate environment.</p>
+
+<p>Is it because companies have “bigger” and “better” hardware? And your home router sucks? Well, not really.</p>
+<h3>So, what IS the problem?</h3>
+<p>The problem is pretty straightforward actually. The devices on your network don’t really know whom they should ask to resolve the hostname.</p>
+
+<p>To translate a hostname to an IP address, the machine will need to know the “Fully Qualified Domain Name” or “FQDN” in short.</p>
+
+<p>FQDN for a particular machine looks something like this: <code>hostname.dnz.zone</code> / <code>hostname.domain.com</code> / <code>hostname.domain.whatever</code>. A home environment (in almost all cases) is not a domain environment, i.e., the computers are not connected to a central domain unlike most companies. This  <code>domain.com</code> part in the FQDN called the “DNS Zone”.</p>
+
+<p>Let us assume that machine we are trying to connect is called <code>wiseindy-pc</code> and its IP address is <code>192.168.1.120</code>.</p>
+
+<p>So on your home network, you have the <code>hostname</code> part, e.g. <code>wiseindy-pc</code>. But the machine has no idea about the <code>domain.com</code> part (since there IS no domain). Hence it has no way to convert <code>wiseindy-pc</code> to <code>192.168.1.120</code>.</p>
+
+<p>Ok, so that explains why it doesn’t work. But, in some rare cases (probably when the planets align) it actually does work, even on a network without a DNS zone. How is that possible?</p>
+
+<p>Well, as it turns out, if a DNS zone is not defined for the network, your device tries ANOTHER way to figure out the IP address before abandoning the resolving process altogether. It tries to find out the hostname -&gt; IP address mapping on its own using a technique called “DNS broadcast”. The problem with this is that not all machines/devices are configured to answer to this DNS broadcasr, or are actually configured to deliberately not answer such a request.</p>
+
+<p>To fix this you need to configure a “DNS Suffix” for your network.</p>
+
+<div class="row">
+  <div class="col-12">
+    
+	<div>
+		<amp-ad layout="responsive" width="300" height="250" type="adsense" data-ad-client="ca-pub-4196010817129150" data-ad-slot="9331725005">
+		</amp-ad>
+	</div>
+
+
+  </div>
+</div>
+
+<h3>So how do I get this "DNS Suffix" thing?</h3>
+<p>If you open up command prompt and type <code>ipconfig</code>, you’ll notice that the <strong>Connection-specific DNS Suffix</strong> is blank.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-03.png"><amp-img class="alignnone size-full wp-image-926" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-03.png" alt="How to access your PCs using DNS names with DD-WRT" width="540" height="94" layout="responsive"><noscript><img class="alignnone size-full wp-image-926" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-03.png" alt="How to access your PCs using DNS names with DD-WRT" width="540" height="94"></noscript></amp-img></a></p>
+
+<p>It’s extremely simple to do this on a router which has the <a target="_blank" href="https://en.wikipedia.org/wiki/DD-WRT">DD-WRT</a> firmware installed. In case you don’t have a router with DD-WRT, <a target="_blank" href="https://wiseindy.com/it/installing-dd-wrt-on-tp-link-tl-wdr3600-n600/">here’s my guide</a> to install DD-WRT on one.</p>
+
+<p>Open up a browser and navigate to your router homepage. After logging in, click on the <strong>Services</strong> tab.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-001.png"><amp-img class="alignnone size-full wp-image-924" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-001.png" alt="How to access your PCs using DNS names with DD-WRT" width="921" height="482" layout="responsive"><noscript><img class="alignnone size-full wp-image-924" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-001.png" alt="How to access your PCs using DNS names with DD-WRT" width="921" height="482"></noscript></amp-img></a></p>
+<ul>
+	<li>For “Used Domain” select “LAN &amp; WLAN” from the dropdown.</li>
+	<li>For "LAN domain", pick whatever you like. It should be of the form <code>domain.com</code> or <code>sub.domain.com</code>, etc.
+<ul>
+	<li>For my home network, I picked  <code>wise.lan</code>
+</li>
+	<li>You can pick whatever you want.
+<ul>
+	<li>The one exception to that rule, is that if you use <code>.local</code>, while your windows machines will probably do just fine, your Linux machines will adhere to the mDNS (<a target="_blank" href="http://tools.ietf.org/html/draft-lynn-dnsext-site-mdns-01">Multicast DNS</a>) standard and will again ignore the DNS server.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><amp-img class="alignnone size-full wp-image-925" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-02.png" alt="How to access your PCs using DNS names with DD-WRT" width="916" height="307" layout="responsive"><noscript><img class="alignnone size-full wp-image-925" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-02.png" alt="How to access your PCs using DNS names with DD-WRT" width="916" height="307"></noscript></amp-img></p>
+
+<p>Scroll down, click <strong>Save</strong>. Then hit <strong>Apply</strong>.</p>
+
+<p>To get the new settings on your PC, you’ll need to refresh the IP configuration. Open up a Command Prompt window and type the following commands one after the other:</p>
+
+<p><code>ipconfig /release</code>
+<code>ipconfig /renew</code></p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-05.png"><amp-img class="alignnone size-full wp-image-927" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-05.png" alt="How to access your PCs using DNS names with DD-WRT" width="305" height="39" layout="responsive"><noscript><img class="alignnone size-full wp-image-927" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-05.png" alt="How to access your PCs using DNS names with DD-WRT" width="305" height="39"></noscript></amp-img></a></p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-06.png"><amp-img class="alignnone size-full wp-image-928" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-06.png" alt="How to access your PCs using DNS names with DD-WRT" width="289" height="39" layout="responsive"><noscript><img class="alignnone size-full wp-image-928" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-06.png" alt="How to access your PCs using DNS names with DD-WRT" width="289" height="39"></noscript></amp-img></a></p>
+
+<p>Type <code>ipconfig</code>. You should see that a DNS suffix is now defined.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-4.png"><amp-img class="alignnone size-full wp-image-929" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-4.png" alt="How to access your PCs using DNS names with DD-WRT" width="540" height="94" layout="responsive"><noscript><img class="alignnone size-full wp-image-929" src="https://wiseindy.com/wp-content/uploads/2015/07/how-to-access-your-pcs-using-dns-names-with-dd-wrt-4.png" alt="How to access your PCs using DNS names with DD-WRT" width="540" height="94"></noscript></amp-img></a></p>
+
+<p>Now, since you have a DNS suffix, the resulting FQDN for this machine will be <code>wiseindy-pc.wise.lan</code>. The hostname can now be resolved to its IP address easily.</p>
+
+<p>Repeat this <code>ipconfig /release</code> and <code>ipconfig /renew</code> on at least one more machine and try pinging <code>wiseindy-pc</code> using only the hostname. You should see that the client has automatically understood that the full name of the device you’re pinging is <code>wiseindy-pc.wise.lan</code> (<code>hostname.dns.zone</code>), and was able to translate (resolve) the FQDN to an IP.</p>
+
+<p>(header image source: <a target="_blank" href="http://www.goodfon.su/wallpaper/dns-d-n-s-oskolki-tuman.html">goodfon.su</a>)</p>
+
+
+	<amp-ad
+	layout="responsive"
+	width=300
+	height=250
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/wiseindy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://wiseindy.com/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2017 Wiseindy. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+  </body>
+</html>

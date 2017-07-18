@@ -1,0 +1,196 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to install Jekyll on Ubuntu 16.04 or Windows 10 - A Step-by-Step Guide</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/it/install-jekyll-on-ubuntu-16.04-windows-10/" />-->
+	<link rel="canonical" href="https://wiseindy.com/it/install-jekyll-on-ubuntu-16.04-windows-10/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">How to install Jekyll on Ubuntu 16.04 or Windows 10 - A Step-by-Step Guide</div>
+<amp-img src="/assets/images/featured/featured-jekyll-full.jpg" width="1250" height="896" layout="responsive"><noscript><img src="/assets/images/featured/featured-jekyll-full.jpg" width="1250" height="896"></noscript></amp-img>
+	</h1>
+
+	<amp-ad
+	layout="fixed-height"
+	height=100
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	<span>
+	2017-04-26 11:00:00 +0000 - wiseindy
+	</span>
+	
+	<p>This guide will show you step by step how to install Jekyll 3.4.3 on a machine running Ubuntu or Windows 10.
+<a href="https://jekyllrb.com/docs/installation/">Jekyll’s official guide</a> is good, but it’s very basic and doesn’t explain how to install Ruby, RubyGems and other dependencies.</p>
+
+<!--more-->
+<h2 id="what-you-need">What you need:</h2>
+
+<ul>
+  <li>An Ubuntu 16.04 or Windows 10 system. This guide should also work for older Ubuntu 14.04</li>
+  <li>And as always, an internet connection</li>
+</ul>
+
+<h2 id="step-1">Step 1:</h2>
+
+<p>Skip to step 2 if you’re installing Jekyll on Ubuntu.</p>
+
+<p>To install Jekyll on Windows 10, we need to first enable <strong>Windows Subsystem on Linux</strong>. <a href="/it/enabling-linux-bash-shell-in-windows-10/">Here is a detailed guide that will show you how to do this step-by-step.</a></p>
+
+<h2 id="step-2">Step 2:</h2>
+
+<p>We will now install <strong>ruby2.3</strong>. To do so, we have to first add the brightbox repository. When asked whether you want to confirm adding the repository, hit ENTER to proceed.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt-get update
+</code></pre>
+</div>
+
+<p>Install <strong>ruby2.3</strong></p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>sudo apt-get install ruby2.3 ruby2.3-dev
+</code></pre>
+</div>
+
+<p>Now you should have <strong>Ruby</strong> and <strong>RubyGems</strong> installed which are the prerequisite for installing Jekyll.</p>
+
+<div class="row">
+  <div class="col-12">
+    
+	<div>
+		<amp-ad layout="responsive" width="300" height="250" type="adsense" data-ad-client="ca-pub-4196010817129150" data-ad-slot="9331725005">
+		</amp-ad>
+	</div>
+
+
+  </div>
+</div>
+
+<h2 id="step-3">Step 3:</h2>
+
+<p>Install <a href="https://gcc.gnu.org/install/">GCC</a> and <a href="https://www.gnu.org/software/make/">Make</a></p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>sudo apt-get install gcc make -y
+</code></pre>
+</div>
+
+<h2 id="step-4">Step 4:</h2>
+
+<p>Install Jekyll and Bundler gems</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>sudo gem install jekyll
+</code></pre>
+</div>
+
+<p>Guess what? That’s it. You have Jekyll 3.4.3 installed.</p>
+
+<h2 id="further-information">Further information:</h2>
+
+<p>Here are some commands from <a href="https://jekyllrb.com/docs/quickstart/">jekyllrb.com</a> that should get you up and running with a new blog.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Create a new Jekyll site at ./wiseblog</span>
+jekyll new wiseblog
+</code></pre>
+</div>
+
+<p>To build this site:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c"># Change into your new directory</span>
+<span class="nb">cd </span>wiseblog
+
+<span class="c"># Build the site and preview it</span>
+bundle <span class="nb">exec </span>jekyll serve
+</code></pre>
+</div>
+
+<p><strong>Note:</strong> If you’re running Windows, you may get an error when you try to run <code class="highlighter-rouge">bundle exec jekyll serve</code>. In this case, simply run it with the <code class="highlighter-rouge">--force_polling</code> option as follows:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve --force_polling
+</code></pre>
+</div>
+
+<p>Now you can preview your website on <code class="highlighter-rouge">http://localhost:4000</code></p>
+
+<h2 id="notes">Notes:</h2>
+
+<p>(You can skip this part. This is only for my reference and for anyone who faces a similar issue)</p>
+
+<p>I had to install <a href="https://github.com/sparklemotion/nokogiri">Nokogiri</a> for my site and was having issues. This is how I solved it.</p>
+
+<p>Below are the installation instructions on <a href="http://www.nokogiri.org/tutorials/installing_nokogiri.html">nokogiri.org</a>:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>sudo apt-get install build-essential patch
+sudo apt-get install ruby-dev zlib1g-dev liblzma-dev
+sudo gem install nokogiri
+</code></pre>
+</div>
+
+<p>(header image source: <a href="https://jekyllrb.com">jekyllrb.com</a>)</p>
+
+
+	<amp-ad
+	layout="responsive"
+	width=300
+	height=250
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/wiseindy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://wiseindy.com/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2017 Wiseindy. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+  </body>
+</html>

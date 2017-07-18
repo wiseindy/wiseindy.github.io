@@ -1,0 +1,108 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to fix error 0x80004005 - Cannot enable developer mode in Windows 10</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/it/windows-10-developer-mode-fix-error-0x80004005/" />-->
+	<link rel="canonical" href="https://wiseindy.com/it/windows-10-developer-mode-fix-error-0x80004005/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">How to fix error 0x80004005 - Cannot enable developer mode in Windows 10</div>
+<amp-img src="/assets/images/featured/featured-developer-full.jpg" width="1920" height="1080" layout="responsive"><noscript><img src="/assets/images/featured/featured-developer-full.jpg" width="1920" height="1080"></noscript></amp-img>
+	</h1>
+
+	<amp-ad
+	layout="fixed-height"
+	height=100
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	<span>
+	2017-04-26 10:00:00 +0000 - wiseindy
+	</span>
+	
+	<p>“Developer mode package failed to install. Error code 0x80004005”. A few people, including me, faced issues when trying to enable developer mode in Windows 10. This guide will show you how to fix it.</p>
+
+<!--more-->
+<h2 id="why-this-happens">Why this happens?</h2>
+
+<p>After quite some digging and research online, I found that this problem is related to WSUS (Windows Server Update Services). If you’re in an environment where your PC gets updates from WSUS, you can face this problem. Luckily, it’s a straightforward fix.</p>
+
+<h2 id="step-1">Step 1:</h2>
+
+<p>Click <strong>Start</strong> and type <code class="highlighter-rouge">regedit</code>. Open it.</p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-windows-10-developer-mode-fix-error-0x80004005-001.png" alt="Click start and search for regedit" title="Click start and search for regedit" width="386" height="520" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-windows-10-developer-mode-fix-error-0x80004005-001.png" alt="Click start and search for regedit" title="Click start and search for regedit" width="386" height="520"></noscript></amp-img></p>
+
+<p>Navigate to <code class="highlighter-rouge">HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU</code> in <strong>regedit</strong></p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-windows-10-developer-mode-fix-error-0x80004005-002.png" alt="Navigate to key in regedit" title="Navigate to key in regedit" width="1066" height="617" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-windows-10-developer-mode-fix-error-0x80004005-002.png" alt="Navigate to key in regedit" title="Navigate to key in regedit" width="1066" height="617"></noscript></amp-img></p>
+
+<p>Double click <strong>UseWUServer</strong> and set the value to <strong>0</strong></p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-windows-10-developer-mode-fix-error-0x80004005-003.png" alt="Set UseWUServer to 0" title="Set UseWUServer to 0" width="331" height="199" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-windows-10-developer-mode-fix-error-0x80004005-003.png" alt="Set UseWUServer to 0" title="Set UseWUServer to 0" width="331" height="199"></noscript></amp-img></p>
+
+<h2 id="step-2">Step 2:</h2>
+
+<p>Restart your PC. Now try to enable developer mode again. This time you will not see the error 0x80004005 and it should be enabled successfully.</p>
+
+<p>(header image source: <a href="http://sf.co.ua/id169202">sf.co.ua</a>)</p>
+
+
+	<amp-ad
+	layout="responsive"
+	width=300
+	height=250
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/wiseindy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://wiseindy.com/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2017 Wiseindy. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+  </body>
+</html>

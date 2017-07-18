@@ -1,0 +1,179 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Installing DD-WRT on TP-Link TL-WDR3600 N600</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/it/installing-dd-wrt-on-tp-link-tl-wdr3600-n600/" />-->
+	<link rel="canonical" href="https://wiseindy.com/it/installing-dd-wrt-on-tp-link-tl-wdr3600-n600/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">Installing DD-WRT on TP-Link TL-WDR3600 N600</div>
+<amp-img src="/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-header.jpg" width="3000" height="1996" layout="responsive"><noscript><img src="/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-header.jpg" width="3000" height="1996"></noscript></amp-img>
+	</h1>
+
+	<amp-ad
+	layout="fixed-height"
+	height=100
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	<span>
+	2015-07-16 04:46:04 +0000 - wiseindy
+	</span>
+	
+	<p><a target="_blank" href="https://en.wikipedia.org/wiki/DD-WRT">DD-WRT</a> is a third-party firmware project that is designed to replace the original firmware for commercial wireless routers and wireless access points. It is a Linux-based firmware and is a solid alternative to the original firmware in your router.</p>
+
+<!--more-->
+<h3>Why would I do this?</h3>
+<p>The <a target="_blank" href="http://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html">TP-Link TL-WDR3600 N600</a> is a pretty good budget Gigabit router for homes. I’ve been using it for a few years now and I like almost everything about this except the fact that there’s no inherent VPN or QoS functionality. Not a deal breaker, but it would be great to extend the capabilities of the device for no additonal cost. There’s also the fact that I’m a networking enthusiast and this is a good opportunity to learn.</p>
+<h3>What you need:</h3>
+<ul>
+	<li>A <a target="_blank" href="http://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html">TP-Link TL-WDR3600 N600</a> router.
+<ul>
+	<li>You could use any other DD-WRT supported routers as well. Check out the <a target="_blank" href="http://www.dd-wrt.com/site/support/router-database">DD-WRT website</a> to see if your router is supported.</li>
+</ul>
+</li>
+	<li>A PC connected to your router with an ethernet cable (duh).</li>
+</ul>
+<h3>Step 1:</h3>
+<p>Head to the <a target="_blank" href="http://www.dd-wrt.com/site/support/router-database">DD-WRT website</a> and search for your router. Mine is <a target="_blank" href="http://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html">TP-Link TL-WDR3600</a>, hence I pick that one from the search results.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-01.png"><amp-img class="alignnone size-full wp-image-887" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-01.png" alt="DD-WRT database search" width="1013" height="586" layout="responsive"><noscript><img class="alignnone size-full wp-image-887" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-01.png" alt="DD-WRT database search" width="1013" height="586"></noscript></amp-img></a></p>
+
+<p>If your router is supported by DD-WRT, you will see a bunch of firmwares which you can download.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-02.png"><amp-img class="alignnone wp-image-889 size-full" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-02.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="1007" height="580" layout="responsive"><noscript><img class="alignnone wp-image-889 size-full" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-02.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="1007" height="580"></noscript></amp-img></a></p>
+
+<p>In this case, we see 3 firmwares.</p>
+<ul>
+	<li>
+<code>factory-to-ddwrt.bin</code>
+<ul>
+	<li>Use this if you're flashing from <strong>stock</strong> firmware to <strong>DD-WRT</strong> firmware. This is what we will be doing.</li>
+</ul>
+</li>
+	<li>
+<code>wdr3600v1_webrevert.rar</code>
+<ul>
+	<li>Use this if you already have <strong>DD-WRT</strong> installed and you want to go back to <strong>stock</strong> firmware.</li>
+</ul>
+</li>
+	<li>
+<code>tl-wdr3600-webflash.bin</code>
+<ul>
+	<li>Use this if you currently have <strong>DD-WRT</strong> installed and you want to upgrade to a newer version of <strong>DD-WRT</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3>Step 2:</h3>
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-003.png"><amp-img class="alignnone size-full wp-image-895" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-003.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="111" height="137" layout="responsive"><noscript><img class="alignnone size-full wp-image-895" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-003.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="111" height="137"></noscript></amp-img></a></p>
+
+<p>Once the <code>factory-to-ddwrt.bin</code> file is downloaded, head to your router’s web interface and log in.</p>
+
+<p>Open up your browser and type your router’s IP address. By default, it should be <code>192.168.1.1</code> or <code>192.168.0.1</code>. If your network uses a different private IP range, then enter the appropriate router address.</p>
+
+<p>[video width=”842” height=”444” webm=”https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-05.webm” loop=”true” autoplay=”true” preload=”auto”][/video]</p>
+<h3>Step 3:</h3>
+<p>From the left sidebar, navigate to <strong>System Tools</strong> &gt; <strong>Firmware Upgrade</strong></p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-08.png"><amp-img class="alignnone size-full wp-image-904" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-08.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="574" height="404" layout="responsive"><noscript><img class="alignnone size-full wp-image-904" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-08.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="574" height="404"></noscript></amp-img></a></p>
+
+<p>Select <strong>Browse…</strong> and pick the <code>factory-to-ddwrt.bin</code> file downloaded in the previous steps. Then click <strong>Upgrade</strong>.</p>
+
+<p>The firmware upgrade process will take about 2-3 minutes. Hang tight.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-09.png"><amp-img class="alignnone size-full wp-image-905" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-09.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="576" height="173" layout="responsive"><noscript><img class="alignnone size-full wp-image-905" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-09.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="576" height="173"></noscript></amp-img></a></p>
+
+<p>Once the upgrade is done, you should see another progress bar like this informing you that the router is restarting.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-10.png"><amp-img class="alignnone size-full wp-image-906" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-10.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="572" height="176" layout="responsive"><noscript><img class="alignnone size-full wp-image-906" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-10.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="572" height="176"></noscript></amp-img></a></p>
+
+<div class="row">
+  <div class="col-12">
+    
+	<div>
+		<amp-ad layout="responsive" width="300" height="250" type="adsense" data-ad-client="ca-pub-4196010817129150" data-ad-slot="9331725005">
+		</amp-ad>
+	</div>
+
+
+  </div>
+</div>
+
+<h3>Step 4:</h3>
+<p>If all goes well, which it should and will, you should see the new DD-WRT router page.</p>
+<blockquote>One thing to note here. If your router was configured to use a different IP range, for example <code>10.15.15.x</code>, then you'll need to manually go to <code>192.168.1.1</code> to see this page.
+
+This is the new firmware's default IP range. You'll need to reconfigure it if you want to work on a different range.</blockquote>
+<p>On this page, enter a <strong>username</strong> and <strong>password</strong> and click <strong>Change Password</strong>.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-11.png"><amp-img class="alignnone size-full wp-image-907" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-11.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="959" height="426" layout="responsive"><noscript><img class="alignnone size-full wp-image-907" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-11.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="959" height="426"></noscript></amp-img></a></p>
+
+<p>Now you will be inside the router configuration page.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-12.png"><amp-img class="alignnone size-full wp-image-909" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-12.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="1023" height="549" layout="responsive"><noscript><img class="alignnone size-full wp-image-909" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-12.png" alt="Installing DD-WRT on TP-Link TL-WDR3600 N600" width="1023" height="549"></noscript></amp-img></a></p>
+
+<p>Your router just gained a whole lot of features that are available only in high end ones. For free. And in less than 10 minutes. That isn’t so bad, is it? Have fun configuring!</p>
+
+<p>Now that you’ve got DD-WRT powered up, see how you can configure DD-WRT to <a target="_blank" href="https://wiseindy.com/it/how-to-access-your-pcs-using-dns-names-with-dd-wrt/">access computers using hostnames on your home network</a></p>
+
+<p>(header image source: <a target="_blank" href="http://www.freeimageslive.co.uk/image/view/3929/_original">freeimageslive.co.uk</a>)</p>
+
+
+	<amp-ad
+	layout="responsive"
+	width=300
+	height=250
+	type="adsense"
+	data-ad-client="ca-pub-4196010817129150"
+	data-ad-slot="1808458201">
+	</amp-ad>
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/wiseindy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://wiseindy.com/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2017 Wiseindy. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+  </body>
+</html>
