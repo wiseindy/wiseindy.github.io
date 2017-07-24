@@ -1,0 +1,159 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to install megatools in Ubuntu 14.04.5 LTS (Trusty Tahr)</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/it/how-to-install-megatools-in-ubuntu-14-04-5-lts-trusty-tahr/" />-->
+	<link rel="canonical" href="https://wiseindy.com/it/how-to-install-megatools-in-ubuntu-14-04-5-lts-trusty-tahr/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">How to install megatools in Ubuntu 14.04.5 LTS (Trusty Tahr)</div>
+<amp-img src="/wp-content/uploads/2016/10/how-to-install-megatools-in-ubuntu-14-04-5-lts-trusty-tahr.jpg" layout="responsive"><noscript><img src="/wp-content/uploads/2016/10/how-to-install-megatools-in-ubuntu-14-04-5-lts-trusty-tahr.jpg"></noscript></amp-img>
+	</h1>
+
+	<amp-ad
+	layout="fixed-height"
+	height=100
+	type="adsense"
+	data-ad-client="ca-pub-1094744891389501"
+	data-ad-slot="6411936673">
+	</amp-ad>
+
+	<span>
+	2016-10-09 05:43:44 +0000 - wiseindy
+	</span>
+	
+	<p>Megatools is a great collection of command line utilities that allow you to interact with your <a target="_blank" href="https://mega.nz">mega.nz</a> account directly from the command line. You can directly download using the cli on your Ubuntu machine. They are a great set of tools, however, installing them does get confusing for a new Linux user. This guide will show you how to install it and set it up in no time.</p>
+
+<!--more-->
+<h3>What you need:</h3>
+<ul>
+ 	<li>SSH or terminal access to an Ubuntu 14.04 server.</li>
+ 	<li>An internet connection (duh).</li>
+</ul>
+<h3>Step 1:</h3>
+<p>First you need to find out what’s the latest version of megatools available.</p>
+
+<p>To find out the latest version, simply visit any one of the links below and see what’s the latest version number:</p>
+<ul>
+ 	<li><a target="_blank" href="https://megatools.megous.com/">https://megatools.megous.com/</a></li>
+ 	<li><a target="_blank" href="https://github.com/megous/megatools">https://github.com/megous/megatools</a></li>
+</ul>
+<p>At the time of writing this article (9 October 2016), the latest version was <code>1.9.97</code>. If it is different in your case, simply replace <code>1.9.97</code> with your version in all the commands below.</p>
+<h3>Step 2:</h3>
+<p>Open your Ubuntu terminal (or SSH to it) and type in the following commands one after the other.</p>
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>sudo apt-get update
+</code></pre>
+</div>
+<p>Run this command to download the package lists from the repositories and “update” them to get information on the newest versions of packages and their dependencies.</p>
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>sudo apt-get install libtool libglib2.0-dev gobject-introspection libgmp3-dev nettle-dev asciidoc glib-networking openssl libcurl4-openssl-dev libssl-dev
+</code></pre>
+</div>
+<p>This installs all the dependencies that you may need to compile megatools from source.</p>
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>wget http://megatools.megous.com/builds/megatools-1.9.97.tar.gz
+</code></pre>
+</div>
+<p><code>wget</code> is used to download the latest megatools. Replace <code>1.9.97</code> with the latest version is available.</p>
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>zcat megatools-1.9.97.tar.gz &gt; megatools-1.9.97.tar
+tar -xf megatools-1.9.97.tar
+</code></pre>
+</div>
+<p>Use <code>zcat</code> to decompress the downloaded file and <code>tar -xf</code> to extract the contents to a folder.</p>
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="nb">cd </span>megatools-1.9.97/
+./configure
+make
+sudo make install
+</code></pre>
+</div>
+<p>Finally, run the above commands to compile megatools and install it in your system.</p>
+
+<div class="row">
+  <div class="col-12">
+    
+	<div>
+		<amp-ad layout="responsive" width="300" height="250" type="adsense" data-ad-client="ca-pub-4196010817129150" data-ad-slot="9331725005">
+		</amp-ad>
+	</div>
+
+
+  </div>
+</div>
+
+<h3>Step 3:</h3>
+<p>If all went well, you should now have megatools installed on your system.</p>
+
+<p>To download from a <a target="_blank" href="https://mega.nz">mega.nz</a> link, simply type <code>megadl '&lt;link&gt;'</code> and the download will start.</p>
+
+<p>Here’s an example:</p>
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>megadl <span class="s1">'https://mega.nz/#G!IK9KLpRS8J1h82Kpa0kWJkPwDh!2adB'</span>
+</code></pre>
+</div>
+<p>For syntax of other commands, type</p>
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>man megatools
+</code></pre>
+</div>
+<p>That’s it. You’re done!</p>
+
+
+	<amp-ad
+	layout="responsive"
+	width=300
+	height=250
+	type="adsense"
+	data-ad-client="ca-pub-1094744891389501"
+	data-ad-slot="6411936673">
+	</amp-ad>
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/wiseindy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://wiseindy.com/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2017 Wiseindy. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+  </body>
+</html>

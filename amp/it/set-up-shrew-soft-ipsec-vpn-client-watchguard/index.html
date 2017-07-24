@@ -1,0 +1,206 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to set up Shrew Soft IPSec VPN Client for WatchGuard</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/it/set-up-shrew-soft-ipsec-vpn-client-watchguard/" />-->
+	<link rel="canonical" href="https://wiseindy.com/it/set-up-shrew-soft-ipsec-vpn-client-watchguard/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">How to set up Shrew Soft IPSec VPN Client for WatchGuard</div>
+<amp-img src="/wp-content/uploads/2016/01/header-set-up-shrew-soft-ipsec-vpn-client-watchguard.jps_.jpg" layout="responsive"><noscript><img src="/wp-content/uploads/2016/01/header-set-up-shrew-soft-ipsec-vpn-client-watchguard.jps_.jpg"></noscript></amp-img>
+	</h1>
+
+	<amp-ad
+	layout="fixed-height"
+	height=100
+	type="adsense"
+	data-ad-client="ca-pub-1094744891389501"
+	data-ad-slot="6411936673">
+	</amp-ad>
+
+	<span>
+	2016-01-20 06:36:14 +0000 - wiseindy
+	</span>
+	
+	<p>This guide will show you how to enable Mobile VPN with IPSec for WatchGuard Firebox M300. It’s a pretty straightfoward process, however it took me quite a while to figure out initially. Hope this guide makes it easier for you.</p>
+
+<!--more-->
+
+<p>It will also show you how to install and configure the <a target="_blank" href="https://www.shrew.net/download/vpn">Shrew Soft IPSec VPN Client</a>. In my opinion, you are better off using this client than the <a target="_blank" href="http://www.watchguard.com/help/docs/wsm/xtm_11/en-US/index.html#en-US/mvpn/client/mvpn-ipsec_client_about_c.html%3FTocPath%3DMobile%2520VPN%2520with%2520IPSec%7CAbout%2520the%2520IPSec%2520Mobile%2520VPN%25C2%25A0Client%7C_____0">WatchGuard IPSec Mobile VPN Monitor</a>. Old versions of this WatchGuard IPSec Mobile VPN Monitor were free, but they do not work on Windows 10. The new version of the IPSec client needs a paid subscription license. Unless you want to go this route, I would suggest using the Shrew Soft IPSec VPN Client. It’s free and you can <a target="_blank" href="https://www.shrew.net/download/vpn">download</a> it from their <a target="_blank" href="https://www.shrew.net/download/vpn">official website</a>.</p>
+
+<p><strong>Note:</strong> While this guide was created for Firebox M300, it should work with other WatchGuard XTM devices as well.</p>
+<h3>What do you need:</h3>
+<ul>
+	<li>An environment where a WatchGuard firewall is installed and running.</li>
+	<li>Administrative access to the firewall (of course).</li>
+</ul>
+<p>So let’s being shall we?</p>
+<h3>Step 1</h3>
+<p>Fire up your browser and navigate to the web interface of your firewall? If your firewall’s IP address is <code>192.168.1.1</code>, then type <code>https://192.168.1.1:8080</code> in the URL bar.</p>
+
+<p>After logging in, go to <strong>VPN</strong> &gt; <strong>Mobile VPN with IPSec</strong>.</p>
+
+<p>Click on <strong>Add</strong> to add a new group.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-01.png" rel="attachment wp-att-1087"><amp-img class="alignnone size-full wp-image-1087" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-01.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-01" width="1014" height="537" layout="responsive"><noscript><img class="alignnone size-full wp-image-1087" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-01.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-01" width="1014" height="537"></noscript></amp-img></a></p>
+<h3>Step 2:</h3>
+<p>Select the <strong>General</strong> tab. Type in a <strong>Name</strong> and select Authentication Server as <strong>Firebox-DB</strong>. You can also set it to authenticate it with your domain, but for this tutorial we will use the firewall as the authentication server.</p>
+
+<p>Next, enter the <strong>passphrase</strong> and enter your firewall’s external IP address. This is the IP address that you use to connect to your firewall from the Internet.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-02.png" rel="attachment wp-att-1062"><amp-img class="alignnone size-full wp-image-1062" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-02.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-02" width="867" height="701" layout="responsive"><noscript><img class="alignnone size-full wp-image-1062" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-02.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-02" width="867" height="701"></noscript></amp-img></a></p>
+<h3>Step 3:</h3>
+<p>Select the <strong>IPSec Tunnel</strong> tab. Make the following changes as shown in the image below.</p>
+<ul>
+	<li>Select <strong>Use the passphrase of the end user profile as the pre-shared key</strong>.</li>
+	<li>Under <strong>Phase 1</strong><strong> Settings</strong>, select <strong>Authentication</strong> as <strong>SHA1</strong> and <strong>Encryption</strong> as <strong>3DES</strong>.</li>
+	<li>Under <strong>Phase 2</strong><strong> Settings</strong>, seelct <strong>PFS</strong> and choose <strong>Diffie-Hellman Group 1</strong>.</li>
+</ul>
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-03.png" rel="attachment wp-att-1063"><amp-img class="alignnone size-full wp-image-1063" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-03.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-03" width="668" height="683" layout="responsive"><noscript><img class="alignnone size-full wp-image-1063" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-03.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-03" width="668" height="683"></noscript></amp-img></a></p>
+<h3>Step 4:</h3>
+<p>Select the <strong>Resources</strong> tab. Here under <strong>Allowed Resources</strong> you can specify which IP addresses are allowed to connect through the tunnel. Click <strong>Add</strong> and type in an IP range.</p>
+
+<p>Next, you’ll have to specify the <strong>Virtual IP Address Pool</strong>. Whenever a device connects to your tunnel, it will be assigned an IP address from this pool.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-04.png" rel="attachment wp-att-1064"><amp-img class="alignnone size-full wp-image-1064" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-04.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-04" width="842" height="299" layout="responsive"><noscript><img class="alignnone size-full wp-image-1064" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-04.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-04" width="842" height="299"></noscript></amp-img></a></p>
+
+<div class="row">
+  <div class="col-12">
+    
+	<div>
+		<amp-ad layout="responsive" width="300" height="250" type="adsense" data-ad-client="ca-pub-4196010817129150" data-ad-slot="9331725005">
+		</amp-ad>
+	</div>
+
+
+  </div>
+</div>
+
+<h3>Step 5:</h3>
+<p>Finally, go the <strong>Advanced</strong> tab and set the <strong>Connect mode</strong> to <strong>Manual</strong> and <strong>Inactivity timeout</strong> to <strong>0 seconds</strong>.</p>
+
+<p>Click <strong>Save</strong>.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-05.png" rel="attachment wp-att-1065"><amp-img class="alignnone size-full wp-image-1065" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-05.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-05" width="755" height="266" layout="responsive"><noscript><img class="alignnone size-full wp-image-1065" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-05.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-05" width="755" height="266"></noscript></amp-img></a></p>
+<h3>Step 6:</h3>
+<p>The next step is to create a user which will connect to the tunnel.</p>
+
+<p>In your firewall web interface, navigate to <strong>Authentication</strong> &gt; <strong>Servers</strong>.</p>
+
+<p>Select <strong>Firebox</strong>.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-06.png" rel="attachment wp-att-1066"><amp-img class="alignnone size-full wp-image-1066" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-06.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-06" width="1038" height="505" layout="responsive"><noscript><img class="alignnone size-full wp-image-1066" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-06.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-06" width="1038" height="505"></noscript></amp-img></a></p>
+<h3>Step 7:</h3>
+<p>Under <strong>Firebox Users</strong>, click <strong>Add</strong> to create a new user.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-07.png" rel="attachment wp-att-1067"><amp-img class="alignnone size-full wp-image-1067" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-07.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-07" width="873" height="735" layout="responsive"><noscript><img class="alignnone size-full wp-image-1067" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-07.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-07" width="873" height="735"></noscript></amp-img></a></p>
+<h3>Step 8:</h3>
+<p>This part is pretty straight forward. Enter the <strong>Name</strong>, <strong>Description</strong>, <strong>Passphrase </strong>and<strong> timeout</strong> values.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-08.png" rel="attachment wp-att-1068"><amp-img class="alignnone size-full wp-image-1068" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-08.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-08" width="571" height="545" layout="responsive"><noscript><img class="alignnone size-full wp-image-1068" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-08.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-08" width="571" height="545"></noscript></amp-img></a></p>
+
+<p>Under <strong>Firebox Authentication Groups</strong>, select the <strong>Group</strong> we created previously. In our case, it was <strong>WISEINDY</strong>, so we check that one.</p>
+
+<p>Click <strong>OK</strong>.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-09.png" rel="attachment wp-att-1069"><amp-img class="alignnone size-full wp-image-1069" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-09.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-09" width="568" height="543" layout="responsive"><noscript><img class="alignnone size-full wp-image-1069" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-09.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-09" width="568" height="543"></noscript></amp-img></a></p>
+<h3>Step 9:</h3>
+<p>Now, navigate back to <strong>VPN</strong> &gt; <strong>Mobile VPN with IPSec</strong> in the firewall web interface.</p>
+
+<p>Here you can download the configuration settings for your preferred IPSec VPN Client. I prefer the free <a target="_blank" href="https://www.shrew.net/download/vpn">Shrew Soft IPSec VPN Client</a> (click to download the client).</p>
+
+<p>From the <strong>Client</strong> dropdown box, select <strong>Shrew Soft VPN</strong> and click <strong>Generate</strong>. It will generate a <code>.vpn</code> file. Save this on your PC.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-10.png" rel="attachment wp-att-1070"><amp-img class="alignnone size-full wp-image-1070" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-10.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-10" width="1231" height="655" layout="responsive"><noscript><img class="alignnone size-full wp-image-1070" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-10.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-10" width="1231" height="655"></noscript></amp-img></a></p>
+<h3>Step 10:</h3>
+<p>Go ahead and install the Shrew Soft VPN Client on your PC. Once installed, double click the <strong>VPN Access Manager</strong> icon on your desktop to launch it.</p>
+
+<p>Select <strong>File</strong> &gt;<strong> Import</strong>.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-11.png" rel="attachment wp-att-1071"><amp-img class="alignnone size-full wp-image-1071" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-11.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-11" width="393" height="309" layout="responsive"><noscript><img class="alignnone size-full wp-image-1071" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-11.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-11" width="393" height="309"></noscript></amp-img></a></p>
+
+<p>Choose the <code>.vpn</code> file that was downloaded in the previous step. Click <strong>Open</strong>.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-12.png" rel="attachment wp-att-1072"><amp-img class="alignnone size-full wp-image-1072" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-12.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-12" width="706" height="473" layout="responsive"><noscript><img class="alignnone size-full wp-image-1072" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-12.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-12" width="706" height="473"></noscript></amp-img></a></p>
+<h3>Step 11:</h3>
+<p>A new connection will be created from the imported settings. Select this connection and click <strong>Connect.</strong></p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-13.png" rel="attachment wp-att-1073"><amp-img class="alignnone size-full wp-image-1073" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-13.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-13" width="401" height="313" layout="responsive"><noscript><img class="alignnone size-full wp-image-1073" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-13.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-13" width="401" height="313"></noscript></amp-img></a></p>
+
+<p>When you click <strong>Connect</strong>, a window will pop up asking you to input credentials to connect to the tunnel.</p>
+
+<p>Enter the <strong>Username</strong> and <strong>Password</strong> that you used to create a user in <strong>Step 8</strong>.</p>
+
+<p>Click <strong>Connect</strong>.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-14.png" rel="attachment wp-att-1074"><amp-img class="alignnone size-full wp-image-1074" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-14.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-14" width="293" height="297" layout="responsive"><noscript><img class="alignnone size-full wp-image-1074" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-14.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-14" width="293" height="297"></noscript></amp-img></a></p>
+
+<p>If the connection is successful, you’ll see a <strong>tunnel enabled</strong> message in the window.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-15.png" rel="attachment wp-att-1075"><amp-img class="alignnone size-full wp-image-1075" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-15.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-15" width="293" height="297" layout="responsive"><noscript><img class="alignnone size-full wp-image-1075" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-15.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-15" width="293" height="297"></noscript></amp-img></a></p>
+
+<p>That’s all. You have sucessfully set up and configured IPSec VPN for your WatchGuard XTM device.</p>
+<h3>Additional information:</h3>
+<p>In case someone needs it, here are my configuration settings that were imported into the Shrew Soft VPN client. You don’t need to change anything here. The correct settings should automatically be configured when this file was generated by your firewall. I’ve only put up this screenshots in case someone is facing any issues and would like to double-check or compare his settings.</p>
+
+<p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-16.png" rel="attachment wp-att-1076"><amp-img class="alignnone size-full wp-image-1076" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-16.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-16" width="301" height="368" layout="responsive"><noscript><img class="alignnone size-full wp-image-1076" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-16.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-16" width="301" height="368"></noscript></amp-img></a> <a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-17.png" rel="attachment wp-att-1077"><amp-img class="alignnone size-full wp-image-1077" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-17.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-17" width="301" height="368" layout="responsive"><noscript><img class="alignnone size-full wp-image-1077" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-17.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-17" width="301" height="368"></noscript></amp-img></a> <a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-18.png" rel="attachment wp-att-1078"><amp-img class="alignnone size-full wp-image-1078" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-18.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-18" width="301" height="368" layout="responsive"><noscript><img class="alignnone size-full wp-image-1078" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-18.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-18" width="301" height="368"></noscript></amp-img></a> <a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-19.png" rel="attachment wp-att-1079"><amp-img class="alignnone size-full wp-image-1079" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-19.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-19" width="301" height="368" layout="responsive"><noscript><img class="alignnone size-full wp-image-1079" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-19.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-19" width="301" height="368"></noscript></amp-img></a> <a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-20.png" rel="attachment wp-att-1080"><amp-img class="alignnone size-full wp-image-1080" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-20.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-20" width="301" height="368" layout="responsive"><noscript><img class="alignnone size-full wp-image-1080" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-20.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-20" width="301" height="368"></noscript></amp-img></a> <a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-21.png" rel="attachment wp-att-1081"><amp-img class="alignnone size-full wp-image-1081" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-21.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-21" width="301" height="368" layout="responsive"><noscript><img class="alignnone size-full wp-image-1081" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-21.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-21" width="301" height="368"></noscript></amp-img></a> <a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-22.png" rel="attachment wp-att-1082"><amp-img class="alignnone size-full wp-image-1082" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-22.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-22" width="301" height="368" layout="responsive"><noscript><img class="alignnone size-full wp-image-1082" src="https://wiseindy.com/wp-content/uploads/2016/01/set-up-shrew-soft-ipsec-vpn-client-watchguard-22.png" alt="set-up-shrew-soft-ipsec-vpn-client-watchguard-22" width="301" height="368"></noscript></amp-img></a></p>
+
+<p>(header image source: <a target="_blank" href="https://www.sciencenews.org/sites/default/files/main/articles/note_shrew_001.jpg">sciencenews.org</a>)</p>
+
+
+	<amp-ad
+	layout="responsive"
+	width=300
+	height=250
+	type="adsense"
+	data-ad-client="ca-pub-1094744891389501"
+	data-ad-slot="6411936673">
+	</amp-ad>
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/wiseindy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://wiseindy.com/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2017 Wiseindy. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+  </body>
+</html>

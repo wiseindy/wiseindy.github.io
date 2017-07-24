@@ -1,0 +1,125 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Why should you virtualize even a single server?</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/blog/why-should-you-virtualize-even-a-single-server/" />-->
+	<link rel="canonical" href="https://wiseindy.com/blog/why-should-you-virtualize-even-a-single-server/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">Why should you virtualize even a single server?</div>
+<amp-img src="/wp-content/uploads/2015/07/why-should-you-virtualize-even-a-single-server.jpg" layout="responsive"><noscript><img src="/wp-content/uploads/2015/07/why-should-you-virtualize-even-a-single-server.jpg"></noscript></amp-img>
+	</h1>
+
+	<amp-ad
+	layout="fixed-height"
+	height=100
+	type="adsense"
+	data-ad-client="ca-pub-1094744891389501"
+	data-ad-slot="6411936673">
+	</amp-ad>
+
+	<span>
+	2015-07-12 11:04:55 +0000 - wiseindy
+	</span>
+	
+	<p>I believe the default mindset these days should be always virtualized. It doesn’t matter if you are looking to implement a single server or several. Of course, there may be outlier cases where virtualization cannot be applied (special case hardware, huge computer clusters, etc.). While providing business requirements or planning a new project, start with the “always virtualized” mindset and work from there.</p>
+
+<!--more-->
+<h3>Hardware abstraction simplifies things</h3>
+<p>The key point that comes to mind when considering virtualization is hardware abstraction. When you virtualize, you are adding a layer between baremetal and the operating system. In a practical sense, this is what virtualization is.</p>
+
+<p>If you are familiar with programming languages, you should be aware of the concept of <a target="_blank" href="https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)">encapsulation</a>. Virtualization works in a similar way by encapsulating the underlying server hardware and presenting a standardized hardware base to operating systems. This hardware abstraction and the resulting stability alone are reason enough to go virtual.</p>
+
+<p>This will greatly enhance the future-proofing of the infrastructure, make backups significantly easier and more versatile. You’ll effectively have a baremetal backup that you can restore to any other host and it also opens doors for effective clustering and migrations.</p>
+<h3>Backups &amp; snapshots make life easier</h3>
+<p>Virtual machines are extremely easy to backup and restore compared to their physical counterparts. Due to abstraction of storage and memory, we can <a target="_blank" href="https://en.wikipedia.org/wiki/Snapshot_(computer_storage)">snapshot</a> the current state of a machine at any point of time. This is basically taking an image of the running system and storing it in a file.</p>
+
+<p>These features allow you to take a system snapshot before carrying out any activities that may risk the stability of the system. For e.g., installing new software, changing configurations, installing updates &amp; patching, etc. Snapshots can assist you in extremely rapid rollbacks should anything go wrong. This seemingly minor feature can lead to big peace of mind and overall system reliability.  It also makes testing of features and rolling back or repeated testing very easy in non-production environments.</p>
+
+<div class="row">
+  <div class="col-12">
+    
+	<div>
+		<amp-ad layout="responsive" width="300" height="250" type="adsense" data-ad-client="ca-pub-4196010817129150" data-ad-slot="9331725005">
+		</amp-ad>
+	</div>
+
+
+  </div>
+</div>
+
+<p>Compare this with a physical machine. You’re unable to do any of this with such ease and speed. Some may say there’s Windows System Restore, but we all know it rarely works when you need it to. Windows System Restore is not an operating system agnostic backup unlike snapshots. In addition, it’s not guaranteed to bring your OS back to the state it was in when you took the snapshot. Also, restoring a VM snapshot will get rid of any viruses or malware you picked up. This is definitely not the case with System Restore.</p>
+
+<p>However, an important point to keep in mind is that that snapshots <a target="_blank" href="http://wiseindy.com/it/virtual-machines-snapshots-arent-backups/">are not backups</a>. You should always have a solid disaster recovery plan in place.</p>
+<h3>Do more with less</h3>
+<p>This one is fairly obvious. Virtualization enables you to run multiple machines on a single physical server. Instead of dedicating individual physical boxes for multiple requirements, virtualization enables you to consolidate multiple workloads onto a single physical box thereby maximizing efficiency and bringing down costs.</p>
+
+<p>Virtualization allows you to prepare for any future expansions even though you may think you do not need it at that time.</p>
+<h3>Virtual machines are files</h3>
+<p>Any hardware upgrades or migrations between physical machines are rife with uncertainity and have the potential to cause odd problems requiring days or weeks to fix. In worst cases, a system rebuild needs to be done.</p>
+
+<p>Virtual machines bypass most of these issues. VMs are simply files, at least when not actively running. You can safely and rapidly migrate between physical hosts without any regard to the underlying hardware. These tasks that would be otherwise risky can become trivial with a virtual environment.</p>
+<h3>The options</h3>
+<p>At the end of the day, IT is about reducing risk, mitigating disasters and maximizing stability and flexibility. Virtualization standardizes your environment, hence making it more flexible, stable and easy to manage. The major enterprise virtualization products (Microsoft Hyper-V, VMware vSphere, Citrix XenServer, KVM) are available, at least in some form, for free.</p>
+
+<p>Virtualization, at zero cost, provides you all the above listed benefits. There are no measureable downsides and if offers a huge potential benefit in the areas of safety, stability, flexibility and future-proofing of your environment. This leaves us with a the conculsion that virtualization in today’s day and age is a no-brainer and should be used as a “default” strategy in every possible environment.</p>
+
+<p>(header image source: <a target="_blank" href="http://vyle-art.com/portfolio/tronlegacy/">vyle-art.com</a>)</p>
+
+
+	<amp-ad
+	layout="responsive"
+	width=300
+	height=250
+	type="adsense"
+	data-ad-client="ca-pub-1094744891389501"
+	data-ad-slot="6411936673">
+	</amp-ad>
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/wiseindy"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://wiseindy.com/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2017 Wiseindy. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+  </body>
+</html>
