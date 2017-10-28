@@ -14,7 +14,7 @@ sharing_disabled:
 ---
 Hello.
 
-I am Wiseindy.
+I am Inderjot Singh.
 
 This is where you will find all that I've created in the past, and everything that I'll be doing in the future.
 More content to come soon.
