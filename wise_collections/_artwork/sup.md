@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.wordpress.com/?p=59
+guid: https://wiseindy.wordpress.com/?p=59
 header:
   teaser: /wp-content/uploads/2013/04/sup2.png
 publicize_reach:
@@ -19,4 +19,4 @@ redirect_from: "/doodles/rough sketches/doodle-sup/"
 toc: false
 format: image
 ---
-<img class="alignnone size-full wp-image-40" alt="Sup" src="http://wiseindy.com/wp-content/uploads/2013/04/sup2.png" width="960" height="1494" />
+<img class="alignnone size-full wp-image-40" alt="Sup" src="https://wiseindy.com/wp-content/uploads/2013/04/sup2.png" width="960" height="1494" />

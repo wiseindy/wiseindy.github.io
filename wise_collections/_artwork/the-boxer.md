@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.com/?p=334
+guid: https://wiseindy.com/?p=334
 header:
   teaser: /wp-content/uploads/2013/05/the-boxer.png
 publicize_reach:
@@ -19,4 +19,4 @@ redirect_from: "/doodles/doodle-the-boxer/"
 toc: false
 format: image
 ---
-<img class="alignnone size-full wp-image-336" alt="The Boxer" src="http://wiseindy.com/wp-content/uploads/2013/05/the-boxer.png" width="670" height="883" />
+<img class="alignnone size-full wp-image-336" alt="The Boxer" src="https://wiseindy.com/wp-content/uploads/2013/05/the-boxer.png" width="670" height="883" />

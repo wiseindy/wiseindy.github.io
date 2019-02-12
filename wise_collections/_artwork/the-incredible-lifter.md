@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.com/?p=338
+guid: https://wiseindy.com/?p=338
 header:
   teaser: /wp-content/uploads/2013/05/the-incredible-lifter.png
 publicize_twitter_user:
@@ -19,4 +19,4 @@ redirect_from: "/doodles/doodle-the-incredible-lifter/"
 toc: false
 format: image
 ---
-<img class="alignnone size-full wp-image-340" alt="The Incredible Lifter" src="http://wiseindy.com/wp-content/uploads/2013/05/the-incredible-lifter.png" width="670" height="898" />
+<img class="alignnone size-full wp-image-340" alt="The Incredible Lifter" src="https://wiseindy.com/wp-content/uploads/2013/05/the-incredible-lifter.png" width="670" height="898" />

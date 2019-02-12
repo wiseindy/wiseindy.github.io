@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.com/?p=349
+guid: https://wiseindy.com/?p=349
 header:
   teaser: /wp-content/uploads/2013/05/canned-evil.png
 publicize_reach:

@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.wordpress.com/?p=61
+guid: https://wiseindy.wordpress.com/?p=61
 header:
   teaser: /wp-content/uploads/2013/04/zom-b.png
 publicize_twitter_user:
@@ -19,4 +19,4 @@ redirect_from: "/doodles/doodle-zom-b/"
 toc: false
 format: image
 ---
-<img class="alignnone size-full wp-image-64" alt="Zom-B" src="http://wiseindy.com/wp-content/uploads/2013/04/zom-b.png" width="960" height="1971" />
+<img class="alignnone size-full wp-image-64" alt="Zom-B" src="https://wiseindy.com/wp-content/uploads/2013/04/zom-b.png" width="960" height="1971" />

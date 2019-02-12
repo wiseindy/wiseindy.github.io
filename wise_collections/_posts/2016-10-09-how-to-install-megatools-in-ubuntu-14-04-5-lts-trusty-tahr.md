@@ -65,7 +65,7 @@ sudo apt-get install libtool libglib2.0-dev gobject-introspection libgmp3-dev ne
 ```
 This installs all the dependencies that you may need to compile megatools from source.
 ``` shell
-wget http://megatools.megous.com/builds/megatools-1.9.97.tar.gz
+wget https://megatools.megous.com/builds/megatools-1.9.97.tar.gz
 ```
 <code>wget</code> is used to download the latest megatools. Replace <code>1.9.97</code> with the latest version is available.
 ``` shell

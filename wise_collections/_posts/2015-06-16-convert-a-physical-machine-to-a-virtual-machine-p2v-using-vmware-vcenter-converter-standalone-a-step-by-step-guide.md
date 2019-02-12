@@ -73,7 +73,7 @@ You can download it for free here:
 <blockquote>Download VMware's official user's guide for VMware vCenter Converter Standalone here:
 <a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/06/vmware_vcenter_converter_standalone_p2v_convsa_60_guide.pdf" target="_blank">VMware vCenter Converter Standalone User's Guide.pdf</a>
 
-Mirror: <a target="_blank" href="http://www.vmware.com/pdf/convsa_60_guide.pdf">VMware official</a></blockquote>
+Mirror: <a target="_blank" href="https://www.vmware.com/pdf/convsa_60_guide.pdf">VMware official</a></blockquote>
 <h3>Some points to keep in mind</h3>
 <ul>
 	<li>P2V has a downtime of a few minutes at best. So do inform your users before making the switch.</li>
@@ -156,7 +156,7 @@ It is an easy fix.
 </ul>
 Once you do the above, carry out steps <strong>2 to 5</strong> once again. If you still get an error, reboot your PC (the one that has the VMware vCenter Converter Standalone installed).
 
-More information on this error and similar errors here: <a target="_blank" href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1001344" target="_blank">http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1001344</a>
+More information on this error and similar errors here: <a target="_blank" href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1001344" target="_blank">https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1001344</a>
 <h3>Step 6:</h3>
 VMware vCenter Converter Standalone has now successfully connected to your physical server. Next step is to communicate with your VMware set up.
 
@@ -239,9 +239,9 @@ If you select <strong>Jobs</strong> view, you can see the exact process that fa
 
 This error happens because in your physical server, if Volume Shadow Copy Service (VSS) has problems performing a snapshot of disks, which can occur if multiple providers are associated with the operating system. <strong>Steps 14,</strong> <strong>15 &amp; 16</strong> will show you how to fix this.
 <blockquote>This can happen if you're running Windows Server 2003. You can read more about it in VMware's knowledgebase article:
-<a target="_blank" href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1035241" target="_blank">http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1035241</a>
+<a target="_blank" href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1035241" target="_blank">https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1035241</a>
 
-More: <a target="_blank" href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1039087" target="_blank">http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1039087</a></blockquote>
+More: <a target="_blank" href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1039087" target="_blank">https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1039087</a></blockquote>
 <h3>Step 14:</h3>
 Log into your physical server. Launch <strong>cmd.exe</strong> and type <code>vssadmin list providers </code>and hit Enter.
 
@@ -341,4 +341,4 @@ In your virtual machine, navigate to the location where you saved your exported�
 <h3>Step 22:</h3>
 As a final step, go ahead and test all your applications. You've successfully migrated a physical server to a virtual machine. Good job!
 
-(header image source: <a target="_blank" href="http://www.ismweb.com/optimization-virtualization">ismweb.com</a>)
+(header image source: <a target="_blank" href="https://www.ismweb.com/optimization-virtualization">ismweb.com</a>)

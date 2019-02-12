@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.com/?p=191
+guid: https://wiseindy.com/?p=191
 header:
   teaser: /wp-content/uploads/2013/04/the_vampire.png
 publicize_reach:
@@ -19,4 +19,4 @@ redirect_from: "/doodles/doodle-the-vampire/"
 toc: false
 format: image
 ---
-<img class="alignnone size-full wp-image-193" alt="The_Vampire" src="http://wiseindy.com/wp-content/uploads/2013/04/the_vampire.png" width="960" height="2280" />
+<img class="alignnone size-full wp-image-193" alt="The_Vampire" src="https://wiseindy.com/wp-content/uploads/2013/04/the_vampire.png" width="960" height="2280" />

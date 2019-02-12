@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.wordpress.com/?p=37
+guid: https://wiseindy.wordpress.com/?p=37
 header:
   teaser: /wp-content/uploads/2013/04/outer_space1.png
 publicize_twitter_user:
@@ -19,4 +19,4 @@ redirect_from: "/doodles/doodle-outer-space/"
 toc: false
 format: image
 ---
-<img class="alignnone size-full wp-image-42" alt="Outer_Space" src="http://wiseindy.com/wp-content/uploads/2013/04/outer_space1.png" width="960" height="1494" />
+<img class="alignnone size-full wp-image-42" alt="Outer_Space" src="https://wiseindy.com/wp-content/uploads/2013/04/outer_space1.png" width="960" height="1494" />

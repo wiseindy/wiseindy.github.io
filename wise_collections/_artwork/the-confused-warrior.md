@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.com/?p=186
+guid: https://wiseindy.com/?p=186
 header:
   teaser: /wp-content/uploads/2013/04/the_confused_warrior.png
 publicize_reach:
@@ -19,4 +19,4 @@ redirect_from: "/doodles/doodle-the-confused-warrior/"
 toc: false
 format: image
 ---
-<img class="alignnone size-full wp-image-188" alt="The_Confused_Warrior" src="http://wiseindy.com/wp-content/uploads/2013/04/the_confused_warrior.png" width="960" height="1345" />
+<img class="alignnone size-full wp-image-188" alt="The_Confused_Warrior" src="https://wiseindy.com/wp-content/uploads/2013/04/the_confused_warrior.png" width="960" height="1345" />

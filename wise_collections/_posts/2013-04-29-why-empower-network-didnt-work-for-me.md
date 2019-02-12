@@ -5,7 +5,7 @@ date: 2013-04-29T17:48:46+00:00
 author: wiseindy
 comments: true
 layout: single
-guid: http://wiseindy.com/?p=161
+guid: https://wiseindy.com/?p=161
 publicize_twitter_user:
   - WiseIndy
   - WiseIndy
@@ -71,7 +71,7 @@ Here are a list of their "products":
 
 1. Viral Blogging System.
 
-For $25 per month you get a "viral" blogging system. It's based on <a title="WordPress" href="http://wordpress.org/" target="_blank">WordPress</a>. Nothing special. They say it's worth hundreds of dollars and you get it for $25 per month. No it's not worth that much. You can set up a blog for free these days. Anyone one with basic Internet knowledge can do it.
+For $25 per month you get a "viral" blogging system. It's based on <a title="WordPress" href="https://wordpress.org/" target="_blank">WordPress</a>. Nothing special. They say it's worth hundreds of dollars and you get it for $25 per month. No it's not worth that much. You can set up a blog for free these days. Anyone one with basic Internet knowledge can do it.
 
 2. Inner Circle Membership
 

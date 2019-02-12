@@ -5,7 +5,7 @@ date: 2015-06-11T10:34:55+00:00
 author: wiseindy
 comments: true
 layout: single
-guid: http://wiseindy.com/?p=625
+guid: https://wiseindy.com/?p=625
 header:
   image: /wp-content/uploads/2015/06/poweshell.jpg
   teaser: /assets/images/featured/featured-powershell.jpg
@@ -66,4 +66,4 @@ replace "<code>\\*</code>" with "<code>\\PC1-USRNAME</code>" as shown below:
 	<li>For example, to create a directory in all workstations, simply run:
 <code>PsExec.exe \\* -s cmd /C mkdir C:\test</code></li>
 </ul>
-(header image source: <a target="_blank" href="http://interfaceit.com">interfaceit.com</a>)
+(header image source: <a target="_blank" href="https://interfaceit.com">interfaceit.com</a>)

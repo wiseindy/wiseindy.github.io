@@ -5,7 +5,7 @@ date: 2015-07-12T11:04:55+00:00
 author: wiseindy
 comments: true
 layout: single
-guid: http://wiseindy.com/?p=868
+guid: https://wiseindy.com/?p=868
 header:
   image: /wp-content/uploads/2015/07/why-should-you-virtualize-even-a-single-server.jpg
   teaser: /assets/images/featured/featured-whyvirtualize.jpg
@@ -60,7 +60,7 @@ These features allow you to take a system snapshot before carrying out any acti
 
 Compare this with a physical machine. You're unable to do any of this with such ease and speed. Some may say there's Windows System Restore, but we all know it rarely works when you need it to. Windows System Restore is not an operating system agnostic backup unlike snapshots. In addition, it's not guaranteed to bring your OS back to the state it was in when you took the snapshot. Also, restoring a VM snapshot will get rid of any viruses or malware you picked up. This is definitely not the case with System Restore.
 
-However, an important point to keep in mind is that that snapshots <a target="_blank" href="http://wiseindy.com/it/virtual-machines-snapshots-arent-backups/" target="_blank">are not backups</a>. You should always have a solid disaster recovery plan in place.
+However, an important point to keep in mind is that that snapshots <a target="_blank" href="https://wiseindy.com/it/virtual-machines-snapshots-arent-backups/" target="_blank">are not backups</a>. You should always have a solid disaster recovery plan in place.
 <h3>Do more with less</h3>
 This one is fairly obvious. Virtualization enables you to run multiple machines on a single physical server. Instead of dedicating individual physical boxes for multiple requirements, virtualization enables you to consolidate multiple workloads onto a single physical box thereby maximizing efficiency and bringing down costs.
 
@@ -74,4 +74,4 @@ At the end of the day, IT is about reducing risk, mitigating disasters and maxim
 
 Virtualization, at zero cost, provides you all the above listed benefits. There are no measureable downsides and if offers a huge potential benefit in the areas of safety, stability, flexibility and future-proofing of your environment. This leaves us with a the conculsion that virtualization in today's day and age is a no-brainer and should be used as a "default" strategy in every possible environment.
 
-(header image source: <a target="_blank" href="http://vyle-art.com/portfolio/tronlegacy/" target="_blank">vyle-art.com</a>)
+(header image source: <a target="_blank" href="https://vyle-art.com/portfolio/tronlegacy/" target="_blank">vyle-art.com</a>)

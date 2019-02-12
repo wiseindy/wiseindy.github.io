@@ -51,4 +51,4 @@ Double click **UseWUServer** and set the value to **0**
 
 Restart your PC. Now try to enable developer mode again. This time you will not see the error 0x80004005 and it should be enabled successfully.
 
-(header image source: [sf.co.ua](http://sf.co.ua/id169202))
+(header image source: [sf.co.ua](https://sf.co.ua/id169202))

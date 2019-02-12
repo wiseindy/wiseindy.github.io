@@ -115,7 +115,7 @@ Now you can preview your website on `http://localhost:4000`
 
 I had to install [Nokogiri](https://github.com/sparklemotion/nokogiri) for my site and was having issues. This is how I solved it.
 
-Below are the installation instructions on [nokogiri.org](http://www.nokogiri.org/tutorials/installing_nokogiri.html):
+Below are the installation instructions on [nokogiri.org](https://www.nokogiri.org/tutorials/installing_nokogiri.html):
 
 ```shell
 sudo apt-get install build-essential patch

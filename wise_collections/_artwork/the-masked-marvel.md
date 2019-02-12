@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.com/?p=182
+guid: https://wiseindy.com/?p=182
 header:
   teaser: /wp-content/uploads/2013/05/the_masked_marvel2.png
 publicize_reach:
@@ -19,4 +19,4 @@ redirect_from: "/doodles/doodle-the-masked-marvel/"
 toc: false
 format: image
 ---
-<img class="alignnone size-full wp-image-316" alt="The_Masked_Marvel" src="http://wiseindy.com/wp-content/uploads/2013/05/the_masked_marvel2.png" width="670" height="1591" />
+<img class="alignnone size-full wp-image-316" alt="The_Masked_Marvel" src="https://wiseindy.com/wp-content/uploads/2013/05/the_masked_marvel2.png" width="670" height="1591" />

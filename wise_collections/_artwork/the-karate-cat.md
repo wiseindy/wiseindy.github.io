@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.com/?p=329
+guid: https://wiseindy.com/?p=329
 header:
   teaser: /wp-content/uploads/2013/05/the-karate-cat.png
 publicize_twitter_user:

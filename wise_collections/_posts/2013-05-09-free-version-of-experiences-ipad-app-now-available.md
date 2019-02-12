@@ -4,7 +4,7 @@ title: 'Free version of Experiences iPad app now available'
 date: 2013-05-09T16:05:15+00:00
 author: wiseindy
 layout: single
-guid: http://wiseindy.com/?p=218
+guid: https://wiseindy.com/?p=218
 publicize_twitter_user:
   - WiseIndy
   - WiseIndy
@@ -31,7 +31,7 @@ It is an app that makes you feel good. And anything that makes you feel good is 
 <div style="clear:both;">
 <div style="width:100px;padding:5px 10px 5px 0;float:left;">
 
-<img class="alignnone  wp-image-222" alt="experiences-free-rainfall" src="http://wiseindy.com/wp-content/uploads/2013/05/experiences-free-rainfall.png?w=150" width="100" height="100" />
+<img class="alignnone  wp-image-222" alt="experiences-free-rainfall" src="https://wiseindy.com/wp-content/uploads/2013/05/experiences-free-rainfall.png?w=150" width="100" height="100" />
 
 </div>
 <div style="width:500px;padding:5px 0 5px 10px;margin-top:6px;float:left;">
@@ -45,7 +45,7 @@ It is an app that makes you feel good. And anything that makes you feel good is 
 <div style="clear:both;">
 <div style="width:100px;padding:5px 10px 5px 0;float:left;">
 
-<img class="alignnone  wp-image-222" alt="experiences-free-white-noise" src="http://wiseindy.com/wp-content/uploads/2013/05/experiences-free-white-noise.png?w=150" width="100" height="100" />
+<img class="alignnone  wp-image-222" alt="experiences-free-white-noise" src="https://wiseindy.com/wp-content/uploads/2013/05/experiences-free-white-noise.png?w=150" width="100" height="100" />
 
 </div>
 <div style="width:500px;padding:5px 0 5px 10px;margin-top:6px;float:left;">
@@ -59,7 +59,7 @@ It is an app that makes you feel good. And anything that makes you feel good is 
 <div style="clear:both;">
 <div style="width:100px;padding:5px 10px 5px 0;float:left;">
 
-<img class="alignnone  wp-image-222" alt="experiences-free-beach" src="http://wiseindy.com/wp-content/uploads/2013/05/experiences-free-beach.png?w=150" width="100" height="100" />
+<img class="alignnone  wp-image-222" alt="experiences-free-beach" src="https://wiseindy.com/wp-content/uploads/2013/05/experiences-free-beach.png?w=150" width="100" height="100" />
 
 </div>
 <div style="width:500px;padding:5px 0 5px 10px;margin-top:6px;float:left;">

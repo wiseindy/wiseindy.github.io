@@ -5,7 +5,7 @@ date: 2015-08-03T02:01:39+00:00
 author: wiseindy
 comments: true
 layout: single
-guid: http://wiseindy.com/?p=947
+guid: https://wiseindy.com/?p=947
 header:
   image: /wp-content/uploads/2015/08/Mailbox.jpg
   teaser: /assets/images/featured/featured-exportmailbox.jpg
@@ -71,4 +71,4 @@ This will remove <strong>all</strong> completed export requests.
 <pre>Get-MailboxExportRequest -Status Completed | Remove-MailboxExportRequest</pre>
 To read more about exporting mailboxes, you can check out <a target="_blank" href="https://technet.microsoft.com/en-us/library/ff459227(v=exchg.141).aspx" target="_blank">this TechNet article</a> by Microsoft.
 
-(header image source: <a target="_blank" href="http://www.wallpaperscastle.com/free-mood-desktop-wallpaper-11761.html" target="_blank">wallpaperscastle.com</a>)
+(header image source: <a target="_blank" href="https://www.wallpaperscastle.com/free-mood-desktop-wallpaper-11761.html" target="_blank">wallpaperscastle.com</a>)

@@ -41,18 +41,18 @@ tags:
 
 <!--more-->
 <h3>Why would I do this?</h3>
-The <a target="_blank" href="http://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html" target="_blank">TP-Link TL-WDR3600 N600</a> is a pretty good budget Gigabit router for homes. I've been using it for a few years now and I like almost everything about this except the fact that there's no inherent VPN or QoS functionality. Not a deal breaker, but it would be great to extend the capabilities of the device for no additonal cost. There's also the fact that I'm a networking enthusiast and this is a good opportunity to learn.
+The <a target="_blank" href="https://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html" target="_blank">TP-Link TL-WDR3600 N600</a> is a pretty good budget Gigabit router for homes. I've been using it for a few years now and I like almost everything about this except the fact that there's no inherent VPN or QoS functionality. Not a deal breaker, but it would be great to extend the capabilities of the device for no additonal cost. There's also the fact that I'm a networking enthusiast and this is a good opportunity to learn.
 <h3>What you need:</h3>
 <ul>
-	<li>A <a target="_blank" href="http://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html" target="_blank">TP-Link TL-WDR3600 N600</a> router.
+	<li>A <a target="_blank" href="https://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html" target="_blank">TP-Link TL-WDR3600 N600</a> router.
 <ul>
-	<li>You could use any other DD-WRT supported routers as well. Check out the <a target="_blank" href="http://www.dd-wrt.com/site/support/router-database" target="_blank">DD-WRT website</a> to see if your router is supported.</li>
+	<li>You could use any other DD-WRT supported routers as well. Check out the <a target="_blank" href="https://www.dd-wrt.com/site/support/router-database" target="_blank">DD-WRT website</a> to see if your router is supported.</li>
 </ul>
 </li>
 	<li>A PC connected to your router with an ethernet cable (duh).</li>
 </ul>
 <h3>Step 1:</h3>
-Head to the <a target="_blank" href="http://www.dd-wrt.com/site/support/router-database" target="_blank">DD-WRT website</a> and search for your router. Mine is <a target="_blank" href="http://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html" target="_blank">TP-Link TL-WDR3600</a>, hence I pick that one from the search results.
+Head to the <a target="_blank" href="https://www.dd-wrt.com/site/support/router-database" target="_blank">DD-WRT website</a> and search for your router. Mine is <a target="_blank" href="https://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html" target="_blank">TP-Link TL-WDR3600</a>, hence I pick that one from the search results.
 
 <a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-01.png"><img class="alignnone size-full wp-image-887" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-01.png" alt="DD-WRT database search" /></a>
 
@@ -124,4 +124,4 @@ Your router just gained a whole lot of features that are available only in high 
 
 Now that you've got DD-WRT powered up, see how you can configure DD-WRT to <a target="_blank" href="https://wiseindy.com/it/how-to-access-your-pcs-using-dns-names-with-dd-wrt/" target="_blank">access computers using hostnames on your home network</a>
 
-(header image source: <a target="_blank" href="http://www.freeimageslive.co.uk/image/view/3929/_original" target="_blank">freeimageslive.co.uk</a>)
+(header image source: <a target="_blank" href="https://www.freeimageslive.co.uk/image/view/3929/_original" target="_blank">freeimageslive.co.uk</a>)

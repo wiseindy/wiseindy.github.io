@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.wordpress.com/?p=55
+guid: https://wiseindy.wordpress.com/?p=55
 header:
   teaser: /wp-content/uploads/2013/04/the_confused_badass.png
 publicize_twitter_user:
@@ -19,4 +19,4 @@ redirect_from: "/doodles/doodle-the-confused-badass/"
 toc: false
 format: image
 ---
-<p><a href="http://wiseindy.com/wp-content/uploads/2013/04/the_confused_badass.png"><img class="alignnone size-full wp-image-57" alt="The_Confused_Badass" src="http://wiseindy.com/wp-content/uploads/2013/04/the_confused_badass.png" width="960" height="797" /></a></p>
+<p><a href="https://wiseindy.com/wp-content/uploads/2013/04/the_confused_badass.png"><img class="alignnone size-full wp-image-57" alt="The_Confused_Badass" src="https://wiseindy.com/wp-content/uploads/2013/04/the_confused_badass.png" width="960" height="797" /></a></p>

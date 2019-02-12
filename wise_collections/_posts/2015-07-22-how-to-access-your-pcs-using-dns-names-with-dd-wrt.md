@@ -87,7 +87,7 @@ Open up a browser and navigate to your router homepage. After logging in, click 
 	<li>For my home network, I picked  <code>wise.lan</code></li>
 	<li>You can pick whatever you want.
 <ul>
-	<li>The one exception to that rule, is that if you use <code>.local</code>, while your windows machines will probably do just fine, your Linux machines will adhere to the mDNS (<a target="_blank" href="http://tools.ietf.org/html/draft-lynn-dnsext-site-mdns-01" target="_blank">Multicast DNS</a>) standard and will again ignore the DNS server.</li>
+	<li>The one exception to that rule, is that if you use <code>.local</code>, while your windows machines will probably do just fine, your Linux machines will adhere to the mDNS (<a target="_blank" href="https://tools.ietf.org/html/draft-lynn-dnsext-site-mdns-01" target="_blank">Multicast DNS</a>) standard and will again ignore the DNS server.</li>
 </ul>
 </li>
 </ul>
@@ -114,4 +114,4 @@ Now, since you have a DNS suffix, the resulting FQDN for this machine will be 
 
 Repeat this <code>ipconfig /release</code> and <code>ipconfig /renew</code> on at least one more machine and try pinging <code>wiseindy-pc</code> using only the hostname. You should see that the client has automatically understood that the full name of the device you’re pinging is <code>wiseindy-pc.wise.lan</code> (<code>hostname.dns.zone</code>), and was able to translate (resolve) the FQDN to an IP.
 
-(header image source: <a target="_blank" href="http://www.goodfon.su/wallpaper/dns-d-n-s-oskolki-tuman.html" target="_blank">goodfon.su</a>)
+(header image source: <a target="_blank" href="https://www.goodfon.su/wallpaper/dns-d-n-s-oskolki-tuman.html" target="_blank">goodfon.su</a>)

@@ -5,7 +5,7 @@ date: 2015-08-23T06:50:33+00:00
 author: wiseindy
 comments: true
 layout: single
-guid: http://wiseindy.com/?p=877
+guid: https://wiseindy.com/?p=877
 header:
   image: /wp-content/uploads/2015/08/virtual-machines-snapshots-are-not-backups.jpg
   teaser: /assets/images/featured/featured-snapshotsbackups.jpg
@@ -45,4 +45,4 @@ A good data protection strategy combines a number of aspects that can include al
 
 While snapshots aren't true backups, they do provide a lot of value. Short-term snapshots are great for dealing with user errors and some data corruption scenarios. More importantly, they are very fast (data can be reverted or restored in seconds). They're extremely space-efficient and in many cases, restores can be performed very quickly. Snapshots reduce the amount of labor needed to manage an environment and are generally good enough for daily use. The issue is simply that they can't be relied upon in a major disaster, and any true backup strategy must go beyond snapshots.
 
-(header image source: <a target="_blank" href="http://www.wallpaperlayer.com/vintage-camera-wallpaper-704.html" target="_blank">wallpaperlayer.com</a>)
+(header image source: <a target="_blank" href="https://www.wallpaperlayer.com/vintage-camera-wallpaper-704.html" target="_blank">wallpaperlayer.com</a>)

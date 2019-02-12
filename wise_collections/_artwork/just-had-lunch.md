@@ -6,7 +6,7 @@ author: wiseindy
 comments: true
 layout: single
 read_time: false
-guid: http://wiseindy.wordpress.com/?p=78
+guid: https://wiseindy.wordpress.com/?p=78
 header:
   teaser: /wp-content/uploads/2013/04/just-had-lunch.png
 publicize_twitter_user:
@@ -16,4 +16,4 @@ redirect_from: "/doodles/doodle-just-had-lunch/"
 toc: false
 format: image
 ---
-<img class="alignnone size-full wp-image-80" alt="Just-had-lunch" src="http://wiseindy.com/wp-content/uploads/2013/04/just-had-lunch.png" width="960" height="1249" />
+<img class="alignnone size-full wp-image-80" alt="Just-had-lunch" src="https://wiseindy.com/wp-content/uploads/2013/04/just-had-lunch.png" width="960" height="1249" />

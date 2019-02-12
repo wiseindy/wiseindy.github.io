@@ -191,4 +191,4 @@ Guess what? That's it! You've successfully installed a new SSL certificate for y
 
 &nbsp;
 
-(header image source: <a target="_blank" href="http://www.animalhi.com/Insects/spiders/rust_locker_room_spider_webs_lock_2560x1440_wallpaper_12182" target="_blank">animalhi.com</a>)
+(header image source: <a target="_blank" href="https://www.animalhi.com/Insects/spiders/rust_locker_room_spider_webs_lock_2560x1440_wallpaper_12182" target="_blank">animalhi.com</a>)

@@ -72,7 +72,7 @@ Click <strong>OK</strong> and close regedit. That's it!
 
 <h2>The automatic way to fix this error</h2>
 <h3>Step 1:</h3>
-Download the Adobe Reader preview handler x64 fixer by <a target="_blank" href="http://www.pretentiousname.com/" target="_blank">Leo Davidson</a>, from this link: <a target="_blank" href="http://www.pretentiousname.com/adobe_pdf_x64_fix/#downl" target="_blank">http://www.pretentiousname.com/adobe_pdf_x64_fix/#downl</a>
+Download the Adobe Reader preview handler x64 fixer by <a target="_blank" href="https://www.pretentiousname.com/" target="_blank">Leo Davidson</a>, from this link: <a target="_blank" href="https://www.pretentiousname.com/adobe_pdf_x64_fix/#downl" target="_blank">https://www.pretentiousname.com/adobe_pdf_x64_fix/#downl</a>
 
 You could download either with installer or without. I choose to do the one without the installer.
 
@@ -88,4 +88,4 @@ Run the preview handler fix utility and click <strong>Apply Fix</strong>.
 
 That's it!
 
-(header image source: <a target="_blank" href="http://blog.automart.co.za/wp-content/uploads/2015/01/trying_to_figure_out_car_trouble.jpg" target="_blank">automart.co.za</a>)
+(header image source: <a target="_blank" href="https://blog.automart.co.za/wp-content/uploads/2015/01/trying_to_figure_out_car_trouble.jpg" target="_blank">automart.co.za</a>)

@@ -36,7 +36,7 @@ How do Windows computers usually update? In a non-WSUS environment (generally al
 This may not be always preferred in a corporate environment. Instead of each workstation manually connecting to Microsoft Update, testing updates and then deploying updates using traditional methods, administrators can use WSUS to download updates centrally to an internal server. Once updates are authorised in WSUS, they’re also deployed internally and reporting tools keep administrators informed of patch progress. This is a very efficient way of working, allowing administrators full control of which updates are deployed to workstations.
 
 In Windows Server 2012 and 2012 R2, WSUS is integrated with the operating system as a server role. In previous versions of Windows Server (2003, 2008, 2008 R2), you had to separately install WSUS 3.0.
-<blockquote>Also, seems like Microsoft will be moving away from WSUS to an entirely new product called Windows Update for Business (WUB). <a target="_blank" href="http://blogs.windows.com/bloggingwindows/2015/05/04/announcing-windows-update-for-business/" target="_blank">You can read more about it here.</a></blockquote>
+<blockquote>Also, seems like Microsoft will be moving away from WSUS to an entirely new product called Windows Update for Business (WUB). <a target="_blank" href="https://blogs.windows.com/bloggingwindows/2015/05/04/announcing-windows-update-for-business/" target="_blank">You can read more about it here.</a></blockquote>
 Ok, so now, let's see how we can set up WSUS on Windows Server 2012 R2
 <h3>What you need:</h3>
 <ol>

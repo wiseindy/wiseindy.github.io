@@ -5,7 +5,7 @@ date: 2016-01-31T08:05:38+00:00
 author: Wiseindy
 comments: true
 layout: single
-guid: http://wiseindy.com/?p=1094
+guid: https://wiseindy.com/?p=1094
 dsq_thread_id:
   - "5585733448"
 header:
@@ -22,6 +22,10 @@ tags:
   - google apps for work
   - Guides
 ---
+
+2018-02-04 Many users have reported that this method no longer seems to work.
+{: .notice--danger}
+
 Back in the day, Google Apps for Business (Work) was free for up to 10 users. Sadly, that is no longer the case. If you are one of the lucky ones to have grabbed an account during those times and you're now looking for ways to change that domain, well, you've come to the right place. This guide will show you how to do this AND it's applicable for both free Google Apps accounts and paid Google Apps subscriptions.
 
 <!--more-->
@@ -48,15 +52,15 @@ Log into your existing Google Apps account. Navigate to <a target="_blank" href
 
 Alternatively, you could navigate to <a target="_blank" href="https://www.google.com/work/apps/business/" target="_blank">https://www.google.com/work/apps/business/</a> or even use your domain's custom Google Apps URL.
 
-For example, if your domain is <a target="_blank" href="http://wiseindy.com" target="_blank">wiseindy.com</a>, simply navigate to <a target="_blank" href="https://google.com/a/example.com" target="_blank">https://google.com/a/<strong>wiseindy.com</strong></a>.
+For example, if your domain is <a target="_blank" href="https://wiseindy.com" target="_blank">wiseindy.com</a>, simply navigate to <a target="_blank" href="https://google.com/a/example.com" target="_blank">https://google.com/a/<strong>wiseindy.com</strong></a>.
 <h3>Step 2:</h3>
 Once you're logged in, click on the big red <strong>Upgrade Now</strong> button on the right hand sidebar.
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-01.png" rel="attachment wp-att-1143"><img class="alignnone size-full wp-image-1143" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-01.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-01" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-01.png" rel="attachment wp-att-1143"><img class="alignnone size-full wp-image-1143" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-01.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-01" /></a>
 
 Enter in your information, check the terms and conditions check box and click <strong>I accept! Upgrade my account</strong>.
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-02.png" rel="attachment wp-att-1145"><img class="alignnone size-full wp-image-1145" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-02.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-02" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-02.png" rel="attachment wp-att-1145"><img class="alignnone size-full wp-image-1145" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-02.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-02" /></a>
 <h3>Step 3:</h3>
 Next, go back to the admin console and click <strong>Domains</strong>. If you don't see the <strong>Domains</strong> tile, click the <strong>Show More</strong> link at the bottom and then select <strong>Domains</strong>.
 
@@ -64,17 +68,17 @@ Then click on <strong>Add/Remove</strong> domains.
 
 Alternatively, you can just navigate to the domains page directly via this link: <a target="_blank" href="https://admin.google.com/AdminHome?pli=1&amp;fral=1#Domains:" target="_blank">https://admin.google.com/AdminHome?pli=1&amp;fral=1#Domains:</a>
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-03.png" rel="attachment wp-att-1146"><img class="alignnone size-full wp-image-1146" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-03.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-03" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-03.png" rel="attachment wp-att-1146"><img class="alignnone size-full wp-image-1146" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-03.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-03" /></a>
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-04.png" rel="attachment wp-att-1147"><img class="alignnone size-full wp-image-1147" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-04.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-04" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-04.png" rel="attachment wp-att-1147"><img class="alignnone size-full wp-image-1147" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-04.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-04" /></a>
 
 Disable the test domain alias by clicking the <strong>Deactivate</strong> button as shown below. A popup box will ask you to confirm this action. Confirm it.
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-05.png" rel="attachment wp-att-1148"><img class="alignnone size-full wp-image-1148" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-05.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-05" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-05.png" rel="attachment wp-att-1148"><img class="alignnone size-full wp-image-1148" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-05.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-05" /></a>
 
 After the test domain alias is deactivated, click the <strong>Add a domain or domain alias</strong> button at the top.
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-06.png" rel="attachment wp-att-1149"><img class="alignnone size-full wp-image-1149" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-06.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-06" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-06.png" rel="attachment wp-att-1149"><img class="alignnone size-full wp-image-1149" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-06.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-06" /></a>
 <h3>Step 4:</h3>
 Enter the new domain name. Follow Google's verification steps to verify ownership for your new domain. This should be pretty straightforward if you have access to your domain registrar/hosting account. Since Google shows you step by step how to verify your domain, I won't cover it here.
 <h3>Step 5:</h3>
@@ -88,7 +92,7 @@ Make sure you’re logged into your existing Google Apps account (you can see 
 
 Click <strong>Try it now.</strong>
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-07.png" rel="attachment wp-att-1150"><img class="alignnone size-full wp-image-1150" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-07.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-07" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-07.png" rel="attachment wp-att-1150"><img class="alignnone size-full wp-image-1150" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-07.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-07" /></a>
 
 Enter the information as shown in the screenshot below.
 <ul>
@@ -108,7 +112,7 @@ Click <strong>Authorize and Execute</strong>.
 
 A couple of popups might show up asking you to authorize this with your Google account, Authorize everything.
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-08.png" rel="attachment wp-att-1151"><img class="alignnone size-full wp-image-1151" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-08.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-08" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-08.png" rel="attachment wp-att-1151"><img class="alignnone size-full wp-image-1151" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-08.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-08" /></a>
 
 Guess what? Your secondary domain (the one you typed above) is now your <strong>primary</strong> domain! You can confirm by going to the <strong>Domains</strong> panel from the admin console (direct link: <a target="_blank" href="https://admin.google.com/AdminHome?pli=1&amp;fral=1#Domains:" target="_blank">https://admin.google.com/AdminHome?pli=1&amp;fral=1#Domains:</a>)
 <h3>Step 6:</h3>
@@ -132,20 +136,20 @@ Let's remove the old domain (that USED to be the primary once upon a time).
 <h3>Step 7:</h3>
 Let's convert our 30 day trial back to a free account. In the admin console, click on <strong>Billing</strong>. Alternatively, directly open it via this link: <a target="_blank" href="https://admin.google.com/AdminHome?pli=1&amp;fral=1#DomainSettings/notab=1&amp;subtab=subscriptions" target="_blank">https://admin.google.com/AdminHome?pli=1&amp;fral=1#DomainSettings/notab=1&amp;subtab=subscriptions</a>
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-09.png" rel="attachment wp-att-1152"><img class="alignnone size-full wp-image-1152" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-09.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-09" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-09.png" rel="attachment wp-att-1152"><img class="alignnone size-full wp-image-1152" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-09.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-09" /></a>
 
 Click the 3 vertical dots and in the dropdown select <strong>Cancel Subscription</strong>.
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-10.png" rel="attachment wp-att-1153"><img class="alignnone size-full wp-image-1153" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-10.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-10" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-10.png" rel="attachment wp-att-1153"><img class="alignnone size-full wp-image-1153" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-10.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-10" /></a>
 
 Chose <strong>Downgrade to Google Apps</strong>.
 
 <strong><span style="color: #ff0000;">Do not choose Cancel Google Apps for Work. This will completely delete your account. Yes. Free, paid, everything. </span></strong>Make sure you choose <strong>Downgrade to Google Apps</strong>. If you do not see the <strong>"downgrade"</strong> option, then make sure that you have only <strong>one</strong> domain in your <strong>Domains</strong> panel (direct link: <a target="_blank" href="https://admin.google.com/AdminHome?pli=1&amp;fral=1#Domains:" target="_blank">https://admin.google.com/AdminHome?pli=1&amp;fral=1#Domains:</a>)
 
-<a target="_blank" href="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-11.png" rel="attachment wp-att-1154"><img class="alignnone size-full wp-image-1154" src="http://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-11.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-11" /></a>
+<a target="_blank" href="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-11.png" rel="attachment wp-att-1154"><img class="alignnone size-full wp-image-1154" src="https://wiseindy.com/wp-content/uploads/2016/01/how-to-change-primary-domain-of-free-or-paid-google-apps-account-11.png" alt="how-to-change-primary-domain-of-free-or-paid-google-apps-account-11" /></a>
 
 Click <strong>Continue</strong>.
 
 That's it. You've successfully changed the primary domain of your free/paid Google Apps account!
 
-(header image source: <a target="_blank" href="http://www.imdb.com/title/tt0098904/" target="_blank">Seinfeld</a>)
+(header image source: <a target="_blank" href="https://www.imdb.com/title/tt0098904/" target="_blank">Seinfeld</a>)
