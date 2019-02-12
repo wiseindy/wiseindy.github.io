@@ -204,6 +204,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-redirect-from
+  - jekyll-include-cache
   - amp-jekyll
 
 # mimic GitHub Pages with --safe
