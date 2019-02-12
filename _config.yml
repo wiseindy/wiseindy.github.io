@@ -5,8 +5,17 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+# Theme Settings
+#
+# Review documentation to determine if you should use `theme` or `remote_theme`
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+
+theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
 # Site Settings
-locale                   : "en"
+locale                   : "en-US"
 title                    : "Wiseindy"
 title_separator          : "-"
 name                     : "Inderjot Singh"
@@ -15,8 +24,8 @@ url                      : https://wiseindy.com # the base hostname & protocol f
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : wiseindy/wiseindy.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+breadcrumbs              : true # true, false (default)
+words_per_minute         : 300
 comments:
   provider               : disqus # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -46,12 +55,22 @@ staticman:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
   path                   : # blank (default) uses feed.xml
-
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : # lunr (default), algolia, google
+algolia:
+  application_id         : # YOUR_APPLICATION_ID
+  index_name             : # YOUR_INDEX_NAME
+  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
+  powered_by             : # true (default), false
+google:
+  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+  instant_search         : # false (default), true
 # SEO Related
 google_site_verification :
 bing_site_verification   :
-alexa_site_verification  :
 yandex_site_verification :
+naver_site_verification  :
 
 # Social Sharing
 twitter:
@@ -79,33 +98,32 @@ analytics:
 author:
   name             : "Wiseindy"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Sysadmin by day, developer by night."
+  bio              : "Engineer by day, developer by night."
   location         : "Toronto, ON"
   email            : wiseindy (at) live (dot) com
-  uri              : https://wiseindy.com
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : wiseindy
-  google_plus      :
-  keybase          :
-  instagram        :
-  lastfm           :
-  linkedin         :
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : "1135804/wiseindy"
-  steam            :
-  tumblr           :
-  twitter          : wiseindy
-  vine             :
-  weibo            :
-  xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
-  # spiceworks     : https://community.spiceworks.com/people/inderjotsingh
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: mailto:your.name@email.com
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/wiseindy"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/1135804/wiseindy"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/wiseindy"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
+    # spiceworks     : https://community.spiceworks.com/people/inderjotsingh
 
 
 # Reading Files
@@ -172,29 +190,30 @@ sass:
 
 
 # Outputting
-# permalink: /:categories/:title/
-permalink: /:categories/:title/
-paginate: 7 # amount of posts to show
-paginate_path: /page:num/
+permalink: /blog/:categories/:title/
+#paginate: 7 # amount of posts to show
+#paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
-gems:
-  - jekyll-paginate
+plugins:
+  #- jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-redirect-from
   - amp-jekyll
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-paginate
+  #- jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-redirect-from
 
 
 ampdir: amp
@@ -235,22 +254,56 @@ compress_html:
   ignore:
     envs: development
 
-    
-    
+collections_dir: wise_collections
+
+# Collections
 collections:
-  category:
+  websites:
     output: true
+    permalink: /:collection/:path/
+  apps:
+    output: true
+    permalink: /:collection/:path/
+  automation:
+    output: true
+    permalink: /:collection/:path/
+  artwork:
+    output: true
+    permalink: /:collection/:path/
+
 
 # Defaults
 defaults:
   # _posts
   - scope:
       path: ""
-      type: category
+      type: posts
     values:
-      layout: category
+      layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: # true
       share: true
       related: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "file-alt"
+      toc_sticky: false
+    
+#collections:
+  #category:
+    #output: true
+
+# Defaults
+#defaults:
+  # _posts
+  #- scope:
+      #path: ""
+      #type: category
+    #values:
+    #  layout: category
+    #  author_profile: true
+    #  read_time: true
+    #  comments: true
+    #  share: true
+    #  related: true

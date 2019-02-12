@@ -12,52 +12,82 @@
 
 <div class="{{ include.type | default: "list" }}__item">
 
-  {% assign loopindex = forloop.index %}
-  {% if loopindex == 3 %}
-  <div>
-  {% include adsense-home.html %}
-  </div>
-  {% endif %}
-  {% if loopindex == 5 %}
-  <div>
-  {% include adsense-home.html %}
-  </div>
-  {% endif %}
-  {% if loopindex == 7 %}
-  <div>
-  {% include adsense-home.html %}
-  </div>
+  {% if include.type != "grid" %}
+    {% assign loopindex = forloop.index %}
+    {% if loopindex == 3 %}
+    <div>
+    {% include adsense-home.html %}
+    </div>
+    {% endif %}
+    {% if loopindex == 5 %}
+    <div>
+    {% include adsense-home.html %}
+    </div>
+    {% endif %}
+    {% if loopindex == 7 %}
+    <div>
+    {% include adsense-home.html %}
+    </div>
+    {% endif %}
   {% endif %}
 
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
           {% if teaser contains "://" %}
             "{{ teaser }}"
           {% else %}
-            "{{ teaser | absolute_url }}"
+            "{{ teaser | relative_url }}"
           {% endif %}
           alt="">
       </div>
     {% endif %}
 	
-	<h2 class="archive__item-title" itemprop="headline" style="display: flex; flex-direction: row; align-items: center;">
-	  {% if post.link %}
-		<div class="archive__item-teaser-mini" style="background:url({{ teaser }}) no-repeat; background-size: cover; background-position: center;">
-		</div>
-		<a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | absolute_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-	  {% else %}
-		<div class="archive__item-teaser-mini" style="background:url({{ teaser }}) no-repeat; background-size: cover; background-position: center;">
-		</div>
-		<a href="{{ post.url | absolute_url }}" rel="permalink">{{ title }}</a>
-	  {% endif %}
-	</h2>
-	
-	{% if post.read_time %}
-	  <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+	{% if include.type == "grid" or post.hideteaser %}
+    <h2 class="archive__item-title" itemprop="headline">
+	{% else %}
+	<h2 class="archive__item-title wise-center-teaser" itemprop="headline">
 	{% endif %}
-	{% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+      {% if post.link %}
+		{% if include.type == "grid" or post.hideteaser %}
+		{% else %}
+		<div class="archive__item-teaser-mini" style="background:url({{ teaser }}) no-repeat; background-size: cover; background-position: center;">
+		</div>
+		{% endif %}
+        <a href="{{ post.link }}">{{ title }}</a>&nbsp;<a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% else %}
+		{% if include.type == "grid" or post.hideteaser %}
+		{% else %}
+		<div class="archive__item-teaser-mini" style="background:url({{ teaser }}) no-repeat; background-size: cover; background-position: center;">
+		</div>
+		{% endif %}
+        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+      {% endif %}
+    </h2>
+	
+    {% if post.read_time %}
+      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+	
+	{% if post.technology or post.android or post.ios %}
+	<p itemprop="technology">
+		{% if post.ios %}
+		<span>
+			<i class="fab fa-apple"></i>&nbsp;
+		</span>
+		{% endif %}
+		{% if post.android %}
+		<span>
+			<i class="fab fa-android"></i>&nbsp;
+		</span>
+		{% endif %}
+		{% for tech in post.technology %}
+		<span class="page__taxonomy-item wise-taxonomy">{{tech}}</span>
+		{% endfor %}
+	</p>
+	{% endif %}
 	
   </article>
 </div>

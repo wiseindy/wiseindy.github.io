@@ -1,9 +1,58 @@
 ---
 layout: home
+classes: wide
 author_profile: true
 title: Who am I?
 excerpt: 
-  System administrator,<br>Web developer,<br>App developer,<br>And a bit of a designer.
+  <i class="fas fa-cogs fa-fw"></i>&nbsp;
+  Computer Engineer,
+  <br>
+  <i class="fas fa-robot fa-fw"></i>&nbsp;
+  Automation enthusiast,
+  <br>
+  <i class="fas fa-globe fa-fw"></i>&nbsp;
+  Web developer,
+  <br>
+  <i class="fas fa-tablet fa-fw"></i>&nbsp;
+  App developer,
+  <br>
+  <i class="fas fa-paint-brush fa-fw"></i>&nbsp;
+  And a bit of a designer.
+  
 header:
   overlay_image: /assets/images/header.jpg
+  
+feature_row:
+  - image_path: /assets/images/home/apps.jpg
+    alt: "apps"
+    title: "Apps"
+    excerpt: "Apps & games that I've designed & developed for iOS and Android."
+    url: "/apps"
+    btn_label: "View all"
+    btn_class: "btn--info"
+  - image_path: /assets/images/home/websites.jpg
+    alt: "websites"
+    title: "Websites"
+    excerpt: "Personal projects and some ideas that I've been working on."
+    url: "/websites"
+    btn_label: "View all"
+    btn_class: "btn--info"
+  - image_path: /assets/images/home/automation.jpg
+    alt: "automation"
+    title: "Automation"
+    excerpt: "Scripts that are a result of laziness combined with perfectionism."
+    url: "/automation"
+    btn_label: "View all"
+    btn_class: "btn--info"
+
 ---
+
+{% include feature_row %}
+
+<div class="notice--info">
+	<h1>Blog</h1>
+
+	<p>In addition to apps, websites and a lot of random stuff, I also write solutions/guides/tutorials to problems that I encounter in my day-to-day tech activities. I have created various articles with the intention of saving you time in case you encounter a similar issue.</p>
+
+	<p>Since I work with many different platforms and applications, the guides cover a variety of topics. You can view the most recent blog posts below or view them by <a href="/categories">categories</a> or <a href="/tags">tags</a>.</p>
+</div>

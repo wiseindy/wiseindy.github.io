@@ -1,0 +1,140 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Update group policy (or run any command) remotely using Powershell</title>
+    <!--<link rel="canonical" href="http://localhost:4000/blog/windows/update-group-policy-or-run-any-command-remotely-using-powershell/" />-->
+	<link rel="canonical" href="https://wiseindy.com/blog/windows/update-group-policy-or-run-any-command-remotely-using-powershell/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  </head>
+  <body>
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">Update group policy (or run any command) remotely using Powershell</div>
+<amp-img src="/wp-content/uploads/2015/06/poweshell.jpg" width="736" height="491" layout="responsive"><noscript><img src="/wp-content/uploads/2015/06/poweshell.jpg" width="736" height="491"></noscript></amp-img>
+	</h1>
+
+	<amp-ad
+	layout="fixed-height"
+	height=100
+	type="adsense"
+	data-ad-client="ca-pub-1094744891389501"
+	data-ad-slot="6411936673">
+	</amp-ad>
+
+	<span>
+	2015-06-11 06:34:55 -0400 - wiseindy
+	</span>
+	
+	<p style="text-align: left;">This script allows you to run any command remotely using Powershell on your network. I usually use this to update group policy configurations on all PCs on my network remotely.</p>
+<!--more-->
+<blockquote>Note: In <strong>Windows Server 2012</strong> &amp; <strong>Windows Server 2012 R2</strong>, you can run the <code>Invoke-GPUpdate</code> PowerShell cmdlet ro refresh group policy on any <strong>Windows 8</strong> computers on your network. <a target="_blank" href="https://technet.microsoft.com/en-us/library/jj134201.aspx">More information here</a>.</blockquote>
+<h3>What you will need:</h3>
+<ul>
+	<li>PsTools
+<ul>
+	<li>Download PsTools from here:
+<a target="_blank" href="https://technet.microsoft.com/en-us/sysinternals/bb896649.aspx">https://technet.microsoft.com/en-us/sysinternals/bb896649.aspx</a>
+</li>
+</ul>
+</li>
+	<li>Domain admin permissions</li>
+	<li>This small script
+<ul>
+	<li><code>PsExec.exe \\* -s cmd /C echo N | gpupdate /force</code></li>
+</ul>
+</li>
+</ul>
+
+<div class="row">
+  <div class="col-12">
+    
+   <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-1094744891389501" data-ad-slot="6411936673"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+
+  </div>
+</div>
+
+<h3>What this script does:</h3>
+<ul>
+	<li>Remotely runs <code>gpupdate /force</code> on all workstations</li>
+	<li>Selects "N" if it asks to logoff user</li>
+</ul>
+<p>When you run it, you’ll see some output like:
+<code>Starting cmd on PC1-USRNAME... on PC1-USRNAME...
+cmd exited on PC1-USRNAME with error code 0.</code></p>
+
+<p>“<code>error code 0</code>” means it has completed successfully without any errors.</p>
+<h3>Additional syntax:</h3>
+<ul>
+	<li>To run this script only on a specific computer, e.g., <code>PC1-USRNAME</code>,
+replace "<code>\\*</code>" with "<code>\\PC1-USRNAME</code>" as shown below:
+<code>PsExec.exe \\PC1-USRNAME -s cmd /C echo N | gpupdate /force</code>
+</li>
+	<li>To force a logoff after updating the group policy settings, use this:
+<code>PsExec.exe \\* -s cmd /C echo Y | gpupdate /force</code>
+</li>
+	<li>To run any other command remotely, simply use the following syntax:
+<code>PsExec.exe \\* -s cmd /C</code>
+</li>
+	<li>For example, to create a directory in all workstations, simply run:
+<code>PsExec.exe \\* -s cmd /C mkdir C:\test</code>
+</li>
+</ul>
+<p>(header image source: <a target="_blank" href="http://interfaceit.com">interfaceit.com</a>)</p>
+
+
+	<amp-ad
+	layout="responsive"
+	width=300
+	height=250
+	type="adsense"
+	data-ad-client="ca-pub-1094744891389501"
+	data-ad-slot="6411936673">
+	</amp-ad>
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2019 Inderjot Singh. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+  </body>
+</html>

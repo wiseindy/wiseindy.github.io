@@ -1,3 +1,4 @@
 source "https://rubygems.org"
 gem "amp-jekyll"
-gemspec
+gem "jekyll-redirect-from"
+gem "minimal-mistakes-jekyll"

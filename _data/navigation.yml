@@ -1,16 +1,16 @@
 # main links
 main:
-    - title: "IT"
-      url: /it
-    - title: "Guides"
-      url: /guides
-    - title: "Powershell"
-      url: /powershell
-    - title: "Networking"
-      url: /networking
-    - title: "Exchange"
-      url: /exchange
-    - title: "Doodles"
-      url: /doodles
+    - title: "Home"
+      url: /
+    - title: "Blog"
+      url: /blog
+    - title: "Apps"
+      url: /apps
+    - title: "Websites"
+      url: /websites
+    - title: "Automation"
+      url: /automation
+    - title: "Artwork"
+      url: /artwork
     - title: "About"
       url: /about
