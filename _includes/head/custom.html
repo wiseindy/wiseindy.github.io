@@ -19,10 +19,10 @@
     enable_page_level_ads: true
   });
 </script>
+<!-- !Page-level ads -->
 
 {% if page.path contains '_posts' %}
   <link rel="amphtml" href="{{ page.id | prepend: '/amp' | prepend: site.baseurl | prepend: site.url | append: '.html' }}">
 {% endif %}
-<!-- !Page-level ads -->
 
 <!-- end custom head snippets -->
