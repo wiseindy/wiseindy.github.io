@@ -29,22 +29,23 @@
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+	
+	<script async custom-element="amp-auto-ads"
+		src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+	</script>
+	
   </head>
   <body>
+  
+	<amp-auto-ads type="adsense"
+	  data-ad-client="ca-pub-8422497268738669">
+	</amp-auto-ads>
+  
 	
 	<h1 class="post-title">
 	<div class="h1-post-title">Installing DD-WRT on TP-Link TL-WDR3600 N600</div>
 <amp-img src="/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-header.jpg" width="3000" height="1996" layout="responsive"><noscript><img src="/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-header.jpg" width="3000" height="1996"></noscript></amp-img>
 	</h1>
-
-	<amp-ad
-	layout="fixed-height"
-	height=100
-	type="adsense"
-	data-ad-client="ca-pub-1094744891389501"
-	data-ad-slot="6411936673">
-	</amp-ad>
 
 	<span>
 	2015-07-16 00:46:04 -0400 - wiseindy
@@ -54,18 +55,18 @@
 
 <!--more-->
 <h3>Why would I do this?</h3>
-<p>The <a target="_blank" href="http://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html">TP-Link TL-WDR3600 N600</a> is a pretty good budget Gigabit router for homes. I’ve been using it for a few years now and I like almost everything about this except the fact that there’s no inherent VPN or QoS functionality. Not a deal breaker, but it would be great to extend the capabilities of the device for no additonal cost. There’s also the fact that I’m a networking enthusiast and this is a good opportunity to learn.</p>
+<p>The <a target="_blank" href="https://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html">TP-Link TL-WDR3600 N600</a> is a pretty good budget Gigabit router for homes. I’ve been using it for a few years now and I like almost everything about this except the fact that there’s no inherent VPN or QoS functionality. Not a deal breaker, but it would be great to extend the capabilities of the device for no additonal cost. There’s also the fact that I’m a networking enthusiast and this is a good opportunity to learn.</p>
 <h3>What you need:</h3>
 <ul>
-	<li>A <a target="_blank" href="http://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html">TP-Link TL-WDR3600 N600</a> router.
+	<li>A <a target="_blank" href="https://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html">TP-Link TL-WDR3600 N600</a> router.
 <ul>
-	<li>You could use any other DD-WRT supported routers as well. Check out the <a target="_blank" href="http://www.dd-wrt.com/site/support/router-database">DD-WRT website</a> to see if your router is supported.</li>
+	<li>You could use any other DD-WRT supported routers as well. Check out the <a target="_blank" href="https://www.dd-wrt.com/site/support/router-database">DD-WRT website</a> to see if your router is supported.</li>
 </ul>
 </li>
 	<li>A PC connected to your router with an ethernet cable (duh).</li>
 </ul>
 <h3>Step 1:</h3>
-<p>Head to the <a target="_blank" href="http://www.dd-wrt.com/site/support/router-database">DD-WRT website</a> and search for your router. Mine is <a target="_blank" href="http://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html">TP-Link TL-WDR3600</a>, hence I pick that one from the search results.</p>
+<p>Head to the <a target="_blank" href="https://www.dd-wrt.com/site/support/router-database">DD-WRT website</a> and search for your router. Mine is <a target="_blank" href="https://www.tp-link.com/en/products/details/cat-9_TL-WDR3600.html">TP-Link TL-WDR3600</a>, hence I pick that one from the search results.</p>
 
 <p><a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-01.png"><amp-img class="alignnone size-full wp-image-887" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-01.png" alt="DD-WRT database search" width="1013" height="586" layout="responsive"><noscript><img class="alignnone size-full wp-image-887" src="https://wiseindy.com/wp-content/uploads/2015/07/installing-dd-wrt-on-tp-link-tl-wdr3600-n600-01.png" alt="DD-WRT database search" width="1013" height="586"></noscript></amp-img></a></p>
 
@@ -119,14 +120,20 @@
 
 <div class="row">
   <div class="col-12">
-    
-   <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-1094744891389501" data-ad-slot="6411936673"></ins>
+    <!--
+
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-format="fluid"
+         data-ad-layout="in-article"
+         data-ad-client="ca-pub-1094744891389501"
+         data-ad-slot="6411936673"></ins>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-
+-->
   </div>
 </div>
 
@@ -147,17 +154,8 @@ This is the new firmware's default IP range. You'll need to reconfigure it if yo
 
 <p>Now that you’ve got DD-WRT powered up, see how you can configure DD-WRT to <a target="_blank" href="https://wiseindy.com/it/how-to-access-your-pcs-using-dns-names-with-dd-wrt/">access computers using hostnames on your home network</a></p>
 
-<p>(header image source: <a target="_blank" href="http://www.freeimageslive.co.uk/image/view/3929/_original">freeimageslive.co.uk</a>)</p>
+<p>(header image source: <a target="_blank" href="https://www.freeimageslive.co.uk/image/view/3929/_original">freeimageslive.co.uk</a>)</p>
 
-
-	<amp-ad
-	layout="responsive"
-	width=300
-	height=250
-	type="adsense"
-	data-ad-client="ca-pub-1094744891389501"
-	data-ad-slot="6411936673">
-	</amp-ad>
 
 	
 	<div class="page__footer-follow">

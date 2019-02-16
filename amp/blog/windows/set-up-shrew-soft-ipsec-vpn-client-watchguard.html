@@ -29,22 +29,23 @@
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+	
+	<script async custom-element="amp-auto-ads"
+		src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+	</script>
+	
   </head>
   <body>
+  
+	<amp-auto-ads type="adsense"
+	  data-ad-client="ca-pub-8422497268738669">
+	</amp-auto-ads>
+  
 	
 	<h1 class="post-title">
 	<div class="h1-post-title">How to set up Shrew Soft IPSec VPN Client for WatchGuard</div>
 <amp-img src="/wp-content/uploads/2016/01/header-set-up-shrew-soft-ipsec-vpn-client-watchguard.jps_.jpg" width="860" height="460" layout="responsive"><noscript><img src="/wp-content/uploads/2016/01/header-set-up-shrew-soft-ipsec-vpn-client-watchguard.jps_.jpg" width="860" height="460"></noscript></amp-img>
 	</h1>
-
-	<amp-ad
-	layout="fixed-height"
-	height=100
-	type="adsense"
-	data-ad-client="ca-pub-1094744891389501"
-	data-ad-slot="6411936673">
-	</amp-ad>
 
 	<span>
 	2016-01-20 01:36:14 -0500 - wiseindy
@@ -54,7 +55,7 @@
 
 <!--more-->
 
-<p>It will also show you how to install and configure the <a target="_blank" href="https://www.shrew.net/download/vpn">Shrew Soft IPSec VPN Client</a>. In my opinion, you are better off using this client than the <a target="_blank" href="http://www.watchguard.com/help/docs/wsm/xtm_11/en-US/index.html#en-US/mvpn/client/mvpn-ipsec_client_about_c.html%3FTocPath%3DMobile%2520VPN%2520with%2520IPSec%7CAbout%2520the%2520IPSec%2520Mobile%2520VPN%25C2%25A0Client%7C_____0">WatchGuard IPSec Mobile VPN Monitor</a>. Old versions of this WatchGuard IPSec Mobile VPN Monitor were free, but they do not work on Windows 10. The new version of the IPSec client needs a paid subscription license. Unless you want to go this route, I would suggest using the Shrew Soft IPSec VPN Client. It’s free and you can <a target="_blank" href="https://www.shrew.net/download/vpn">download</a> it from their <a target="_blank" href="https://www.shrew.net/download/vpn">official website</a>.</p>
+<p>It will also show you how to install and configure the <a target="_blank" href="https://www.shrew.net/download/vpn">Shrew Soft IPSec VPN Client</a>. In my opinion, you are better off using this client than the <a target="_blank" href="https://www.watchguard.com/help/docs/wsm/xtm_11/en-US/index.html#en-US/mvpn/client/mvpn-ipsec_client_about_c.html%3FTocPath%3DMobile%2520VPN%2520with%2520IPSec%7CAbout%2520the%2520IPSec%2520Mobile%2520VPN%25C2%25A0Client%7C_____0">WatchGuard IPSec Mobile VPN Monitor</a>. Old versions of this WatchGuard IPSec Mobile VPN Monitor were free, but they do not work on Windows 10. The new version of the IPSec client needs a paid subscription license. Unless you want to go this route, I would suggest using the Shrew Soft IPSec VPN Client. It’s free and you can <a target="_blank" href="https://www.shrew.net/download/vpn">download</a> it from their <a target="_blank" href="https://www.shrew.net/download/vpn">official website</a>.</p>
 
 <p><strong>Note:</strong> While this guide was created for Firebox M300, it should work with other WatchGuard XTM devices as well.</p>
 <h3>What do you need:</h3>
@@ -94,14 +95,20 @@
 
 <div class="row">
   <div class="col-12">
-    
-   <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-1094744891389501" data-ad-slot="6411936673"></ins>
+    <!--
+
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-format="fluid"
+         data-ad-layout="in-article"
+         data-ad-client="ca-pub-1094744891389501"
+         data-ad-slot="6411936673"></ins>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-
+-->
   </div>
 </div>
 
@@ -176,15 +183,6 @@
 
 <p>(header image source: <a target="_blank" href="https://www.sciencenews.org/sites/default/files/main/articles/note_shrew_001.jpg">sciencenews.org</a>)</p>
 
-
-	<amp-ad
-	layout="responsive"
-	width=300
-	height=250
-	type="adsense"
-	data-ad-client="ca-pub-1094744891389501"
-	data-ad-slot="6411936673">
-	</amp-ad>
 
 	
 	<div class="page__footer-follow">

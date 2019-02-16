@@ -29,22 +29,23 @@
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+	
+	<script async custom-element="amp-auto-ads"
+		src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+	</script>
+	
   </head>
   <body>
+  
+	<amp-auto-ads type="adsense"
+	  data-ad-client="ca-pub-8422497268738669">
+	</amp-auto-ads>
+  
 	
 	<h1 class="post-title">
 	<div class="h1-post-title">Convert a physical machine to a virtual machine (P2V) using VMware vCenter Converter Standalone – A Step-by-Step Guide</div>
 <amp-img src="/wp-content/uploads/2015/06/convert-physical-machine-to-virtual-machine-using-vmware-vcenter-converter.jpg" width="1024" height="682" layout="responsive"><noscript><img src="/wp-content/uploads/2015/06/convert-physical-machine-to-virtual-machine-using-vmware-vcenter-converter.jpg" width="1024" height="682"></noscript></amp-img>
 	</h1>
-
-	<amp-ad
-	layout="fixed-height"
-	height=100
-	type="adsense"
-	data-ad-client="ca-pub-1094744891389501"
-	data-ad-slot="6411936673">
-	</amp-ad>
 
 	<span>
 	2015-06-16 06:20:37 -0400 - wiseindy
@@ -96,7 +97,7 @@ You can download it for free here:
 <blockquote>Download VMware's official user's guide for VMware vCenter Converter Standalone here:
 <a target="_blank" href="https://wiseindy.com/wp-content/uploads/2015/06/vmware_vcenter_converter_standalone_p2v_convsa_60_guide.pdf">VMware vCenter Converter Standalone User's Guide.pdf</a>
 
-Mirror: <a target="_blank" href="http://www.vmware.com/pdf/convsa_60_guide.pdf">VMware official</a>
+Mirror: <a target="_blank" href="https://www.vmware.com/pdf/convsa_60_guide.pdf">VMware official</a>
 </blockquote>
 <h3>Some points to keep in mind</h3>
 <ul>
@@ -149,14 +150,20 @@ Mirror: <a target="_blank" href="http://www.vmware.com/pdf/convsa_60_guide.pdf"
 
 <div class="row">
   <div class="col-12">
-    
-   <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-1094744891389501" data-ad-slot="6411936673"></ins>
+    <!--
+
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-format="fluid"
+         data-ad-layout="in-article"
+         data-ad-client="ca-pub-1094744891389501"
+         data-ad-slot="6411936673"></ins>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-
+-->
   </div>
 </div>
 
@@ -188,7 +195,7 @@ Mirror: <a target="_blank" href="http://www.vmware.com/pdf/convsa_60_guide.pdf"
 </ul>
 <p>Once you do the above, carry out steps <strong>2 to 5</strong> once again. If you still get an error, reboot your PC (the one that has the VMware vCenter Converter Standalone installed).</p>
 
-<p>More information on this error and similar errors here: <a target="_blank" href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1001344">http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1001344</a></p>
+<p>More information on this error and similar errors here: <a target="_blank" href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1001344">https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1001344</a></p>
 <h3>Step 6:</h3>
 <p>VMware vCenter Converter Standalone has now successfully connected to your physical server. Next step is to communicate with your VMware set up.</p>
 
@@ -273,9 +280,9 @@ When you convert a powered on Windows machine, Converter Standalone copies data 
 
 <p>This error happens because in your physical server, if Volume Shadow Copy Service (VSS) has problems performing a snapshot of disks, which can occur if multiple providers are associated with the operating system. <strong>Steps 14,</strong> <strong>15 &amp; 16</strong> will show you how to fix this.</p>
 <blockquote>This can happen if you're running Windows Server 2003. You can read more about it in VMware's knowledgebase article:
-<a target="_blank" href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1035241">http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1035241</a>
+<a target="_blank" href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1035241">https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1035241</a>
 
-More: <a target="_blank" href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1039087">http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1039087</a>
+More: <a target="_blank" href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1039087">https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1039087</a>
 </blockquote>
 <h3>Step 14:</h3>
 <p>Log into your physical server. Launch <strong>cmd.exe</strong> and type <code>vssadmin list providers </code>and hit Enter.</p>
@@ -376,17 +383,8 @@ More: <a target="_blank" href="http://kb.vmware.com/selfservice/microsites/sear
 <h3>Step 22:</h3>
 <p>As a final step, go ahead and test all your applications. You’ve successfully migrated a physical server to a virtual machine. Good job!</p>
 
-<p>(header image source: <a target="_blank" href="http://www.ismweb.com/optimization-virtualization">ismweb.com</a>)</p>
+<p>(header image source: <a target="_blank" href="https://www.ismweb.com/optimization-virtualization">ismweb.com</a>)</p>
 
-
-	<amp-ad
-	layout="responsive"
-	width=300
-	height=250
-	type="adsense"
-	data-ad-client="ca-pub-1094744891389501"
-	data-ad-slot="6411936673">
-	</amp-ad>
 
 	
 	<div class="page__footer-follow">

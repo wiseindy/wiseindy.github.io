@@ -29,22 +29,23 @@
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+	
+	<script async custom-element="amp-auto-ads"
+		src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+	</script>
+	
   </head>
   <body>
+  
+	<amp-auto-ads type="adsense"
+	  data-ad-client="ca-pub-8422497268738669">
+	</amp-auto-ads>
+  
 	
 	<h1 class="post-title">
 	<div class="h1-post-title">How to set up WSUS on Windows Server 2012 R2 – A Step-by-Step Guide</div>
 <amp-img src="/wp-content/uploads/2015/06/windows-server-update-services.jpg" width="824" height="470" layout="responsive"><noscript><img src="/wp-content/uploads/2015/06/windows-server-update-services.jpg" width="824" height="470"></noscript></amp-img>
 	</h1>
-
-	<amp-ad
-	layout="fixed-height"
-	height=100
-	type="adsense"
-	data-ad-client="ca-pub-1094744891389501"
-	data-ad-slot="6411936673">
-	</amp-ad>
 
 	<span>
 	2015-06-14 04:21:40 -0400 - wiseindy
@@ -61,7 +62,7 @@
 <p>This may not be always preferred in a corporate environment. Instead of each workstation manually connecting to Microsoft Update, testing updates and then deploying updates using traditional methods, administrators can use WSUS to download updates centrally to an internal server. Once updates are authorised in WSUS, they’re also deployed internally and reporting tools keep administrators informed of patch progress. This is a very efficient way of working, allowing administrators full control of which updates are deployed to workstations.</p>
 
 <p>In Windows Server 2012 and 2012 R2, WSUS is integrated with the operating system as a server role. In previous versions of Windows Server (2003, 2008, 2008 R2), you had to separately install WSUS 3.0.</p>
-<blockquote>Also, seems like Microsoft will be moving away from WSUS to an entirely new product called Windows Update for Business (WUB). <a target="_blank" href="http://blogs.windows.com/bloggingwindows/2015/05/04/announcing-windows-update-for-business/">You can read more about it here.</a>
+<blockquote>Also, seems like Microsoft will be moving away from WSUS to an entirely new product called Windows Update for Business (WUB). <a target="_blank" href="https://blogs.windows.com/bloggingwindows/2015/05/04/announcing-windows-update-for-business/">You can read more about it here.</a>
 </blockquote>
 <p>Ok, so now, let’s see how we can set up WSUS on Windows Server 2012 R2</p>
 <h3>What you need:</h3>
@@ -112,14 +113,20 @@
 
 <div class="row">
   <div class="col-12">
-    
-   <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-1094744891389501" data-ad-slot="6411936673"></ins>
+    <!--
+
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-format="fluid"
+         data-ad-layout="in-article"
+         data-ad-client="ca-pub-1094744891389501"
+         data-ad-slot="6411936673"></ins>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-
+-->
   </div>
 </div>
 
@@ -427,15 +434,6 @@ In the <strong>Options</strong> area, specify your server name in the form of a
 
 <p>Hope this guide was useful to you. You can leave your feedback in the comments below.</p>
 
-
-	<amp-ad
-	layout="responsive"
-	width=300
-	height=250
-	type="adsense"
-	data-ad-client="ca-pub-1094744891389501"
-	data-ad-slot="6411936673">
-	</amp-ad>
 
 	
 	<div class="page__footer-follow">

@@ -29,22 +29,23 @@
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+	
+	<script async custom-element="amp-auto-ads"
+		src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+	</script>
+	
   </head>
   <body>
+  
+	<amp-auto-ads type="adsense"
+	  data-ad-client="ca-pub-8422497268738669">
+	</amp-auto-ads>
+  
 	
 	<h1 class="post-title">
 	<div class="h1-post-title">How to install Jekyll on Ubuntu 16.04 or Windows 10 - A Step-by-Step Guide</div>
 <amp-img src="/assets/images/featured/featured-jekyll-full.jpg" width="1250" height="896" layout="responsive"><noscript><img src="/assets/images/featured/featured-jekyll-full.jpg" width="1250" height="896"></noscript></amp-img>
 	</h1>
-
-	<amp-ad
-	layout="fixed-height"
-	height=100
-	type="adsense"
-	data-ad-client="ca-pub-1094744891389501"
-	data-ad-slot="6411936673">
-	</amp-ad>
 
 	<span>
 	2017-04-26 07:00:00 -0400 - wiseindy
@@ -84,14 +85,20 @@
 
 <div class="row">
   <div class="col-12">
-    
-   <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-1094744891389501" data-ad-slot="6411936673"></ins>
+    <!--
+
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-format="fluid"
+         data-ad-layout="in-article"
+         data-ad-client="ca-pub-1094744891389501"
+         data-ad-slot="6411936673"></ins>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-
+-->
   </div>
 </div>
 
@@ -141,7 +148,7 @@ bundle <span class="nb">exec </span>jekyll serve
 
 <p>I had to install <a href="https://github.com/sparklemotion/nokogiri">Nokogiri</a> for my site and was having issues. This is how I solved it.</p>
 
-<p>Below are the installation instructions on <a href="http://www.nokogiri.org/tutorials/installing_nokogiri.html">nokogiri.org</a>:</p>
+<p>Below are the installation instructions on <a href="https://www.nokogiri.org/tutorials/installing_nokogiri.html">nokogiri.org</a>:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>build-essential patch
 <span class="nb">sudo </span>apt-get <span class="nb">install </span>ruby-dev zlib1g-dev liblzma-dev
@@ -150,15 +157,6 @@ bundle <span class="nb">exec </span>jekyll serve
 
 <p>(header image source: <a href="https://jekyllrb.com">jekyllrb.com</a>)</p>
 
-
-	<amp-ad
-	layout="responsive"
-	width=300
-	height=250
-	type="adsense"
-	data-ad-client="ca-pub-1094744891389501"
-	data-ad-slot="6411936673">
-	</amp-ad>
 
 	
 	<div class="page__footer-follow">
