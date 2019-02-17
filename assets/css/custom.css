@@ -41,6 +41,10 @@
 	text-decoration: underline;
 }
 
+ins {
+	border-bottom: none;
+}
+
 .wise-center-teaser {
 	display: flex;
 	flex-direction: row;
