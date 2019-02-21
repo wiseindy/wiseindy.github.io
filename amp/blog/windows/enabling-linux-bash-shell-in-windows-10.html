@@ -1,0 +1,176 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enabling Linux Bash Shell in Windows 10</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/blog/windows/enabling-linux-bash-shell-in-windows-10/" />-->
+	<link rel="canonical" href="https://wiseindy.com/blog/windows/enabling-linux-bash-shell-in-windows-10/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	
+	<script async custom-element="amp-auto-ads"
+		src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+	</script>
+	
+  </head>
+  <body>
+  
+	<amp-auto-ads type="adsense"
+	  data-ad-client="ca-pub-8422497268738669">
+	</amp-auto-ads>
+  
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">Enabling Linux Bash Shell in Windows 10</div>
+<amp-img src="/assets/images/featured/featured-bash-full.jpg" width="1296" height="884" layout="responsive"><noscript><img src="/assets/images/featured/featured-bash-full.jpg" width="1296" height="884"></noscript></amp-img>
+	</h1>
+
+	<span>
+	2017-04-26 01:43:44 -0400 - wiseindy
+	</span>
+	
+	<p>Windows 10 (the new Anniversary update, specifically) has a new feature called “Windows Subsystem for Linux”. It’s basically a full-fledged Ubuntu based bash shell running directly under Windows. Pretty cool, eh? This guide will show you how exactly to enable it.</p>
+
+<!--more-->
+<h2 id="what-you-need">What you need:</h2>
+
+<ul>
+  <li>A PC running 64-bit of Windows 10 Anniversary Update build 14393 or later (Step 1 shows you how to check your Windows 10 version).</li>
+  <li>And as always, an internet connection.</li>
+</ul>
+
+<h2 id="step-1">Step 1:</h2>
+
+<p>First, let’s find out whether your Windows 10 is build 14393 or later.</p>
+
+<p>To do this, simply open <strong>Settings</strong></p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-001.png" alt="Search for Settings in the Start menu" title="Search for Settings in the Start menu" width="391" height="520" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-001.png" alt="Search for Settings in the Start menu" title="Search for Settings in the Start menu" width="391" height="520"></noscript></amp-img></p>
+
+<p>Click on <strong>System</strong></p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-002.png" alt="Select System" title="Select System" width="1026" height="825" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-002.png" alt="Select System" title="Select System" width="1026" height="825"></noscript></amp-img></p>
+
+<p>Scroll to the end and click on <strong>About</strong>.
+Here you’ll see your <strong>OS Build</strong> number. This should be equal to or higher than <strong>14393</strong>. Also, verify if your Windows 10 installation is 64 bit.</p>
+
+<p>If your build number is less than <strong>14393</strong>, check for updates.</p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-003.png" alt="Click on About" title="Click on About" width="1026" height="825" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-003.png" alt="Click on About" title="Click on About" width="1026" height="825"></noscript></amp-img></p>
+
+<h2 id="step-2">Step 2:</h2>
+
+<p>The next step is to enable <strong>Developer Mode</strong> in Windows 10.</p>
+
+<p>Open <strong>Settings</strong> again. Select <strong>Update &amp; security</strong>.</p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-004.png" alt="Select Update &amp; security in Settings" title="Select Update &amp; security in Settings" width="1026" height="825" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-004.png" alt="Select Update &amp; security in Settings" title="Select Update &amp; security in Settings" width="1026" height="825"></noscript></amp-img></p>
+
+<p>Click on <strong>For developers</strong> and enable <strong>Developer mode</strong>. If it asks you to restart the PC, go ahead and restart.</p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-005.png" alt="Enable developer mode in Windows 10" title="Select For developers and enable developer mode" width="1026" height="825" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-005.png" alt="Enable developer mode in Windows 10" title="Select For developers and enable developer mode" width="1026" height="825"></noscript></amp-img></p>
+
+<p><strong>Note:</strong> <a href="/it/windows-10-developer-mode-fix-error-0x80004005/">If you get an error message <strong>Developer mode package failed to install. Error code 0x80004005</strong> while trying to enable developer mode, please click here to see how to fix it</a></p>
+
+<h2 id="step-3">Step 3:</h2>
+
+<p>Now, let’s enable <strong>Windows Subsystem for Linux</strong>. Click the <strong>Start</strong> button and search for <strong>Turn Windows features on or off</strong>.</p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-006.png" alt="Search for Turn Windows features on or off" title="Search for Turn Windows features on or off" width="388" height="518" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-006.png" alt="Search for Turn Windows features on or off" title="Search for Turn Windows features on or off" width="388" height="518"></noscript></amp-img></p>
+
+<p>Check <strong>Windows Subsystem for Linux (Beta)</strong> to enable it and click <strong>OK</strong></p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-007.png" alt="Enable Windows Subsystem for Linux (Beta)" title="Enable Windows Subsystem for Linux (Beta)" width="415" height="368" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-007.png" alt="Enable Windows Subsystem for Linux (Beta)" title="Enable Windows Subsystem for Linux (Beta)" width="415" height="368"></noscript></amp-img></p>
+
+<p>Restart your PC when it prompts you to.</p>
+
+<div class="row">
+  <div class="col-12">
+    <!--
+
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-format="fluid"
+         data-ad-layout="in-article"
+         data-ad-client="ca-pub-1094744891389501"
+         data-ad-slot="6411936673"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+-->
+  </div>
+</div>
+
+<h2 id="step-4">Step 4:</h2>
+
+<p>After you’ve rebooted your PC, open a command prompt window (click the Start button and type <code class="highlighter-rouge">cmd</code>).</p>
+
+<p>Type <code class="highlighter-rouge">bash</code> and hit enter.</p>
+
+<p>Since this is the first time you’re running <code class="highlighter-rouge">bash</code>, you’ll be asked whether you want to install it. Type <code class="highlighter-rouge">y</code> and hit enter to proceed.</p>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-008.png" alt="Installing bash via command prompt" title="Installing bash via command prompt" width="650" height="339" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-008.png" alt="Installing bash via command prompt" title="Installing bash via command prompt" width="650" height="339"></noscript></amp-img></p>
+
+<p>After the installation is complete, you will be asked to create a new UNIX username and password. This user account is for the new Ubuntu environment and in no way related to your Windows account.</p>
+
+<p>Well, that’s all there is. You should have a bash prompt now and can run linux commands.</p>
+
+<h2 id="step-5">Step 5:</h2>
+
+<p>To start <code class="highlighter-rouge">bash</code> you can use two ways:</p>
+
+<ul>
+  <li>Simply open any command prompt window and type <code class="highlighter-rouge">bash</code>. It will start the Ubuntu command line environment.</li>
+  <li>Click the Start button and search for <strong>bash</strong>. Open <strong>Bash on Ubuntu for Windows</strong>.</li>
+</ul>
+
+<p><amp-img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-008.png" alt="Launching Bash on Ubuntu for Windows" title="Search for Bash on Ubuntu for Windows" width="650" height="339" layout="responsive"><noscript><img src="/assets/images/posts/2017-04-26-enabling-linux-bash-shell-in-windows-10-008.png" alt="Launching Bash on Ubuntu for Windows" title="Search for Bash on Ubuntu for Windows" width="650" height="339"></noscript></amp-img></p>
+
+<p>That’s it!</p>
+
+<p><strong>Note:</strong> While in the Ubuntu environment, you can access your Windows drives under <code class="highlighter-rouge">/mnt/</code>. All Windows drives will be listed under this. You can <code class="highlighter-rouge">cd</code> to any directory and work with the files.</p>
+
+<p>(header image source: <a href="https://wall.alphacoders.com/big.php?i=520207">wall.alphacoders.com</a>)</p>
+
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2019 Inderjot Singh. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+  </body>
+</html>
