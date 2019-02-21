@@ -1,0 +1,141 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to set DNS in CentOS/RHEL 7 & prevent NetworkManager from overwriting /etc/resolv.conf?</title>
+    <!--<link rel="canonical" href="https://wiseindy.com/blog/linux/how-to-set-dns-in-centos-rhel-7-prevent-network-manager-from-overwriting-etc-resolv-conf/" />-->
+	<link rel="canonical" href="https://wiseindy.com/blog/linux/how-to-set-dns-in-centos-rhel-7-prevent-network-manager-from-overwriting-etc-resolv-conf/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+		body {
+			font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+			padding: 10px;
+			color: #494e52;
+			line-height: 1.5;
+		}
+		.post-title {
+			margin: 0 -10px 10px -10px
+		}
+		.h1-post-title {
+			padding: 10px;
+		}
+		.highlight {
+			overflow-x: scroll;
+			padding: 11px;
+			border: 1px solid #f2f3f3;
+			border-radius: 4px;
+			background-color: #fafafa;
+		}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	
+	<script async custom-element="amp-auto-ads"
+		src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+	</script>
+	
+  </head>
+  <body>
+  
+	<amp-auto-ads type="adsense"
+	  data-ad-client="ca-pub-8422497268738669">
+	</amp-auto-ads>
+  
+	
+	<h1 class="post-title">
+	<div class="h1-post-title">How to set DNS in CentOS/RHEL 7 &amp; prevent NetworkManager from overwriting /etc/resolv.conf?</div>
+<amp-img src="/assets/images/featured/featured-dnslinux.jpg" width="2765" height="1843" layout="responsive"><noscript><img src="/assets/images/featured/featured-dnslinux.jpg" width="2765" height="1843"></noscript></amp-img>
+	</h1>
+
+	<span>
+	2019-02-21 10:03:00 -0500 - wiseindy
+	</span>
+	
+	<p>This guide shows you how to set custom DNS entries for CentOS 7 / RedHat 7 and ensure that the settings are persistent even after a reboot.</p>
+
+<!--more-->
+
+<h1 id="what-you-need">What you need</h1>
+
+<ul>
+  <li>A CentOS 7 or a Red Hat Enterprise Linux (RHEL) 7 server</li>
+  <li>A couple of minutes</li>
+</ul>
+
+<h1 id="overview">Overview</h1>
+
+<p>In CentOS and Red Hat Enterprise Linux (RHEL) 7, any custom DNS entries are stored in the file <code class="highlighter-rouge">/etc/resolv.conf</code>. However, if we simply go ahead and add our nameservers to this file, we’ll notice that after a reboot or a restart of the network.service, the file is overwritten by NetworkManager.</p>
+
+<p>In this guide, we will first configure NetworkManager to <strong>not overwrite</strong> this file. Then, we will go ahead and actually add our custom nameservers to <code class="highlighter-rouge">/etc/resolv.conf</code>.</p>
+
+<h1 id="step-1">Step 1</h1>
+
+<p>The NetworkManager configuration is located here: <code class="highlighter-rouge">/etc/NetworkManager/NetworkManager.conf</code>
+Open this file using <code class="highlighter-rouge">vim</code> or your favorite text editor.</p>
+
+<p>Search for the <code class="highlighter-rouge">[main]</code> section in this file. It should look something like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+[main]
+#plugins=ifcfg-rh,ibft
+...
+</code></pre></div></div>
+
+<p>Add <code class="highlighter-rouge">dns=none</code> just after the <code class="highlighter-rouge">[main]</code> tag like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+[main]
+dns=none
+#plugins=ifcfg-rh,ibft
+...
+</code></pre></div></div>
+
+<p>Go ahead and save the file.</p>
+
+<h1 id="step-2">Step 2</h1>
+
+<p>Let’s restart the <code class="highlighter-rouge">NetworkManager.service</code> service so that it picks up the changes we made to the configuration.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo systemctl restart NetworkManager.service
+</code></pre></div></div>
+
+<p>Note that the service name <code class="highlighter-rouge">NetworkManager.service</code> is <strong>case-sensitive</strong>.</p>
+
+<h1 id="step-3">Step 3</h1>
+
+<p>Now, let’s add our nameservers to <code class="highlighter-rouge">/etc/resolv.conf</code></p>
+
+<p>Open this file in you favorite text editor and specify the name servers as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Generated by NetworkManager
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+</code></pre></div></div>
+
+<p>That’s it! You’re done. The nameservers added to <code class="highlighter-rouge">/etc/resolv.conf</code> will now persist even after a reboot. NetworkManager will not longer overwrite this file.</p>
+
+<hr>
+
+<p>Photo by Steve Johnson on Unsplash</p>
+
+<p><a style='background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px' href="https://unsplash.com/@steve_j?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Steve Johnson"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewbox="0 0 32 32"><title>unsplash-logo</title>
+<path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Steve Johnson</span></a></p>
+
+
+	
+	<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2019 Inderjot Singh. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+  </body>
+</html>
