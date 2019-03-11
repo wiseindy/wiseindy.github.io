@@ -6,6 +6,7 @@ link: https://formulaecalendar.com/
 technology:
     - PHP
     - JavaScript
+    - HTML5
 header:
   teaser: "/assets/images/websites/formulaecalendar.com.jpg"
 ---
