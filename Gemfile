@@ -1,4 +1,5 @@
 source "https://rubygems.org"
 gem "amp-jekyll"
 gem "jekyll-redirect-from"
+gem "jemoji"
 gem "minimal-mistakes-jekyll"
