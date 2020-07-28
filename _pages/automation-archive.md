@@ -8,5 +8,3 @@ sort_by: date
 sort_order: reverse
 classes: wide
 ---
-
-Coming soon
