@@ -65,7 +65,7 @@ layout: default
 			</div>
 			{% endif %}
 			
-			{% if page.android or page.ios %}
+			{% if page.android or page.ios or page.github %}
 				<div class="wise-link-app-wrapper">
 					{% if page.android %}
 					<div class="wise-link-app">
@@ -82,6 +82,14 @@ layout: default
 						</a>
 					</div>
 					{% endif %}
+				
+          {% if page.github %}
+          <div class="wise-link-app">
+            <a href="{{ page.github }}" target="_blank" rel="View on GitHub" title="View {{ page.title }} on GitHub">
+              <img src="/assets/images/apps/github.png" />
+            </a>
+          </div>
+          {% endif %}
 				</div>
 			{% endif %}
 		  
@@ -100,7 +108,7 @@ layout: default
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" target="_blank"  class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
 		
-		{% if page.android or page.ios %}
+		{% if page.android or page.ios or page.github %}
 			<div class="wise-link-app-wrapper">
 				{% if page.android %}
 				<div class="wise-link-app">
@@ -117,6 +125,14 @@ layout: default
 					</a>
 				</div>
 				{% endif %}
+				
+				{% if page.github %}
+				<div class="wise-link-app">
+					<a href="{{ page.github }}" target="_blank" rel="View on GitHub" title="View {{ page.title }} on GitHub">
+						<img src="/assets/images/apps/github.png" />
+					</a>
+				</div>
+				{% endif %}
 			</div>
 		{% endif %}
 		
@@ -126,6 +142,10 @@ layout: default
 		
 		{% if page.ios %}
 		<p class="notice--primary">Apple, the Apple logo, iPhone, and iPad are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.</p>
+		{% endif %}
+		
+		{% if page.github %}
+		<p class="notice--primary">GitHub and the the GitHub logo are trademarks of Microsoft Corporation.</p>
 		{% endif %}
 		
       </section>
