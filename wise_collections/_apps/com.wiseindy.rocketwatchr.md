@@ -4,8 +4,6 @@ date: 2019-09-20T00:00:00+00:00
 layout: project
 android:
     - https://play.google.com/store/apps/details?id=com.wiseindy.rocketwatchr
-# ios:
-#     - https://itunes.apple.com/us/app/alien-tv-for-reddit/id1273549678?mt=8
 technology:
     - Ionic
     - Angular
