@@ -10,7 +10,5 @@ main:
       url: /websites
     - title: "Automation"
       url: /automation
-    - title: "Artwork"
-      url: /artwork
     - title: "About"
       url: /about
